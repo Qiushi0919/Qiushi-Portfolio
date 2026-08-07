@@ -10,7 +10,7 @@
   <meta property="og:description" content="从多模态任务输入到自主巡逻、目标识别、安全控制与报告导出的完整闭环。" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://qiushi0919.github.io/IntelCup-2026/" />
-  <meta property="og:image" content="https://qiushi0919.github.io/IntelCup-2026/assets/nationals/team-at-national-finals-2.jpg" />
+  <meta property="og:image" content="https://qiushi0919.github.io/IntelCup-2026/assets/nationals/team-at-national-finals-2.webp" />
   <style>
     :root {
       --hust:#005bac;
@@ -128,7 +128,7 @@
 <body>
   <div class="topbar">
     <div class="container nav">
-      <a class="brand" href="#top"><img src="assets/hust_logo.png" alt="华中科技大学" /><span>智驭低空枢纽</span></a>
+      <a class="brand" href="#top"><img loading="lazy" decoding="async" src="assets/hust_logo.png" alt="华中科技大学" /><span>智驭低空枢纽</span></a>
       <nav class="navlinks" aria-label="页面导航">
         <a href="#demo-video">演示视频</a><a href="#figures">功能演示</a><a href="#pipeline">闭环流程</a><a href="#system">系统架构</a><a href="#results">测试结果</a><a href="#finals">国赛现场</a><a href="#citation">引用</a><a href="https://github.com/Qiushi0919/IntelCup-2026" target="_blank" rel="noopener">项目仓库 ↗</a>
       </nav>
@@ -140,8 +140,8 @@
       <div class="hero-grid">
         <div class="hero-copy">
           <div class="logo-strip">
-            <div class="logo-card"><img src="assets/hust_logo.png" alt="华中科技大学" /></div>
-            <div class="contest-card"><img src="assets/figures/fig_01.webp" alt="英特尔杯专题赛标识" /><span>2026 Intel Cup<br>National Finals Edition</span></div>
+            <div class="logo-card"><img loading="lazy" decoding="async" src="assets/hust_logo.png" alt="华中科技大学" /></div>
+            <div class="contest-card"><img loading="lazy" decoding="async" src="assets/figures/fig_01.webp" alt="英特尔杯专题赛标识" /><span>2026 Intel Cup<br>National Finals Edition</span></div>
           </div>
           <h1>智驭低空枢纽</h1>
           <p class="subtitle">面向低空消防巡检的多模态地面站系统<span class="subtitle-en">A Multimodal Ground Station System for Low-Altitude Fire Patrol</span></p>
@@ -153,29 +153,29 @@
           <div class="browser-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span>ground-station.demo / live view</span></div>
           <div class="hero-carousel" id="heroCarousel" tabindex="0" aria-label="国赛答辩 PPT 第 3 至 25 页轮播">
             <div class="hero-slides">
-              <button class="hero-slide active" type="button" data-full="assets/nationals/ppt-slides/slide-03.jpg" data-title="项目背景" data-caption="低空巡检场景的现实痛点与 Intel DK-2500 边缘智能底座。"><img src="assets/nationals/ppt-slides/slide-03.jpg" alt="PPT 第 3 页：项目背景" /></button>
-              <button class="hero-slide" type="button" data-full="assets/nationals/ppt-slides/slide-04.jpg" data-title="作品实现思路" data-caption="从模态输入、计算处理到任务执行的完整链路。"><img src="assets/nationals/ppt-slides/slide-04.jpg" alt="PPT 第 4 页：作品实现思路" loading="lazy" /></button>
-              <button class="hero-slide" type="button" data-full="assets/nationals/ppt-slides/slide-05.jpg" data-title="作品创新点" data-caption="围绕系统整体架构总结人机交互、感知、记录与安全创新。"><img src="assets/nationals/ppt-slides/slide-05.jpg" alt="PPT 第 5 页：作品创新点" loading="lazy" /></button>
-              <button class="hero-slide" type="button" data-full="assets/nationals/ppt-slides/slide-06.jpg" data-title="四个转变 + 一个底座" data-caption="用 DK-2500 边缘智能底座支撑自然交互、感知、数据闭环与安全。"><img src="assets/nationals/ppt-slides/slide-06.jpg" alt="PPT 第 6 页：四个转变加一个底座" loading="lazy" /></button>
-              <button class="hero-slide" type="button" data-full="assets/nationals/ppt-slides/slide-07.jpg" data-title="硬件总体方案" data-caption="DK-2500、无人机、图传、数传、摄像与输入设备的连接关系。"><img src="assets/nationals/ppt-slides/slide-07.jpg" alt="PPT 第 7 页：硬件总体方案" loading="lazy" /></button>
-              <button class="hero-slide" type="button" data-full="assets/nationals/ppt-slides/slide-08.jpg" data-title="软件总体架构" data-caption="多模态输入、目标识别、候选确认、任务执行与记录的工作流。"><img src="assets/nationals/ppt-slides/slide-08.jpg" alt="PPT 第 8 页：软件总体架构" loading="lazy" /></button>
-              <button class="hero-slide" type="button" data-full="assets/nationals/ppt-slides/slide-09.jpg" data-title="手势与视线输入" data-caption="手势确定任务组，视线在候选任务中完成选择。"><img src="assets/nationals/ppt-slides/slide-09.jpg" alt="PPT 第 9 页：手势与视线输入" loading="lazy" /></button>
-              <button class="hero-slide" type="button" data-full="assets/nationals/ppt-slides/slide-10.jpg" data-title="姿态自检" data-caption="现场转动无人机，对照地面站三维姿态模型验证数据。"><video muted loop playsinline preload="metadata" poster="assets/nationals/ppt-slides/slide-10.jpg" src="assets/nationals/ppt-slides/animated-slide-10.mp4" aria-label="PPT 第 10 页动态演示：姿态自检"></video></button>
-              <button class="hero-slide" type="button" data-full="assets/nationals/ppt-slides/slide-11.jpg" data-title="系统传感器自检" data-caption="检查飞控、IMU、高度、速度、电压与姿态曲线。"><img src="assets/nationals/ppt-slides/slide-11.jpg" alt="PPT 第 11 页：系统传感器自检" loading="lazy" /></button>
-              <button class="hero-slide" type="button" data-full="assets/nationals/ppt-slides/slide-12.jpg" data-title="摄像头自检" data-caption="检查无人机图传与地面站视频画面是否正常。"><img src="assets/nationals/ppt-slides/slide-12.jpg" alt="PPT 第 12 页：摄像头自检" loading="lazy" /></button>
-              <button class="hero-slide" type="button" data-full="assets/nationals/ppt-slides/slide-13.jpg" data-title="仿真飞行" data-caption="三维空间内预演无人机起飞、巡航、航点与运动轨迹。"><video muted loop playsinline preload="metadata" poster="assets/nationals/ppt-slides/slide-13.jpg" src="assets/nationals/ppt-slides/animated-slide-13.mp4" aria-label="PPT 第 13 页动态演示：仿真飞行"></video></button>
-              <button class="hero-slide" type="button" data-full="assets/nationals/ppt-slides/slide-14.jpg" data-title="六航点低空巡逻" data-caption="左侧选择预设航点，右侧展示无人机按规划路线执行。"><video muted loop playsinline preload="metadata" poster="assets/nationals/ppt-slides/slide-14.jpg" src="assets/nationals/ppt-slides/animated-slide-14.mp4" aria-label="PPT 第 14 页动态演示：六航点低空巡逻"></video></button>
-              <button class="hero-slide" type="button" data-full="assets/nationals/ppt-slides/slide-15.jpg" data-title="自由选点巡逻：路线规划" data-caption="在地图中自由选点并生成路线，随后交由无人机执行。"><video muted loop playsinline preload="metadata" poster="assets/nationals/ppt-slides/slide-15.jpg" src="assets/nationals/ppt-slides/animated-slide-15.mp4" aria-label="PPT 第 15 页动态演示：自由选点巡逻"></video></button>
-              <button class="hero-slide" type="button" data-full="assets/nationals/ppt-slides/slide-16.jpg" data-title="自由选点巡逻：实飞过程" data-caption="展示无人机起飞、巡航与降落的实际任务过程。"><video muted loop playsinline preload="metadata" poster="assets/nationals/ppt-slides/slide-16.jpg" src="assets/nationals/ppt-slides/animated-slide-16.mp4" aria-label="PPT 第 16 页动态演示：自由选点巡逻实飞过程"></video></button>
-              <button class="hero-slide" type="button" data-full="assets/nationals/ppt-slides/slide-17.jpg" data-title="无人机状态机流程" data-caption="展示开始、起飞、航点巡航、识别、返航与降落的状态转移。"><img src="assets/nationals/ppt-slides/slide-17.jpg" alt="PPT 第 17 页：无人机状态机流程" loading="lazy" /></button>
-              <button class="hero-slide" type="button" data-full="assets/nationals/ppt-slides/slide-18.jpg" data-title="无人机安全飞行管理" data-caption="安全命令确认、应急操作、状态传输与数传图传连接管理。"><img src="assets/nationals/ppt-slides/slide-18.jpg" alt="PPT 第 18 页：无人机安全飞行管理" loading="lazy" /></button>
-              <button class="hero-slide" type="button" data-full="assets/nationals/ppt-slides/slide-19.jpg" data-title="无人机视觉识别" data-caption="对火点、人脸和文字目标进行识别，并在地图中标注位置。"><img src="assets/nationals/ppt-slides/slide-19.jpg" alt="PPT 第 19 页：无人机视觉识别" loading="lazy" /></button>
-              <button class="hero-slide" type="button" data-full="assets/nationals/ppt-slides/slide-20.jpg" data-title="飞行日志生成与保存" data-caption="保存飞行日志、识别图像与数据文件，自动生成报告。"><img src="assets/nationals/ppt-slides/slide-20.jpg" alt="PPT 第 20 页：飞行日志生成与保存" loading="lazy" /></button>
-              <button class="hero-slide" type="button" data-full="assets/nationals/ppt-slides/slide-21.jpg" data-title="测试结果汇总（上）" data-caption="展示开发套件、姿态解构、路线规划与实时状态显示的完成情况。"><img src="assets/nationals/ppt-slides/slide-21.jpg" alt="PPT 第 21 页：测试结果汇总上" loading="lazy" /></button>
-              <button class="hero-slide" type="button" data-full="assets/nationals/ppt-slides/slide-22.jpg" data-title="测试结果汇总（下）" data-caption="展示目标识别、航迹地图、日志报告、安全指令与仿真的完成情况。"><img src="assets/nationals/ppt-slides/slide-22.jpg" alt="PPT 第 22 页：测试结果汇总下" loading="lazy" /></button>
-              <button class="hero-slide" type="button" data-full="assets/nationals/ppt-slides/slide-23.jpg" data-title="目标识别测试结果（上）" data-caption="汇总多组火点、人脸与文字识别用例及结果。"><img src="assets/nationals/ppt-slides/slide-23.jpg" alt="PPT 第 23 页：目标识别测试结果上" loading="lazy" /></button>
-              <button class="hero-slide" type="button" data-full="assets/nationals/ppt-slides/slide-24.jpg" data-title="目标识别测试结果（下）" data-caption="继续展示识别用例，并对照实际场地标记与测试目标。"><img src="assets/nationals/ppt-slides/slide-24.jpg" alt="PPT 第 24 页：目标识别测试结果下" loading="lazy" /></button>
-              <button class="hero-slide" type="button" data-full="assets/nationals/ppt-slides/slide-25.jpg" data-title="系统展望" data-caption="规划向更复杂的巡检任务、服务质量与数据统一性继续迭代。"><img src="assets/nationals/ppt-slides/slide-25.jpg" alt="PPT 第 25 页：系统展望" loading="lazy" /></button>
+              <button class="hero-slide active" type="button" data-full="assets/nationals/ppt-slides/slide-03.webp" data-title="项目背景" data-caption="低空巡检场景的现实痛点与 Intel DK-2500 边缘智能底座。"><img loading="lazy" decoding="async" src="assets/nationals/ppt-slides/slide-03.webp" alt="PPT 第 3 页：项目背景" /></button>
+              <button class="hero-slide" type="button" data-full="assets/nationals/ppt-slides/slide-04.webp" data-title="作品实现思路" data-caption="从模态输入、计算处理到任务执行的完整链路。"><img loading="lazy" decoding="async" data-src="assets/nationals/ppt-slides/slide-04.webp" alt="PPT 第 4 页：作品实现思路" /></button>
+              <button class="hero-slide" type="button" data-full="assets/nationals/ppt-slides/slide-05.webp" data-title="作品创新点" data-caption="围绕系统整体架构总结人机交互、感知、记录与安全创新。"><img loading="lazy" decoding="async" data-src="assets/nationals/ppt-slides/slide-05.webp" alt="PPT 第 5 页：作品创新点" /></button>
+              <button class="hero-slide" type="button" data-full="assets/nationals/ppt-slides/slide-06.webp" data-title="四个转变 + 一个底座" data-caption="用 DK-2500 边缘智能底座支撑自然交互、感知、数据闭环与安全。"><img loading="lazy" decoding="async" data-src="assets/nationals/ppt-slides/slide-06.webp" alt="PPT 第 6 页：四个转变加一个底座" /></button>
+              <button class="hero-slide" type="button" data-full="assets/nationals/ppt-slides/slide-07.webp" data-title="硬件总体方案" data-caption="DK-2500、无人机、图传、数传、摄像与输入设备的连接关系。"><img loading="lazy" decoding="async" data-src="assets/nationals/ppt-slides/slide-07.webp" alt="PPT 第 7 页：硬件总体方案" /></button>
+              <button class="hero-slide" type="button" data-full="assets/nationals/ppt-slides/slide-08.webp" data-title="软件总体架构" data-caption="多模态输入、目标识别、候选确认、任务执行与记录的工作流。"><img loading="lazy" decoding="async" data-src="assets/nationals/ppt-slides/slide-08.webp" alt="PPT 第 8 页：软件总体架构" /></button>
+              <button class="hero-slide" type="button" data-full="assets/nationals/ppt-slides/slide-09.webp" data-title="手势与视线输入" data-caption="手势确定任务组，视线在候选任务中完成选择。"><img loading="lazy" decoding="async" data-src="assets/nationals/ppt-slides/slide-09.webp" alt="PPT 第 9 页：手势与视线输入" /></button>
+              <button class="hero-slide" type="button" data-full="assets/nationals/ppt-slides/slide-10.webp" data-title="姿态自检" data-caption="现场转动无人机，对照地面站三维姿态模型验证数据。"><video muted loop playsinline preload="none" poster="assets/nationals/ppt-slides/slide-10.webp" data-src="assets/nationals/ppt-slides/animated-slide-10.mp4" aria-label="PPT 第 10 页动态演示：姿态自检"></video></button>
+              <button class="hero-slide" type="button" data-full="assets/nationals/ppt-slides/slide-11.webp" data-title="系统传感器自检" data-caption="检查飞控、IMU、高度、速度、电压与姿态曲线。"><img loading="lazy" decoding="async" data-src="assets/nationals/ppt-slides/slide-11.webp" alt="PPT 第 11 页：系统传感器自检" /></button>
+              <button class="hero-slide" type="button" data-full="assets/nationals/ppt-slides/slide-12.webp" data-title="摄像头自检" data-caption="检查无人机图传与地面站视频画面是否正常。"><img loading="lazy" decoding="async" data-src="assets/nationals/ppt-slides/slide-12.webp" alt="PPT 第 12 页：摄像头自检" /></button>
+              <button class="hero-slide" type="button" data-full="assets/nationals/ppt-slides/slide-13.webp" data-title="仿真飞行" data-caption="三维空间内预演无人机起飞、巡航、航点与运动轨迹。"><video muted loop playsinline preload="none" poster="assets/nationals/ppt-slides/slide-13.webp" data-src="assets/nationals/ppt-slides/animated-slide-13.mp4" aria-label="PPT 第 13 页动态演示：仿真飞行"></video></button>
+              <button class="hero-slide" type="button" data-full="assets/nationals/ppt-slides/slide-14.webp" data-title="六航点低空巡逻" data-caption="左侧选择预设航点，右侧展示无人机按规划路线执行。"><video muted loop playsinline preload="none" poster="assets/nationals/ppt-slides/slide-14.webp" data-src="assets/nationals/ppt-slides/animated-slide-14.mp4" aria-label="PPT 第 14 页动态演示：六航点低空巡逻"></video></button>
+              <button class="hero-slide" type="button" data-full="assets/nationals/ppt-slides/slide-15.webp" data-title="自由选点巡逻：路线规划" data-caption="在地图中自由选点并生成路线，随后交由无人机执行。"><video muted loop playsinline preload="none" poster="assets/nationals/ppt-slides/slide-15.webp" data-src="assets/nationals/ppt-slides/animated-slide-15.mp4" aria-label="PPT 第 15 页动态演示：自由选点巡逻"></video></button>
+              <button class="hero-slide" type="button" data-full="assets/nationals/ppt-slides/slide-16.webp" data-title="自由选点巡逻：实飞过程" data-caption="展示无人机起飞、巡航与降落的实际任务过程。"><video muted loop playsinline preload="none" poster="assets/nationals/ppt-slides/slide-16.webp" data-src="assets/nationals/ppt-slides/animated-slide-16.mp4" aria-label="PPT 第 16 页动态演示：自由选点巡逻实飞过程"></video></button>
+              <button class="hero-slide" type="button" data-full="assets/nationals/ppt-slides/slide-17.webp" data-title="无人机状态机流程" data-caption="展示开始、起飞、航点巡航、识别、返航与降落的状态转移。"><img loading="lazy" decoding="async" data-src="assets/nationals/ppt-slides/slide-17.webp" alt="PPT 第 17 页：无人机状态机流程" /></button>
+              <button class="hero-slide" type="button" data-full="assets/nationals/ppt-slides/slide-18.webp" data-title="无人机安全飞行管理" data-caption="安全命令确认、应急操作、状态传输与数传图传连接管理。"><img loading="lazy" decoding="async" data-src="assets/nationals/ppt-slides/slide-18.webp" alt="PPT 第 18 页：无人机安全飞行管理" /></button>
+              <button class="hero-slide" type="button" data-full="assets/nationals/ppt-slides/slide-19.webp" data-title="无人机视觉识别" data-caption="对火点、人脸和文字目标进行识别，并在地图中标注位置。"><img loading="lazy" decoding="async" data-src="assets/nationals/ppt-slides/slide-19.webp" alt="PPT 第 19 页：无人机视觉识别" /></button>
+              <button class="hero-slide" type="button" data-full="assets/nationals/ppt-slides/slide-20.webp" data-title="飞行日志生成与保存" data-caption="保存飞行日志、识别图像与数据文件，自动生成报告。"><img loading="lazy" decoding="async" data-src="assets/nationals/ppt-slides/slide-20.webp" alt="PPT 第 20 页：飞行日志生成与保存" /></button>
+              <button class="hero-slide" type="button" data-full="assets/nationals/ppt-slides/slide-21.webp" data-title="测试结果汇总（上）" data-caption="展示开发套件、姿态解构、路线规划与实时状态显示的完成情况。"><img loading="lazy" decoding="async" data-src="assets/nationals/ppt-slides/slide-21.webp" alt="PPT 第 21 页：测试结果汇总上" /></button>
+              <button class="hero-slide" type="button" data-full="assets/nationals/ppt-slides/slide-22.webp" data-title="测试结果汇总（下）" data-caption="展示目标识别、航迹地图、日志报告、安全指令与仿真的完成情况。"><img loading="lazy" decoding="async" data-src="assets/nationals/ppt-slides/slide-22.webp" alt="PPT 第 22 页：测试结果汇总下" /></button>
+              <button class="hero-slide" type="button" data-full="assets/nationals/ppt-slides/slide-23.webp" data-title="目标识别测试结果（上）" data-caption="汇总多组火点、人脸与文字识别用例及结果。"><img loading="lazy" decoding="async" data-src="assets/nationals/ppt-slides/slide-23.webp" alt="PPT 第 23 页：目标识别测试结果上" /></button>
+              <button class="hero-slide" type="button" data-full="assets/nationals/ppt-slides/slide-24.webp" data-title="目标识别测试结果（下）" data-caption="继续展示识别用例，并对照实际场地标记与测试目标。"><img loading="lazy" decoding="async" data-src="assets/nationals/ppt-slides/slide-24.webp" alt="PPT 第 24 页：目标识别测试结果下" /></button>
+              <button class="hero-slide" type="button" data-full="assets/nationals/ppt-slides/slide-25.jpg" data-title="系统展望" data-caption="规划向更复杂的巡检任务、服务质量与数据统一性继续迭代。"><img loading="lazy" decoding="async" data-src="assets/nationals/ppt-slides/slide-25.jpg" alt="PPT 第 25 页：系统展望" /></button>
             </div>
             <button class="carousel-arrow prev" type="button" aria-label="上一张">‹</button>
             <button class="carousel-arrow next" type="button" aria-label="下一张">›</button>
@@ -193,15 +193,15 @@
       <div class="section-title"><h2>系统组成<span class="section-en">System Components</span></h2></div>
       <div class="system-component-grid">
         <article class="paper system-component-card reveal">
-          <button class="system-component-media" type="button" data-full="assets/hardware/dk2500-cutout.png" data-title="Intel DK-2500 边缘智能板卡"><img src="assets/hardware/dk2500-cutout.png" alt="透明背景的 Intel DK-2500 边缘智能板卡" loading="lazy" /></button>
+          <button class="system-component-media" type="button" data-full="assets/hardware/dk2500-cutout.webp" data-title="Intel DK-2500 边缘智能板卡"><img loading="lazy" decoding="async" src="assets/hardware/dk2500-cutout.webp" alt="透明背景的 Intel DK-2500 边缘智能板卡" /></button>
           <div class="system-component-body"><h3>Intel DK-2500 边缘智能平台</h3><p>承载多模态交互、飞行任务管理、视觉识别与数据闭环。</p></div>
         </article>
         <article class="paper system-component-card reveal">
-          <button class="system-component-media" type="button" data-full="assets/hardware/drone-cutout.png" data-title="低空巡检无人机"><img src="assets/hardware/drone-cutout.png" alt="透明背景的低空巡检无人机" loading="lazy" /></button>
+          <button class="system-component-media" type="button" data-full="assets/hardware/drone-cutout.webp" data-title="低空巡检无人机"><img loading="lazy" decoding="async" src="assets/hardware/drone-cutout.webp" alt="透明背景的低空巡检无人机" /></button>
           <div class="system-component-body"><h3>低空巡检无人机</h3><p>集成飞控、相机、图传与数传设备，执行自主巡逻任务。</p></div>
         </article>
         <article class="paper system-component-card software reveal">
-          <button class="system-component-media" type="button" data-full="assets/nationals/ground-station-overview.png" data-title="地面站软件运行界面"><img src="assets/nationals/ground-station-overview.png" alt="地面站软件整体运行界面" loading="lazy" /></button>
+          <button class="system-component-media" type="button" data-full="assets/nationals/ground-station-overview.webp" data-title="地面站软件运行界面"><img loading="lazy" decoding="async" src="assets/nationals/ground-station-overview.webp" alt="地面站软件整体运行界面" /></button>
           <div class="system-component-body"><h3>地面站软件运行界面</h3><p>统一呈现状态、自检、任务地图、设备健康与安全控制。</p></div>
         </article>
       </div>
@@ -211,78 +211,78 @@
       <div class="section-title"><h2>功能演示<span class="section-en">Functional Demonstration</span></h2></div>
       <div class="demo-grid">
         <article class="paper demo-card">
-          <div class="demo-media"><video class="demo-loop" autoplay muted loop playsinline preload="metadata" tabindex="0" aria-label="系统自检动画" src="assets/nationals/demos/self-check.mp4"></video></div>
+          <div class="demo-media"><video class="demo-loop" muted loop playsinline preload="none" tabindex="0" aria-label="系统自检动画" data-src="assets/nationals/demos/self-check.mp4"></video></div>
           <div class="demo-body"><h3>姿态自检</h3><p>现场转动无人机并对照地面站三维模型，同步检查飞控、传感器、通信与姿态数据。</p></div>
         </article>
 
         <article class="paper demo-card wide">
           <div class="demo-media demo-duo">
-            <video class="demo-loop" autoplay muted loop playsinline preload="metadata" tabindex="0" aria-label="仿真起飞动画" src="assets/nationals/demos/simulation-takeoff.mp4"></video>
-            <video class="demo-loop" autoplay muted loop playsinline preload="metadata" tabindex="0" aria-label="仿真巡航动画" src="assets/nationals/demos/simulation-cruise.mp4"></video>
+            <video class="demo-loop" muted loop playsinline preload="none" tabindex="0" aria-label="仿真起飞动画" data-src="assets/nationals/demos/simulation-takeoff.mp4"></video>
+            <video class="demo-loop" muted loop playsinline preload="none" tabindex="0" aria-label="仿真巡航动画" data-src="assets/nationals/demos/simulation-cruise.mp4"></video>
           </div>
           <div class="demo-body"><h3>仿真飞行</h3><p>在三维场景中演示起飞、巡航与轨迹变化，用于任务预演和飞行状态验证。</p></div>
         </article>
 
         <article class="paper demo-card">
-          <button class="demo-media visual-button" type="button" data-full="assets/nationals/ground-station-video-feed.jpg" data-title="地面站图传与任务地图协同"><img src="assets/nationals/ground-station-video-feed.jpg" alt="地面站图传、实拍画面与任务地图同时运行" loading="lazy" /></button>
+          <button class="demo-media visual-button" type="button" data-full="assets/nationals/ground-station-video-feed.webp" data-title="地面站图传与任务地图协同"><img loading="lazy" decoding="async" src="assets/nationals/ground-station-video-feed.webp" alt="地面站图传、实拍画面与任务地图同时运行" /></button>
           <div class="demo-body"><h3>实时图传与任务地图</h3><p>地面站同步显示无人机实拍画面、路线、位置、状态和设备健康信息。</p></div>
         </article>
 
         <article class="paper demo-card wide">
           <div class="demo-media demo-duo">
-            <button class="visual-button" type="button" data-full="assets/nationals/six-waypoint-selection.png" data-title="六航点选点与路线确认"><img src="assets/nationals/six-waypoint-selection.png" alt="在地面站中选择六个预设航点" loading="lazy" /></button>
-            <video class="demo-loop" autoplay muted loop playsinline preload="metadata" tabindex="0" aria-label="无人机按六航点规划路线自主巡航" src="assets/nationals/demos/six-waypoint-patrol.mp4"></video>
+            <button class="visual-button" type="button" data-full="assets/nationals/six-waypoint-selection.webp" data-title="六航点选点与路线确认"><img loading="lazy" decoding="async" src="assets/nationals/six-waypoint-selection.webp" alt="在地面站中选择六个预设航点" /></button>
+            <video class="demo-loop" muted loop playsinline preload="none" tabindex="0" aria-label="无人机按六航点规划路线自主巡航" data-src="assets/nationals/demos/six-waypoint-patrol.mp4"></video>
           </div>
           <div class="demo-body"><h3>六航点低空巡逻</h3><p>左侧在地面站中选择预设航点并确认路线，右侧展示无人机按规划路线自主巡航。</p></div>
         </article>
 
         <article class="paper demo-card wide">
           <div class="demo-media demo-duo">
-            <video class="demo-loop" autoplay muted loop playsinline preload="metadata" tabindex="0" aria-label="自由选点路线规划动画" src="assets/nationals/demos/free-route-planning.mp4"></video>
-            <video class="demo-loop" autoplay muted loop playsinline preload="metadata" tabindex="0" aria-label="自由选点路线执行动画" src="assets/nationals/demos/free-route-execution.mp4"></video>
+            <video class="demo-loop" muted loop playsinline preload="none" tabindex="0" aria-label="自由选点路线规划动画" data-src="assets/nationals/demos/free-route-planning.mp4"></video>
+            <video class="demo-loop" muted loop playsinline preload="none" tabindex="0" aria-label="自由选点路线执行动画" data-src="assets/nationals/demos/free-route-execution.mp4"></video>
           </div>
           <div class="demo-body"><h3>自由选点巡逻</h3><p>在地图中选择巡逻点并生成路线，随后由无人机自动执行自定义巡检任务。</p></div>
         </article>
 
         <article class="paper demo-card">
-          <button class="demo-media visual-button" type="button" data-full="assets/nationals/ppt-slides/slide-18.jpg" data-title="PPT 第 18 页·无人机安全飞行管理"><img src="assets/nationals/ppt-slides/slide-18.jpg" alt="PPT 中的无人机安全飞行管理完整页" loading="lazy" /></button>
+          <button class="demo-media visual-button" type="button" data-full="assets/nationals/ppt-slides/slide-18.webp" data-title="PPT 第 18 页·无人机安全飞行管理"><img loading="lazy" decoding="async" src="assets/nationals/ppt-slides/slide-18.webp" alt="PPT 中的无人机安全飞行管理完整页" /></button>
           <div class="demo-body"><h3>无人机安全飞行管理</h3><p>安全命令中心统一处理重要指令确认、应急操作、飞行状态显示与数传图传连接。</p></div>
         </article>
 
         <article class="paper demo-card">
-          <button class="demo-media visual-button" type="button" data-full="assets/nationals/target-recognition-slide.png" data-title="火源、人脸与文字识别"><img src="assets/nationals/target-recognition-slide.png" alt="火源、人脸与文字目标识别演示" loading="lazy" /></button>
+          <button class="demo-media visual-button" type="button" data-full="assets/nationals/target-recognition-slide.webp" data-title="火源、人脸与文字识别"><img loading="lazy" decoding="async" src="assets/nationals/target-recognition-slide.webp" alt="火源、人脸与文字目标识别演示" /></button>
           <div class="demo-body"><h3>火源、人脸与文字识别</h3><p>飞行过程中逐帧识别三类目标，并将结果与任务地图和日志关联。</p></div>
         </article>
 
         <article class="paper demo-card wide">
           <div class="demo-media demo-triptych">
-            <video class="demo-loop" autoplay muted loop playsinline preload="metadata" tabindex="0" aria-label="无人机起飞实拍动画" src="assets/nationals/demos/flight-takeoff.mp4"></video>
-            <video class="demo-loop" autoplay muted loop playsinline preload="metadata" tabindex="0" aria-label="无人机巡航实拍动画" src="assets/nationals/demos/flight-cruise.mp4"></video>
-            <video class="demo-loop" autoplay muted loop playsinline preload="metadata" tabindex="0" aria-label="无人机降落实拍动画" src="assets/nationals/demos/flight-landing.mp4"></video>
+            <video class="demo-loop" muted loop playsinline preload="none" tabindex="0" aria-label="无人机起飞实拍动画" data-src="assets/nationals/demos/flight-takeoff.mp4"></video>
+            <video class="demo-loop" muted loop playsinline preload="none" tabindex="0" aria-label="无人机巡航实拍动画" data-src="assets/nationals/demos/flight-cruise.mp4"></video>
+            <video class="demo-loop" muted loop playsinline preload="none" tabindex="0" aria-label="无人机降落实拍动画" data-src="assets/nationals/demos/flight-landing.mp4"></video>
           </div>
           <div class="demo-body"><h3>起飞—巡航—降落实拍</h3><p>三段现场画面完整展示无人机任务执行过程和实际飞行效果。</p></div>
         </article>
 
         <article class="paper demo-card">
-          <button class="demo-media visual-button" type="button" data-full="assets/nationals/report-export-slide.png" data-title="飞行日志与报告导出"><img src="assets/nationals/report-export-slide.png" alt="飞行日志保存与报告导出功能" loading="lazy" /></button>
+          <button class="demo-media visual-button" type="button" data-full="assets/nationals/report-export-slide.webp" data-title="飞行日志与报告导出"><img loading="lazy" decoding="async" src="assets/nationals/report-export-slide.webp" alt="飞行日志保存与报告导出功能" /></button>
           <div class="demo-body"><h3>日志管理与报告导出</h3><p>航迹、状态、目标图片和事件记录统一保存，并生成可复盘的本地报告。</p></div>
         </article>
 
         <article class="paper demo-card">
-          <button class="demo-media visual-button" type="button" data-full="assets/nationals/project-demo-cover-v3.jpg" data-title="项目演示视频封面"><img src="assets/nationals/project-demo-cover-v3.jpg" alt="包含姿态自检、仿真飞行、巡逻、识别和日志的项目视频封面" loading="lazy" /></button>
+          <button class="demo-media visual-button" type="button" data-full="assets/nationals/project-demo-cover-v3.webp" data-title="项目演示视频封面"><img loading="lazy" decoding="async" src="assets/nationals/project-demo-cover-v3.webp" alt="包含姿态自检、仿真飞行、巡逻、识别和日志的项目视频封面" /></button>
           <div class="demo-body"><h3>项目演示视频封面</h3><p>补充仿真飞行关键帧，并概览自检、巡逻、安全、识别与日志功能。</p></div>
         </article>
 
         <article class="paper demo-card">
-          <button class="demo-media visual-button" type="button" data-full="assets/nationals/national-finals-poster.jpg" data-title="2026 英特尔杯国赛海报"><img src="assets/nationals/national-finals-poster.jpg" alt="2026 英特尔杯国赛项目海报" loading="lazy" /></button>
+          <button class="demo-media visual-button" type="button" data-full="assets/nationals/national-finals-poster.webp" data-title="2026 英特尔杯国赛海报"><img loading="lazy" decoding="async" src="assets/nationals/national-finals-poster.webp" alt="2026 英特尔杯国赛项目海报" /></button>
           <div class="demo-body"><h3>国赛项目海报</h3><p>系统定位、总体架构、核心功能和验证结果的正式展示版本。</p></div>
         </article>
 
         <article class="paper demo-card full">
           <div class="demo-image-row">
-            <button class="visual-button" type="button" data-full="assets/figures/fig_09.webp" data-title="手势识别示例"><img src="assets/figures/fig_09.webp" alt="手势识别示例" loading="lazy" /></button>
-            <button class="visual-button" type="button" data-full="assets/figures/fig_10.webp" data-title="手势与视线三卡片选择"><img src="assets/figures/fig_10.webp" alt="手势与视线三卡片选择" loading="lazy" /></button>
-            <button class="visual-button" type="button" data-full="assets/figures/fig_11.webp" data-title="高风险候选动作确认"><img src="assets/figures/fig_11.webp" alt="高风险候选动作确认" loading="lazy" /></button>
+            <button class="visual-button" type="button" data-full="assets/figures/fig_09.webp" data-title="手势识别示例"><img loading="lazy" decoding="async" src="assets/figures/fig_09.webp" alt="手势识别示例" /></button>
+            <button class="visual-button" type="button" data-full="assets/figures/fig_10.webp" data-title="手势与视线三卡片选择"><img loading="lazy" decoding="async" src="assets/figures/fig_10.webp" alt="手势与视线三卡片选择" /></button>
+            <button class="visual-button" type="button" data-full="assets/figures/fig_11.webp" data-title="高风险候选动作确认"><img loading="lazy" decoding="async" src="assets/figures/fig_11.webp" alt="高风险候选动作确认" /></button>
           </div>
           <div class="demo-body"><h3>手势、视线与安全确认</h3><p>三张实际开发截图展示多模态任务选择和高风险动作确认的完整交互过程。</p></div>
         </article>
@@ -299,7 +299,7 @@
           </div>
         </div>
         <div class="video-wrap">
-          <video id="demoVideo" controls preload="metadata" poster="assets/nationals/project-demo-cover-v3.jpg" src="assets/nationals/national-finals-demo.mp4">当前浏览器不支持直接播放视频。</video>
+          <video id="demoVideo" controls preload="none" poster="assets/nationals/project-demo-cover-v3.webp" data-src="assets/nationals/national-finals-demo.mp4">当前浏览器不支持直接播放视频。</video>
         </div>
         <div class="video-foot">
           <div><b id="videoTitle">2026 国赛新版 · 03:48</b><p id="videoDescription">覆盖参数自检、六航点巡逻、自由选点、安全飞行管理、火源/人脸/文字识别与日志报告导出。</p></div>
@@ -321,7 +321,7 @@
       <div class="section-title"><h2>闭环流程<span class="section-en">Closed-loop Pipeline</span></h2></div>
       <div class="pipeline-layout">
         <article class="paper pipeline-visual reveal">
-        <button class="visual-button" type="button" data-full="assets/nationals/four-shifts-one-foundation.png" data-title="四个转变 + 一个底座"><img src="assets/nationals/four-shifts-one-foundation.png" alt="四个转变加一个底座的系统闭环" loading="lazy" /></button>
+        <button class="visual-button" type="button" data-full="assets/nationals/four-shifts-one-foundation.webp" data-title="四个转变 + 一个底座"><img loading="lazy" decoding="async" src="assets/nationals/four-shifts-one-foundation.webp" alt="四个转变加一个底座的系统闭环" /></button>
         <div class="visual-body"><h3>四个转变 + 一个底座</h3><p>自然交互、任务级管理、自主安全飞行、全过程记录都汇聚到 DK-2500 边缘智能平台。</p></div>
         </article>
         <div class="stage-grid">
@@ -337,9 +337,9 @@
     <section id="system" class="container">
       <div class="section-title"><h2>系统架构<span class="section-en">System Architecture</span></h2></div>
       <div class="architecture-grid">
-        <article class="paper architecture-card primary reveal"><button class="visual-button" type="button" data-full="assets/nationals/system-architecture.jpg" data-title="系统整体架构图"><img src="assets/nationals/system-architecture.jpg" alt="系统整体架构图" loading="lazy" /></button><div class="visual-body"><h3>系统整体架构图</h3><p>多模态输入进入 Intel 板卡地面站，外设、图传与无人机飞控在统一任务链路中协同。</p></div></article>
-        <article class="paper architecture-card reveal"><button class="visual-button" type="button" data-full="assets/nationals/hardware-architecture.png" data-title="基于 DK-2500 的无人机空地双链路架构"><img src="assets/nationals/hardware-architecture.png" alt="基于 DK-2500 的无人机空地双链路硬件架构" loading="lazy" /></button><div class="visual-body"><h3>硬件总体架构</h3><p>DK-2500、无人机、图传、数传、飞控与摄像设备构成空地双链路。</p></div></article>
-        <article class="paper architecture-card reveal"><button class="visual-button" type="button" data-full="assets/nationals/software-architecture.png" data-title="软件总体架构与系统工作流程"><img src="assets/nationals/software-architecture.png" alt="软件总体架构与系统工作流程" loading="lazy" /></button><div class="visual-body"><h3>软件总体架构</h3><p>参数自检、多模态交互、仿真飞行、自主巡逻、安全管理、目标识别与日志导出组成完整软件工作流。</p></div></article>
+        <article class="paper architecture-card primary reveal"><button class="visual-button" type="button" data-full="assets/nationals/system-architecture.webp" data-title="系统整体架构图"><img loading="lazy" decoding="async" src="assets/nationals/system-architecture.webp" alt="系统整体架构图" /></button><div class="visual-body"><h3>系统整体架构图</h3><p>多模态输入进入 Intel 板卡地面站，外设、图传与无人机飞控在统一任务链路中协同。</p></div></article>
+        <article class="paper architecture-card reveal"><button class="visual-button" type="button" data-full="assets/nationals/hardware-architecture.webp" data-title="基于 DK-2500 的无人机空地双链路架构"><img loading="lazy" decoding="async" src="assets/nationals/hardware-architecture.webp" alt="基于 DK-2500 的无人机空地双链路硬件架构" /></button><div class="visual-body"><h3>硬件总体架构</h3><p>DK-2500、无人机、图传、数传、飞控与摄像设备构成空地双链路。</p></div></article>
+        <article class="paper architecture-card reveal"><button class="visual-button" type="button" data-full="assets/nationals/software-architecture.webp" data-title="软件总体架构与系统工作流程"><img loading="lazy" decoding="async" src="assets/nationals/software-architecture.webp" alt="软件总体架构与系统工作流程" /></button><div class="visual-body"><h3>软件总体架构</h3><p>参数自检、多模态交互、仿真飞行、自主巡逻、安全管理、目标识别与日志导出组成完整软件工作流。</p></div></article>
       </div>
     </section>
 
@@ -379,21 +379,21 @@
         </table>
       </div>
       <div class="result-gallery">
-        <article class="paper reveal"><button class="visual-button" type="button" data-full="assets/nationals/test-summary-slide.png" data-title="国赛功能演示汇总"><img src="assets/nationals/test-summary-slide.png" alt="国赛功能演示汇总表" loading="lazy" /></button><div class="visual-body"><h3>功能演示汇总</h3><p>开发套件运行、姿态解构、路线规划与飞行状态显示均完成。</p></div></article>
-        <article class="paper reveal"><button class="visual-button" type="button" data-full="assets/nationals/test-cases-slide.png" data-title="国赛功能演示用例"><img src="assets/nationals/test-cases-slide.png" alt="国赛功能演示用例表" loading="lazy" /></button><div class="visual-body"><h3>功能演示用例</h3><p>目标识别、航迹标识、事件日志、安全指令与空间运动仿真均完成。</p></div></article>
-        <article class="paper reveal"><button class="visual-button" type="button" data-full="assets/nationals/recognition-results-a.png" data-title="目标识别测试结果 A"><img src="assets/nationals/recognition-results-a.png" alt="目标识别测试结果前半部分" loading="lazy" /></button><div class="visual-body"><h3>目标识别测试 · A</h3><p>火源、人脸与文字识别用例按统一记录格式完成验证。</p></div></article>
-        <article class="paper reveal"><button class="visual-button" type="button" data-full="assets/nationals/recognition-results-b.png" data-title="目标识别测试结果 B"><img src="assets/nationals/recognition-results-b.png" alt="目标识别测试结果后半部分" loading="lazy" /></button><div class="visual-body"><h3>目标识别测试 · B</h3><p>识别结果与地图位置、报告文件和现场目标完成对应。</p></div></article>
+        <article class="paper reveal"><button class="visual-button" type="button" data-full="assets/nationals/test-summary-slide.webp" data-title="国赛功能演示汇总"><img loading="lazy" decoding="async" src="assets/nationals/test-summary-slide.webp" alt="国赛功能演示汇总表" /></button><div class="visual-body"><h3>功能演示汇总</h3><p>开发套件运行、姿态解构、路线规划与飞行状态显示均完成。</p></div></article>
+        <article class="paper reveal"><button class="visual-button" type="button" data-full="assets/nationals/test-cases-slide.webp" data-title="国赛功能演示用例"><img loading="lazy" decoding="async" src="assets/nationals/test-cases-slide.webp" alt="国赛功能演示用例表" /></button><div class="visual-body"><h3>功能演示用例</h3><p>目标识别、航迹标识、事件日志、安全指令与空间运动仿真均完成。</p></div></article>
+        <article class="paper reveal"><button class="visual-button" type="button" data-full="assets/nationals/recognition-results-a.webp" data-title="目标识别测试结果 A"><img loading="lazy" decoding="async" src="assets/nationals/recognition-results-a.webp" alt="目标识别测试结果前半部分" /></button><div class="visual-body"><h3>目标识别测试 · A</h3><p>火源、人脸与文字识别用例按统一记录格式完成验证。</p></div></article>
+        <article class="paper reveal"><button class="visual-button" type="button" data-full="assets/nationals/recognition-results-b.webp" data-title="目标识别测试结果 B"><img loading="lazy" decoding="async" src="assets/nationals/recognition-results-b.webp" alt="目标识别测试结果后半部分" /></button><div class="visual-body"><h3>目标识别测试 · B</h3><p>识别结果与地图位置、报告文件和现场目标完成对应。</p></div></article>
       </div>
     </section>
 
     <section id="finals" class="container">
       <div class="section-title"><h2>国赛海报与团队现场<span class="section-en">National Finals</span></h2></div>
       <div class="finals-grid">
-        <article class="paper poster-card reveal"><button class="visual-button" type="button" data-full="assets/nationals/national-finals-poster.jpg" data-title="2026 英特尔杯国赛海报"><img src="assets/nationals/national-finals-poster.jpg" alt="2026 英特尔杯国赛项目海报" loading="lazy" /></button><div class="visual-body"><h3>国赛项目海报</h3><p>系统定位、总体架构、核心功能与验证结果的正式展示版本。</p></div></article>
+        <article class="paper poster-card reveal"><button class="visual-button" type="button" data-full="assets/nationals/national-finals-poster.webp" data-title="2026 英特尔杯国赛海报"><img loading="lazy" decoding="async" src="assets/nationals/national-finals-poster.webp" alt="2026 英特尔杯国赛项目海报" /></button><div class="visual-body"><h3>国赛项目海报</h3><p>系统定位、总体架构、核心功能与验证结果的正式展示版本。</p></div></article>
         <article class="paper team-gallery reveal">
-          <button class="visual-button team-main" type="button" data-full="assets/nationals/team-at-national-finals-2.jpg" data-title="团队与无人机系统合照"><img src="assets/nationals/team-at-national-finals-2.jpg" alt="团队成员与无人机系统国赛现场合照" loading="lazy" /></button>
-          <button class="visual-button" type="button" data-full="assets/nationals/team-at-national-finals-1.jpg" data-title="团队在国赛调试现场"><img src="assets/nationals/team-at-national-finals-1.jpg" alt="团队在国赛调试现场合照" loading="lazy" /></button>
-          <button class="visual-button" type="button" data-full="assets/nationals/ground-station-overview.png" data-title="国赛现场使用的新版地面站"><img src="assets/nationals/ground-station-overview.png" alt="国赛现场使用的新版地面站界面" loading="lazy" /></button>
+          <button class="visual-button team-main" type="button" data-full="assets/nationals/team-at-national-finals-2.webp" data-title="团队与无人机系统合照"><img loading="lazy" decoding="async" src="assets/nationals/team-at-national-finals-2.webp" alt="团队成员与无人机系统国赛现场合照" /></button>
+          <button class="visual-button" type="button" data-full="assets/nationals/team-at-national-finals-1.webp" data-title="团队在国赛调试现场"><img loading="lazy" decoding="async" src="assets/nationals/team-at-national-finals-1.webp" alt="团队在国赛调试现场合照" /></button>
+          <button class="visual-button" type="button" data-full="assets/nationals/ground-station-overview.webp" data-title="国赛现场使用的新版地面站"><img loading="lazy" decoding="async" src="assets/nationals/ground-station-overview.webp" alt="国赛现场使用的新版地面站界面" /></button>
         </article>
         <div class="finals-note"><b>从软件到现场：</b>团队完成地面站、飞行端、图传/数传、多模态交互、目标识别、仿真规划与报告导出的集成，并在全国评审现场完成联调与展示。</div>
       </div>
@@ -417,7 +417,7 @@
   </main>
 
   <footer class="container">
-    <div class="footer-title"><img src="assets/hust_logo.png" alt="华中科技大学" />智驭低空枢纽 · Low-Altitude Intelligent Hub</div>
+    <div class="footer-title"><img loading="lazy" decoding="async" src="assets/hust_logo.png" alt="华中科技大学" />智驭低空枢纽 · Low-Altitude Intelligent Hub</div>
     <div>2026 Intel Cup National Finals showcase · <a href="https://github.com/Qiushi0919/IntelCup-2026" target="_blank" rel="noopener">Qiushi0919/IntelCup-2026</a></div>
   </footer>
 
@@ -425,7 +425,7 @@
   <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="图片预览">
     <div class="lightbox-inner">
       <div class="lightbox-head"><span id="lightboxTitle">图片预览</span><button class="lightbox-close" type="button" aria-label="关闭图片预览">×</button></div>
-      <img id="lightboxImg" alt="放大预览" />
+      <img loading="lazy" decoding="async" id="lightboxImg" alt="放大预览" />
     </div>
   </div>
 
@@ -434,7 +434,7 @@
     const videoVersions = {
       national: {
         src: 'assets/nationals/national-finals-demo.mp4',
-        poster: 'assets/nationals/project-demo-cover-v3.jpg',
+        poster: 'assets/nationals/project-demo-cover-v3.webp',
         title: '2026 国赛新版 · 03:48',
         description: '覆盖参数自检、六航点巡逻、自由选点、安全飞行管理、火源/人脸/文字识别与日志报告导出。'
       },
@@ -446,10 +446,31 @@
       }
     };
 
+    const hydrateVideo = (media, preload = 'auto') => {
+      const source = media.dataset.src;
+      if (!source) return;
+      media.preload = preload;
+      media.src = source;
+      media.removeAttribute('data-src');
+      media.load();
+    };
+
     const video = document.getElementById('demoVideo');
     const videoTitle = document.getElementById('videoTitle');
     const videoDescription = document.getElementById('videoDescription');
     const videoDirectLink = document.getElementById('videoDirectLink');
+    const warmDemoVideo = () => hydrateVideo(video, 'metadata');
+    ['pointerenter', 'pointerdown', 'focus', 'touchstart'].forEach(eventName => {
+      video.addEventListener(eventName, warmDemoVideo, {once:true, passive:true});
+    });
+    if ('IntersectionObserver' in window) {
+      const demoVideoObserver = new IntersectionObserver(entries => {
+        if (!entries.some(entry => entry.isIntersecting)) return;
+        warmDemoVideo();
+        demoVideoObserver.disconnect();
+      }, {rootMargin:'600px 0px'});
+      demoVideoObserver.observe(video);
+    }
     document.querySelectorAll('.video-tab').forEach(tab => tab.addEventListener('click', () => {
       const selected = videoVersions[tab.dataset.version];
       if (!selected || tab.getAttribute('aria-selected') === 'true') return;
@@ -495,13 +516,28 @@
     let heroIndex = 0;
     let heroTimer = null;
     let heroHoverPaused = false;
+    const hydrateHeroSlide = (slide, priority = 'high') => {
+      const slideImage = slide.querySelector('img[data-src]');
+      if (slideImage) {
+        slideImage.fetchPriority = priority;
+        slideImage.src = slideImage.dataset.src;
+        slideImage.removeAttribute('data-src');
+      }
+      const slideVideo = slide.querySelector('video[data-src]');
+      if (slideVideo && !reduceMotion) hydrateVideo(slideVideo, priority === 'low' ? 'metadata' : 'auto');
+    };
     const showHeroSlide = index => {
       heroIndex = (index + heroSlides.length) % heroSlides.length;
+      hydrateHeroSlide(heroSlides[heroIndex]);
+      hydrateHeroSlide(heroSlides[(heroIndex + 1) % heroSlides.length], 'low');
       heroSlides.forEach((slide, i) => {
         slide.classList.toggle('active', i === heroIndex);
         const slideVideo = slide.querySelector('video');
         if (!slideVideo) return;
-        if (i === heroIndex && !reduceMotion) slideVideo.play().catch(() => {});
+        if (i === heroIndex && !reduceMotion) {
+          hydrateVideo(slideVideo);
+          slideVideo.play().catch(() => {});
+        }
         else slideVideo.pause();
       });
       const slide = heroSlides[heroIndex];
@@ -539,11 +575,12 @@
     showHeroSlide(0);
     if (!reduceMotion) startHero();
 
-    document.querySelectorAll('.demo-loop').forEach(media => {
-      if (reduceMotion) media.pause();
+    const demoLoops = [...document.querySelectorAll('.demo-loop')];
+    demoLoops.forEach(media => {
       const togglePlayback = () => {
+        hydrateVideo(media);
         if (media.paused) {
-          media.play();
+          media.play().catch(() => {});
           media.classList.remove('paused');
         } else {
           media.pause();
@@ -558,6 +595,22 @@
         }
       });
     });
+    if ('IntersectionObserver' in window) {
+      const demoLoopObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          const media = entry.target;
+          if (entry.isIntersecting) {
+            hydrateVideo(media);
+            if (!reduceMotion && !media.classList.contains('paused')) media.play().catch(() => {});
+          } else {
+            media.pause();
+          }
+        });
+      }, {rootMargin:'320px 0px', threshold:.01});
+      demoLoops.forEach(media => demoLoopObserver.observe(media));
+    } else {
+      demoLoops.forEach(media => hydrateVideo(media, 'metadata'));
+    }
 
     const copyButton = document.getElementById('copyBibtex');
     copyButton.addEventListener('click', async () => {
