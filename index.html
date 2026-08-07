@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="谢秋实的竞赛与科研项目作品集" />
+  <title>谢秋实 · 作品集项目</title>
+  <style>
+    :root{--blue:#1772d0;--navy:#162a3a;--muted:#5f7180;--line:#e2e7eb;--paper:#fff;--bg:#fff}
+    *{box-sizing:border-box}html{color-scheme:light}body{margin:0;background:var(--bg);color:#1d2d3a;font-family:Lato,Arial,"PingFang SC","Microsoft YaHei",sans-serif;font-size:14px}
+    a{color:var(--blue);text-decoration:none}a:hover{color:#f09228;text-decoration:none}
+    .page{width:min(860px,calc(100% - 96px));margin:0 auto;padding:42px 0 72px}
+    .page-head{margin-bottom:24px}.page-head small{display:block;color:#7d91a2;font-size:11px;font-weight:760;letter-spacing:.08em}.page-head h1{margin:6px 0 7px;font-size:32px;letter-spacing:-.035em}.page-head p{margin:0;color:var(--muted);font-size:14px}
+    .project-card{position:relative;display:grid;grid-template-columns:240px minmax(0,1fr);column-gap:28px;row-gap:14px;align-items:center;padding:24px 16px;background:var(--paper);border:0;border-bottom:1px solid var(--line);border-radius:0;box-shadow:none}
+    .project-topline{grid-column:1/-1;display:flex;align-items:flex-start;justify-content:space-between;gap:10px 18px;flex-wrap:wrap}
+    .cover-column{display:grid;gap:12px;align-self:center}.cover-trigger{position:relative;display:block;width:100%;aspect-ratio:1;padding:8px;overflow:hidden;border:1px solid var(--line);border-radius:3px;background:#fff;cursor:zoom-in;box-shadow:none}
+    .cover-trigger video{width:100%;height:100%;display:block;object-fit:cover;pointer-events:none}
+    .project-logos{display:flex;flex:0 1 auto;align-items:center;justify-content:flex-end;gap:10px;flex-wrap:wrap;margin-left:auto}.project-logos img{display:block;object-fit:contain}.project-logos .hust-mark{width:118px;height:32px}.project-logos .intel-mark{width:40px;height:38px}.project-logos .nuedc-mark{width:42px;height:38px}.project-logos .embedded-contest-mark{width:58px;height:42px}.project-logos .renesas-mark{width:84px;height:48px}.embedded-card .project-logos{gap:0}.embedded-card .project-logos .logo-tip:nth-child(2){margin-left:-7px}.embedded-card .project-logos .logo-tip:nth-child(3){margin-left:-12px}
+    .logo-tip{position:relative;z-index:8;display:inline-flex;align-items:center;justify-content:center;outline:none}.logo-tip::after{content:attr(data-label);position:absolute;left:50%;top:calc(100% + 6px);z-index:30;max-width:260px;padding:5px 8px;border:1px solid #cfd5da;background:#fff;color:#303b43;box-shadow:0 3px 9px rgba(22,42,58,.16);font-size:12px;font-weight:400;line-height:1.3;white-space:nowrap;opacity:0;visibility:hidden;pointer-events:none;transform:translate(-50%,0)}.logo-tip:hover::after,.logo-tip:focus::after{opacity:1;visibility:visible}.spie-wordmark{display:inline-block;color:#ed1c24;font-family:Arial,sans-serif;font-size:18px;font-weight:900;letter-spacing:-.04em;line-height:1}.renesas-wordmark{display:inline-block;color:#542881;font-family:Arial,sans-serif;font-size:14px;font-weight:800;letter-spacing:.02em;line-height:1}
+    .visual-tip{position:relative;z-index:7;outline:none}.visual-tip::after{content:attr(data-label);position:absolute;left:calc(100% + 8px);top:50%;z-index:40;padding:5px 8px;border:1px solid #cfd5da;background:#fff;color:#303b43;box-shadow:0 3px 9px rgba(22,42,58,.16);font-size:12px;font-weight:400;line-height:1.3;white-space:nowrap;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(-50%)}.visual-tip:hover,.visual-tip:focus,.visual-tip:focus-within{z-index:50}.visual-tip:hover::after,.visual-tip:focus::after,.visual-tip:focus-within::after{opacity:1;visibility:visible}
+    .project-actions{display:flex;align-items:center;justify-content:space-between;gap:12px 24px;flex-wrap:wrap}.hardware-link{position:relative;display:block;width:100%;height:100%}.hardware-zoom{position:absolute;right:0;top:0;width:17px;height:17px;border:1px solid #ccd7df;border-radius:50%;background:#fff;color:#526b7d;font-size:10px;line-height:15px;text-align:center}
+    .project-copy{align-self:start;margin-top:0}.project-copy.has-signature{position:relative;min-height:118px;padding-right:164px}.project-kicker,.vase-kicker{display:block;flex:1 1 360px;max-width:none;padding:0;border:0;border-radius:0;background:none;font-size:13px;font-weight:700;letter-spacing:.025em;line-height:1.4}.project-kicker{color:#60798d}.project-copy h2{margin:0;color:var(--blue);font-size:24px;font-weight:700;line-height:1.22;letter-spacing:0}.project-copy h2 .title-link{color:inherit;transition:color .16s ease}.project-copy h2 .title-link:hover,.project-copy h2 .title-link:focus-visible{color:#f09228}.project-meta,.vase-meta{margin:9px 0 12px;color:#314e64}.project-meta p,.vase-meta p{margin:0;font-weight:700;line-height:1.5}.project-meta p:first-child,.vase-meta p:first-child{font-size:14px}.project-meta p:last-child,.vase-meta p:last-child{font-size:13px}.project-bottom{max-width:720px}.project-copy .summary{max-width:700px;margin:0 0 13px;color:#364f63;font-size:14px;line-height:1.55}
+    .signature-visuals{position:absolute;right:0;top:0;width:146px;display:grid;align-items:center;justify-items:stretch;gap:6px}.signature-visuals figure{min-width:0;margin:0}.signature-visuals img{display:block;width:100%;height:100%;object-fit:contain}.signature-hardware{grid-template-columns:1fr;grid-template-rows:auto auto;align-items:start;top:0}.signature-hardware figure{height:auto}.signature-hardware img{width:100%;height:auto}.intel-copy.has-signature{min-height:200px}.signature-stack{grid-template-rows:auto auto;align-items:start}.signature-stack figure{height:auto;overflow:visible}.signature-stack .photo img,.signature-stack .interface img{width:100%;height:auto;padding:0;object-fit:contain}.nuedc-copy.has-signature{min-height:210px}.signature-vase{right:24px;width:78px}.signature-vase figure{height:112px}.signature-photo{top:8px}.signature-photo figure{height:100px;overflow:visible}.signature-photo img{object-fit:contain}
+    .links{display:flex;flex-wrap:wrap;gap:15px;font-size:14px;font-weight:700}
+    .vase-card{margin-top:10px;padding:24px 16px}.vase-logos{display:flex;flex:0 1 auto;align-items:center;justify-content:flex-end;gap:6px;flex-wrap:wrap;margin-left:auto}.vase-logos img{display:block;width:auto;max-width:56px;height:25px;object-fit:contain}.vase-logos .wide{max-width:72px}.vase-logos .seal{width:25px}.vase-cover-trigger{position:relative;display:block;width:100%;aspect-ratio:1;padding:8px;overflow:hidden;border:1px solid var(--line);border-radius:3px;background:#fff;cursor:zoom-in;box-shadow:none}.vase-slide{position:absolute;inset:8px;display:grid;grid-template-rows:repeat(2,minmax(0,1fr));gap:6px;opacity:0;animation:vase-cycle 4.5s ease-in-out infinite both;will-change:opacity}.vase-slide img{display:block;width:100%;max-width:100%;height:100%;min-width:0;min-height:0;object-fit:contain;border:0;border-radius:0;background:#fff}.vase-slide:nth-child(1){animation-delay:-.18s}.vase-slide:nth-child(2){animation-delay:1.32s}.vase-slide:nth-child(3){animation-delay:2.82s}.vase-copy{align-self:start;margin-top:0;padding:0 0 3px}.vase-copy.has-signature{padding-right:164px}.vase-kicker{color:#58747a}.vase-copy h2{margin:0 0 1px;color:#177276;font-size:24px;font-weight:700;line-height:1.15;letter-spacing:0}.vase-subtitle{margin:0;color:#667987;font-size:14px;font-weight:400}.vase-meta{color:#314e64}.vase-summary{max-width:720px;margin:0 0 13px;color:#364f63;font-size:14px;line-height:1.55}
+    .nuedc-card{margin-top:10px}.nuedc-cover-trigger{position:relative;display:block;width:100%;aspect-ratio:1;padding:8px;overflow:hidden;border:1px solid var(--line);border-radius:3px;background:#fff;cursor:zoom-in;box-shadow:none}.nuedc-cover-grid{display:grid;width:100%;height:100%;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:55% 45%;gap:5px}.nuedc-cover-grid figure{position:relative;min-width:0;min-height:0;margin:0;overflow:hidden;background:#f4f6f7}.nuedc-cover-grid figure:first-child{grid-column:1/-1}.nuedc-cover-grid img{display:block;width:100%;height:100%;object-fit:cover}.nuedc-cover-grid .diagram img{padding:6px;object-fit:contain;background:#fff}.nuedc-copy h2{color:#195e9b}.nuedc-note{margin:0 0 13px;padding-left:10px;border-left:2px solid #dca72d;color:#536777;font-size:13px;line-height:1.55}.nuedc-feature-overlay{width:min(1000px,78vw);background:rgba(252,252,251,.99)}.nuedc-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.nuedc-figure{display:grid;grid-template-rows:minmax(0,1fr) auto;min-height:0;margin:0;overflow:hidden;border:1px solid #dce3e7;border-radius:3px;background:#fff}.nuedc-figure.wide{grid-column:span 2}.nuedc-figure img{display:block;width:100%;height:152px;padding:7px;object-fit:contain;background:#fff}.nuedc-figure.photo img{padding:0;object-fit:cover}.nuedc-figure figcaption{padding:7px 9px 8px;border-top:1px solid #e8ecef;color:#31546e;font-size:11px;font-weight:700;line-height:1.35}.nuedc-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;margin-top:10px;background:#e1e6e9;border:1px solid #e1e6e9}.nuedc-metrics span{padding:8px 9px;background:#fff;color:#5a6d7c;font-size:10px;line-height:1.3}.nuedc-metrics strong{display:block;margin-bottom:2px;color:#174d75;font-size:14px}
+    @keyframes vase-cycle{0%{opacity:0}4%,29.33%{opacity:1}33.33%,100%{opacity:0}}
+    .vase-slide,.nuedc-cover-slide{animation:cover-cycle 7.5s ease-in-out infinite both;will-change:opacity}.vase-slide:nth-child(1),.nuedc-cover-slide:nth-child(1){animation-delay:-.1s}.vase-slide:nth-child(2),.nuedc-cover-slide:nth-child(2){animation-delay:2.4s}.vase-slide:nth-child(3),.nuedc-cover-slide:nth-child(3){animation-delay:4.9s}.nuedc-cover-slide{position:absolute;inset:8px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:55% 45%;gap:5px;opacity:0}.nuedc-cover-slide figure{position:relative;min-width:0;min-height:0;margin:0;overflow:hidden;background:#f4f6f7}.nuedc-cover-slide figure:first-child{grid-column:1/-1}.nuedc-cover-slide img{display:block;width:100%;height:100%;object-fit:cover}.nuedc-cover-slide .diagram img,.nuedc-cover-slide .portrait img{padding:5px;object-fit:contain;background:#fff}@keyframes cover-cycle{0%{opacity:0}3%,30.33%{opacity:1}33.33%,100%{opacity:0}}
+    .eecs-card{margin-top:10px}.eecs-cover-trigger{position:relative;display:block;width:100%;aspect-ratio:1;padding:8px;overflow:hidden;border:1px solid var(--line);border-radius:3px;background:#fff;cursor:zoom-in;box-shadow:none}.eecs-slide{position:absolute;inset:8px;display:grid;gap:6px;opacity:0;animation:cover-cycle 7.5s ease-in-out infinite both;will-change:opacity}.eecs-slide:nth-child(1){animation-delay:-.1s}.eecs-slide:nth-child(2){animation-delay:2.4s}.eecs-slide:nth-child(3){animation-delay:4.9s}.eecs-slide.double{grid-template-rows:repeat(2,minmax(0,1fr))}.eecs-slide img{display:block;width:100%;height:100%;min-width:0;min-height:0;padding:4px;object-fit:contain;background:#fff}.eecs-copy h2{color:#9e312e;font-size:21px}.eecs-subtitle{margin:4px 0 0;color:#667987;font-size:13px;line-height:1.4}.eecs-feature-overlay{width:min(940px,76vw);background:rgba(252,251,250,.99)}.eecs-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.eecs-figure{display:grid;grid-template-rows:minmax(0,1fr) auto;min-height:0;margin:0;overflow:hidden;border:1px solid #e1dfdc;background:#fff}.eecs-figure img{display:block;width:100%;height:225px;padding:8px;object-fit:contain;background:#fff}.eecs-figure figcaption{padding:8px 9px 9px;border-top:1px solid #ece9e6;color:#654745;font-size:12px;font-weight:700;line-height:1.35}.eecs-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;margin-top:10px;background:#e4e0de;border:1px solid #e4e0de}.eecs-metrics span{padding:8px 9px;background:#fff;color:#6d625d;font-size:10px;line-height:1.3}.eecs-metrics strong{display:block;margin-bottom:2px;color:#9e312e;font-size:14px}
+    .embedded-card{margin-top:10px}.embedded-cover-trigger{position:relative;display:block;width:100%;aspect-ratio:1;padding:8px;overflow:hidden;border:1px solid var(--line);border-radius:3px;background:#fff;cursor:zoom-in;box-shadow:none}.embedded-cover-slide{position:absolute;inset:8px;display:grid;gap:5px;opacity:0;animation:cover-cycle 7.5s ease-in-out infinite both;will-change:opacity}.embedded-cover-slide:nth-child(1){animation-delay:-.1s}.embedded-cover-slide:nth-child(2){animation-delay:2.4s}.embedded-cover-slide:nth-child(3){animation-delay:4.9s}.embedded-cover-slide.single{grid-template-columns:1fr}.embedded-cover-slide.pair{grid-template-rows:repeat(2,minmax(0,1fr))}.embedded-cover-slide.data{grid-template-columns:42% 58%;grid-template-rows:repeat(2,minmax(0,1fr))}.embedded-cover-slide img{display:block;width:100%;height:100%;min-width:0;min-height:0;object-fit:contain;background:#fff}.embedded-cover-slide.single img,.embedded-cover-slide.pair img{object-fit:cover}.embedded-cover-slide.data img:first-child{grid-row:1/-1}.embedded-copy h2{color:#613b88;font-size:21px}.embedded-feature-overlay{width:min(1000px,78vw);background:rgba(252,251,253,.99)}.embedded-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.embedded-figure{display:grid;grid-template-rows:minmax(0,1fr) auto;min-height:0;margin:0;overflow:hidden;border:1px solid #e2dce8;background:#fff}.embedded-figure.wide{grid-column:span 2}.embedded-figure img{display:block;width:100%;height:160px;padding:7px;object-fit:contain;background:#fff}.embedded-figure.photo img{padding:0;object-fit:cover}.embedded-figure.finals-showcase img{height:auto;aspect-ratio:1600/1026;object-fit:contain}.embedded-figure.portrait img{object-fit:contain;background:#111}.embedded-figure figcaption{padding:8px 9px 9px;border-top:1px solid #eee8f1;color:#553c69;font-size:11px;font-weight:700;line-height:1.35}.embedded-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;margin-top:10px;background:#e6e0ea;border:1px solid #e6e0ea}.embedded-metrics span{padding:8px 9px;background:#fff;color:#696070;font-size:10px;line-height:1.3}.embedded-metrics strong{display:block;margin-bottom:2px;color:#613b88;font-size:14px}
+    .overlay-backdrop{position:fixed;inset:0;z-index:90;background:rgba(4,18,31,.34);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .22s ease,visibility .22s}.overlay-active{overflow:hidden}.overlay-active .overlay-backdrop{opacity:1;visibility:visible;pointer-events:auto;cursor:zoom-out}.feature-overlay{position:fixed;right:3.5vw;top:50%;z-index:100;width:min(920px,74vw);max-height:86vh;overflow:auto;padding:15px;border:1px solid #d8e1e8;border-radius:8px;background:rgba(249,251,253,.98);backdrop-filter:blur(14px);box-shadow:0 18px 50px rgba(0,0,0,.24);opacity:0;visibility:hidden;pointer-events:none;transform:translate(-280px,-50%) scale(.34);transform-origin:left center;transition:opacity .22s ease,transform .52s cubic-bezier(.16,1,.3,1),visibility .52s;will-change:transform,opacity}
+    .project-card.is-open .feature-overlay{opacity:1;visibility:visible;pointer-events:auto;transform:translate(0,-50%) scale(1)}
+    .overlay-head{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:6px 5px 15px}.overlay-head h3{margin:0;color:var(--navy);font-size:25px;line-height:1.15}.overlay-head h3 span{display:block;margin-top:4px;color:#7890a4;font-size:12px;letter-spacing:.04em}.close{width:38px;height:38px;border:1px solid #c9dcea;border-radius:50%;background:#fff;color:#24455f;font-size:23px;cursor:pointer}
+    .feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.feature{position:relative;overflow:hidden;aspect-ratio:16/10;border-radius:3px;background:#071625;box-shadow:none}.feature video{width:100%;height:100%;display:block;object-fit:cover}.feature.flight video{object-fit:contain}.feature b{position:absolute;left:8px;bottom:8px;padding:5px 7px;border-radius:2px;background:rgba(4,18,31,.76);color:white;font-size:12px}
+    .overlay-foot{display:flex;flex-wrap:wrap;gap:6px;padding:12px 2px 0}.overlay-foot span{padding:5px 7px;border:1px solid #d5e0e8;border-radius:2px;background:#fff;color:#315a79;font-size:11px;font-weight:700}.vase-feature-overlay{width:min(980px,76vw);background:rgba(250,252,252,.98)}.research-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.research-figure{display:grid;grid-template-rows:minmax(0,1fr) auto;min-height:0;margin:0;overflow:hidden;border:1px solid #d9e2e5;border-radius:3px;background:#fff;box-shadow:none}.research-figure img{display:block;width:100%;height:170px;padding:7px;object-fit:contain;background:#fff}.research-figure figcaption{padding:8px 9px 9px;border-top:1px solid #e7eeee;color:#315a60;font-size:12px;font-weight:700;line-height:1.35}
+    :focus-visible{outline:3px solid rgba(8,120,213,.48);outline-offset:3px}
+    @media(max-width:1050px){.feature-overlay{right:2vw;width:min(860px,82vw)}}
+    @media(max-width:760px){.page{width:min(100% - 24px,1180px);padding-top:30px}.project-card{grid-template-columns:1fr;column-gap:0;row-gap:18px;padding:18px}.project-topline{grid-row:1}.project-logos,.vase-logos{width:100%;justify-content:flex-start;margin-left:0}.cover-column{grid-row:2;max-width:360px}.project-copy{grid-row:3;margin-top:0}.project-copy.has-signature{padding-right:0}.signature-visuals{position:static;margin:0 0 14px}.project-kicker,.vase-kicker{flex-basis:100%;max-width:100%}.vase-cover-trigger,.nuedc-cover-trigger,.eecs-cover-trigger,.embedded-cover-trigger{grid-row:2;max-width:360px}.vase-copy,.nuedc-copy,.eecs-copy,.embedded-copy{grid-row:3;margin-top:0;padding-top:0}.project-actions{align-items:flex-start}.feature-overlay{right:auto;left:50%;width:92vw;padding:11px;border-radius:8px;transform:translate(-50%,-50%) scale(.86);transform-origin:center}.project-card.is-open .feature-overlay{transform:translate(-50%,-50%) scale(1)}.feature-grid,.research-grid,.eecs-grid{grid-template-columns:repeat(2,1fr)}.nuedc-grid,.embedded-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.feature{aspect-ratio:4/3}.research-figure img,.nuedc-figure img,.eecs-figure img,.embedded-figure img{height:145px}.overlay-head h3{font-size:20px}}
+    @media(max-width:460px){.feature-grid,.research-grid,.nuedc-grid,.eecs-grid,.embedded-grid{grid-template-columns:1fr}.nuedc-figure.wide,.embedded-figure.wide{grid-column:auto}.nuedc-metrics,.eecs-metrics,.embedded-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.feature{aspect-ratio:16/9}.research-figure img,.nuedc-figure img,.eecs-figure img,.embedded-figure img{height:auto;max-height:220px}.logo-tip::after{left:0;transform:translate(0,-2px)}.logo-tip:hover::after,.logo-tip:focus::after{transform:translate(0,0)}}
+    @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}.cover-trigger,.vase-cover-trigger,.nuedc-cover-trigger,.eecs-cover-trigger,.embedded-cover-trigger,.feature-overlay{transition:none}.vase-slide,.nuedc-cover-slide,.eecs-slide,.embedded-cover-slide{animation:none;opacity:0}.vase-slide:first-child,.nuedc-cover-slide:first-child,.eecs-slide:first-child,.embedded-cover-slide:first-child{opacity:1}}
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="page-head">
+      <small>谢秋实 · 项目作品集</small>
+      <h1>作品集项目</h1>
+      <p>点击项目链接查看完整网站与开源仓库；单击项目封面可展开功能汇总。</p>
+    </header>
+
+    <article class="project-card vase-card" id="vaseProjectCard">
+      <div class="project-topline vase-topline">
+        <span class="vase-kicker">2025年10月—至今 · 研究项目</span>
+        <div class="vase-logos" aria-label="Vase Museum 合作院校与研究组织">
+          <span class="logo-tip" data-label="北京交通大学" tabindex="0"><img class="seal" src="assets/portfolio-cover/bjtu-logo.png" alt="北京交通大学" /></span>
+          <span class="logo-tip" data-label="北京大学" tabindex="0"><img class="seal" src="assets/portfolio-cover/pku-logo.svg" alt="北京大学" /></span>
+          <span class="logo-tip" data-label="华中科技大学" tabindex="0"><img class="wide" src="assets/hust_logo.png" alt="华中科技大学" /></span>
+          <span class="logo-tip" data-label="La Trobe University" tabindex="0"><img class="wide" src="assets/portfolio-cover/latrobe-logo.svg" alt="La Trobe University" /></span>
+          <span class="logo-tip" data-label="中国科学技术大学" tabindex="0"><img class="wide" src="assets/portfolio-cover/ustc-logo.svg" alt="中国科学技术大学" /></span>
+          <span class="logo-tip" data-label="AIGeeksGroup" tabindex="0"><img class="seal" src="assets/portfolio-cover/aigeeks-logo.png" alt="AIGeeksGroup" /></span>
+        </div>
+      </div>
+      <button class="vase-cover-trigger" id="vaseCoverTrigger" type="button" aria-expanded="false" aria-controls="vaseFeatureOverlay" aria-label="展开 VaseMuseum 论文关键流程与实验结果">
+        <span class="vase-slide">
+          <img src="assets/portfolio-cover/vase-paper-preview/architecture-clean.webp" alt="VaseMuseum 系统架构" />
+          <img src="assets/portfolio-cover/vase-paper-preview/interaction-clean.webp" alt="虚拟博物馆交互流程" />
+        </span>
+        <span class="vase-slide">
+          <img src="assets/portfolio-cover/vase-paper-preview/interface-clean.webp" alt="虚拟博物馆界面" />
+          <img src="assets/portfolio-cover/vase-paper-preview/reliability-clean.webp" alt="VaseAgent 可靠性框架" />
+        </span>
+        <span class="vase-slide">
+          <img src="assets/portfolio-cover/vase-paper-preview/results-clean.webp" alt="主要实验结果" />
+          <img src="assets/portfolio-cover/vase-paper-preview/evaluation-clean.webp" alt="消融、扩展性与多维评估" />
+        </span>
+      </button>
+      <div class="vase-copy project-copy has-signature">
+        <div class="signature-visuals signature-vase" aria-label="VaseMuseum 数字博物馆展柜">
+          <figure class="visual-tip" data-label="VaseMuseum 标志图" tabindex="0"><img src="assets/portfolio-cover/vase-paper-preview/vase-display.png" alt="VaseMuseum 古希腊陶器数字展柜" /></figure>
+        </div>
+        <h2><a class="title-link" href="https://aigeeksgroup.github.io/VaseMuseum/" target="_blank" rel="noopener">VaseMuseum</a></h2>
+        <p class="vase-subtitle">Digital Intelligent Museum for Ancient Greek Pottery</p>
+        <div class="vase-meta"><p>预计投稿至 NMI</p><p>共同第一作者</p></div>
+        <p class="vase-summary">面向古希腊陶器的数字智能博物馆，融合多模态感知、三维推理、外部知识检索与推理时可靠性控制，为文化遗产问答提供更可信、可验证的解释。</p>
+        <div class="links"><a href="https://aigeeksgroup.github.io/VaseMuseum/" target="_blank" rel="noopener">项目网站</a><a href="https://github.com/AIGeeksGroup/VaseMuseum" target="_blank" rel="noopener">项目仓库</a></div>
+      </div>
+
+      <section class="feature-overlay vase-feature-overlay" id="vaseFeatureOverlay" aria-label="VaseMuseum 论文关键流程与实验结果">
+        <div class="overlay-head">
+          <h3>VaseMuseum · 方法与验证<span>Key figures from the research paper</span></h3>
+          <button class="close" id="vaseCloseOverlay" type="button" aria-label="关闭论文图示汇总">×</button>
+        </div>
+        <div class="research-grid">
+          <figure class="research-figure"><img src="assets/portfolio-cover/vase-paper-preview/architecture-clean.webp" alt="VaseMuseum 系统架构" /><figcaption>系统架构 · 感知、检索与可靠性控制</figcaption></figure>
+          <figure class="research-figure"><img src="assets/portfolio-cover/vase-paper-preview/interaction-clean.webp" alt="虚拟博物馆交互流程" /><figcaption>交互流程 · 从藏品导入到数字展陈</figcaption></figure>
+          <figure class="research-figure"><img src="assets/portfolio-cover/vase-paper-preview/interface-clean.webp" alt="虚拟博物馆界面" /><figcaption>系统界面 · 3D 展品与可验证问答</figcaption></figure>
+          <figure class="research-figure"><img src="assets/portfolio-cover/vase-paper-preview/reliability-clean.webp" alt="VaseAgent 可靠性框架" /><figcaption>可靠性框架 · Source / Response Control</figcaption></figure>
+          <figure class="research-figure"><img src="assets/portfolio-cover/vase-paper-preview/results-clean.webp" alt="VaseAgent 主要实验结果" /><figcaption>主要结果 · 准确率、幻觉率与链接有效性</figcaption></figure>
+          <figure class="research-figure"><img src="assets/portfolio-cover/vase-paper-preview/evaluation-clean.webp" alt="VaseAgent 消融与扩展性实验" /><figcaption>深入评估 · 消融、扩展性与多维对比</figcaption></figure>
+        </div>
+      </section>
+    </article>
+
+    <article class="project-card eecs-card" id="eecsProjectCard">
+      <div class="project-topline">
+        <span class="project-kicker">2025年9月—2026年6月 · 嵌赛成果转化</span>
+        <div class="project-logos" aria-label="华中科技大学与 SPIE">
+          <span class="logo-tip" data-label="华中科技大学" tabindex="0"><img class="hust-mark" src="assets/hust_logo.png" alt="华中科技大学" /></span>
+          <span class="logo-tip" data-label="SPIE（会议论文出版）" tabindex="0"><span class="spie-wordmark" aria-label="SPIE">SPIE</span></span>
+        </div>
+      </div>
+
+      <button class="eecs-cover-trigger" id="eecsCoverTrigger" type="button" aria-expanded="false" aria-controls="eecsFeatureOverlay" aria-label="展开 EECS 2026 电池剩余寿命预测论文方法与实验结果">
+        <span class="eecs-slide" aria-hidden="true"><img src="assets/portfolio-cover/eecs-2026/framework.png" alt="" /></span>
+        <span class="eecs-slide" aria-hidden="true"><img src="assets/portfolio-cover/eecs-2026/decomposition.png" alt="" /></span>
+        <span class="eecs-slide double" aria-hidden="true">
+          <img src="assets/portfolio-cover/eecs-2026/nasa-results.png" alt="" />
+          <img src="assets/portfolio-cover/eecs-2026/calce-results.png" alt="" />
+        </span>
+      </button>
+
+      <div class="project-copy eecs-copy">
+        <h2><a class="title-link" href="https://spie.org/" target="_blank" rel="noopener">Optical-sensing-oriented remaining useful life estimation of lithium-ion batteries using ALA-tuned VMD and a BiTCN-AM model</a></h2>
+        <p class="eecs-subtitle">EECS 2026 · 3rd International Conference on Electronics, Electrical and Control System</p>
+        <div class="project-meta"><p>EECS 2026 录用 · SPIE 会议论文集</p><p>独立第一作者</p></div>
+        <p class="summary">面向锂离子电池剩余寿命预测，以 ALA 自适应优化 VMD 分解参数，并结合双向时序卷积与注意力机制建模容量退化，在 NASA 与 CALCE 数据集上完成跨数据源验证。</p>
+        <div class="links"><a href="https://spie.org/" target="_blank" rel="noopener">论文页面（待检索）</a></div>
+      </div>
+
+      <section class="feature-overlay eecs-feature-overlay" id="eecsFeatureOverlay" aria-label="EECS 2026 电池剩余寿命预测论文方法与实验结果">
+        <div class="overlay-head">
+          <h3>锂离子电池剩余寿命预测<span>ALA-VMD · BiTCN-AM · NASA / CALCE</span></h3>
+          <button class="close" id="eecsCloseOverlay" type="button" aria-label="关闭论文图示汇总">×</button>
+        </div>
+        <div class="eecs-grid">
+          <figure class="eecs-figure"><img src="assets/portfolio-cover/eecs-2026/framework.png" alt="ALA-VMD-BiTCN-AM 电池剩余寿命预测框架" /><figcaption>总体方法 · ALA 参数寻优、VMD 分解与 BiTCN-AM 预测</figcaption></figure>
+          <figure class="eecs-figure"><img src="assets/portfolio-cover/eecs-2026/decomposition.png" alt="标准 VMD 与 ALA-VMD 电池容量序列分解对比" /><figcaption>自适应分解 · 标准 VMD 与 ALA-VMD 对比</figcaption></figure>
+          <figure class="eecs-figure"><img src="assets/portfolio-cover/eecs-2026/nasa-results.png" alt="NASA B0005 电池容量与剩余寿命预测结果" /><figcaption>NASA B0005 · 容量轨迹与剩余寿命预测</figcaption></figure>
+          <figure class="eecs-figure"><img src="assets/portfolio-cover/eecs-2026/calce-results.png" alt="CALCE CS2_38 电池容量与剩余寿命预测结果" /><figcaption>CALCE CS2_38 · 跨数据集验证</figcaption></figure>
+        </div>
+        <div class="eecs-metrics" aria-label="论文实验关键指标">
+          <span><strong>0.01137</strong>NASA RMSE</span><span><strong>0 cycle</strong>NASA RUL 绝对误差</span><span><strong>0.00490</strong>CALCE RMSE</span><span><strong>99.93%</strong>CALCE R²</span>
+        </div>
+      </section>
+    </article>
+
+    <article class="project-card" id="projectCard">
+      <div class="project-topline">
+        <span class="project-kicker">2026年4月—7月 · 2026年英特尔杯大学生电子设计竞赛嵌入式AI专题赛</span>
+        <div class="project-logos" aria-label="华中科技大学与英特尔杯大学生电子设计竞赛">
+          <span class="logo-tip" data-label="华中科技大学" tabindex="0"><img class="hust-mark" src="assets/hust_logo.png" alt="华中科技大学" /></span>
+          <span class="logo-tip" data-label="英特尔杯大学生电子设计竞赛" tabindex="0"><img class="intel-mark" src="assets/figures/fig_01.webp" alt="英特尔杯大学生电子设计竞赛" /></span>
+        </div>
+      </div>
+
+      <div class="cover-column">
+        <button class="cover-trigger" id="coverTrigger" type="button" aria-expanded="false" aria-controls="featureOverlay" aria-label="展开智驭低空枢纽完整功能汇总">
+          <video autoplay muted loop playsinline preload="metadata" poster="assets/portfolio-cover/portfolio-cover-poster.jpg" src="assets/portfolio-cover/portfolio-cover.mp4"></video>
+        </button>
+      </div>
+
+      <div class="project-copy intel-copy has-signature">
+        <div class="signature-visuals signature-hardware" aria-label="Intel DK-2500 板卡与巡检无人机">
+          <figure class="visual-tip" data-label="Intel DK-2500 板卡">
+            <a class="hardware-link" href="https://nuedc.sjtu.edu.cn/en/show.aspx?info_lb=20&amp;info_id=1314&amp;flag=20" target="_blank" rel="noopener" aria-label="查看 Intel DK-2500 开发套件介绍">
+              <img src="assets/hardware/dk2500-cutout.png" alt="Intel DK-2500 边缘智能板卡" />
+              <span class="hardware-zoom" aria-hidden="true">🔍</span>
+            </a>
+          </figure>
+          <figure class="visual-tip" data-label="无人机" tabindex="0"><img src="assets/hardware/drone-cutout.png" alt="低空巡检无人机" /></figure>
+        </div>
+        <h2><a class="title-link" href="intelcup.html">智驭低空枢纽（无人机地面站系统）</a></h2>
+        <div class="project-meta"><p>全国二等奖 第18/230名 前7.83%</p><p>项目队长</p></div>
+        <div class="project-bottom">
+          <div>
+            <p class="summary">基于 Intel DK-2500 的多模态无人机地面站：用手势与视线生成任务，完成仿真规划、自主巡逻、目标识别、安全确认和全过程记录。</p>
+            <div class="links"><a href="intelcup.html">项目主页</a><a href="https://github.com/Qiushi0919/IntelCup-2026" target="_blank" rel="noopener">项目仓库</a></div>
+          </div>
+        </div>
+      </div>
+
+      <section class="feature-overlay" id="featureOverlay" aria-label="智驭低空枢纽功能汇总">
+        <div class="overlay-head">
+          <h3>智驭低空枢纽 · 核心功能<span>Six real system demonstrations</span></h3>
+          <button class="close" id="closeOverlay" type="button" aria-label="关闭功能汇总">×</button>
+        </div>
+        <div class="feature-grid">
+          <div class="feature flight"><video autoplay muted loop playsinline preload="metadata" src="assets/portfolio-cover/flight-summary.mp4"></video><b>起飞 · 巡航 · 降落</b></div>
+          <div class="feature"><video autoplay muted loop playsinline preload="metadata" src="assets/nationals/demos/self-check.mp4"></video><b>姿态自检</b></div>
+          <div class="feature"><video autoplay muted loop playsinline preload="metadata" src="assets/portfolio-cover/simulation.mp4"></video><b>仿真飞行</b></div>
+          <div class="feature"><video autoplay muted loop playsinline preload="metadata" src="assets/portfolio-cover/free-route.mp4"></video><b>自由选点巡逻</b></div>
+          <div class="feature"><video autoplay muted loop playsinline preload="metadata" src="assets/portfolio-cover/gesture-gaze.mp4"></video><b>手势 · 视线输入</b></div>
+          <div class="feature"><video autoplay muted loop playsinline preload="metadata" src="assets/portfolio-cover/text-recognition.mp4"></video><b>火源 · 人脸 · 文字识别</b></div>
+        </div>
+        <div class="overlay-foot"><span>多模态交互</span><span>三维仿真</span><span>自主路线规划</span><span>低空巡检</span><span>边缘视觉识别</span><span>安全飞行管理</span></div>
+      </section>
+    </article>
+
+    <article class="project-card nuedc-card" id="nuedcProjectCard">
+      <div class="project-topline">
+        <span class="project-kicker">2026年7月—8月 · 2026年全国大学生电子设计竞赛（湖北赛区）</span>
+        <div class="project-logos" aria-label="华中科技大学与全国大学生电子设计竞赛">
+          <span class="logo-tip" data-label="华中科技大学" tabindex="0"><img class="hust-mark" src="assets/hust_logo.png" alt="华中科技大学" /></span>
+          <span class="logo-tip" data-label="全国大学生电子设计竞赛" tabindex="0"><img class="nuedc-mark" src="assets/portfolio-cover/nuedc-c/nuedc-badge.png" alt="全国大学生电子设计竞赛" /></span>
+        </div>
+      </div>
+
+      <button class="nuedc-cover-trigger" id="nuedcCoverTrigger" type="button" aria-expanded="false" aria-controls="nuedcFeatureOverlay" aria-label="展开数字钥匙实验系统的原理、实现与测试汇总">
+        <span class="nuedc-cover-slide" aria-hidden="true">
+          <figure><img src="assets/portfolio-cover/nuedc-c/test-integrated.jpg" alt="" /></figure>
+          <figure class="portrait"><img src="assets/portfolio-cover/nuedc-c/digital-key.jpg" alt="" /></figure>
+          <figure class="diagram"><img src="assets/portfolio-cover/nuedc-c/software-unlock.png" alt="" /></figure>
+        </span>
+        <span class="nuedc-cover-slide" aria-hidden="true">
+          <figure class="diagram"><img src="assets/portfolio-cover/nuedc-c/system-block.png" alt="" /></figure>
+          <figure class="diagram"><img src="assets/portfolio-cover/nuedc-c/pdoa-principle.png" alt="" /></figure>
+          <figure class="diagram"><img src="assets/portfolio-cover/nuedc-c/receiver-structure.png" alt="" /></figure>
+        </span>
+        <span class="nuedc-cover-slide" aria-hidden="true">
+          <figure><img src="assets/portfolio-cover/nuedc-c/smart-lock.jpg" alt="" /></figure>
+          <figure class="diagram"><img src="assets/portfolio-cover/nuedc-c/program-flow.png" alt="" /></figure>
+          <figure class="diagram"><img src="assets/portfolio-cover/nuedc-c/test-results.png" alt="" /></figure>
+        </span>
+      </button>
+
+      <div class="project-copy nuedc-copy has-signature">
+        <div class="signature-visuals signature-stack" aria-label="数字钥匙整体系统与软件运行界面">
+          <figure class="photo visual-tip" data-label="整体系统实物图" tabindex="0"><img src="assets/portfolio-cover/nuedc-c/system-overview.jpg" alt="数字钥匙实验系统整体实物" /></figure>
+          <figure class="interface visual-tip" data-label="软件界面" tabindex="0"><img src="assets/portfolio-cover/nuedc-c/software-unlock.png" alt="数字钥匙软件运行界面" /></figure>
+        </div>
+        <h2><a class="title-link" href="https://qiushi0919.github.io/2026-NUEDC-C/" target="_blank" rel="noopener">基于无线通信的数字钥匙实验系统</a></h2>
+        <div class="project-meta"><p>湖北赛区一等奖 · 华中科技大学该题目唯一省一队伍</p><p>项目队长</p></div>
+        <p class="summary">基于 UWB ToF 测距、四天线 PDoA 测角和卡尔曼滤波，完成 4 位身份验证、三区域实时判定、迎宾声光提示与自动开闭锁。</p>
+        <p class="nuedc-note">2026 年为全国大学生电子设计竞赛省赛年，当届不设置全国赛；湖北赛区一等奖为该年度赛事的最高奖项。</p>
+        <div class="links"><a href="https://qiushi0919.github.io/2026-NUEDC-C/" target="_blank" rel="noopener">正式网站</a><a href="https://github.com/Qiushi0919/2026-NUEDC-C" target="_blank" rel="noopener">项目仓库</a></div>
+      </div>
+
+      <section class="feature-overlay nuedc-feature-overlay" id="nuedcFeatureOverlay" aria-label="数字钥匙实验系统原理、实现与测试汇总">
+        <div class="overlay-head">
+          <h3>数字钥匙实验系统 · 原理与验证<span>UWB ToF / PDoA · Identity · Zone Control · Smart Lock</span></h3>
+          <button class="close" id="nuedcCloseOverlay" type="button" aria-label="关闭数字钥匙系统汇总">×</button>
+        </div>
+        <div class="nuedc-grid">
+          <figure class="nuedc-figure wide"><img src="assets/portfolio-cover/nuedc-c/system-block.png" alt="数字钥匙端与智能门锁端系统框图" /><figcaption>系统闭环 · UWB 发送、定位接收、主控与门锁执行</figcaption></figure>
+          <figure class="nuedc-figure"><img src="assets/portfolio-cover/nuedc-c/pdoa-principle.png" alt="双天线 PDoA 方位角测量原理" /><figcaption>测角原理 · 到达相位差解算方位角</figcaption></figure>
+          <figure class="nuedc-figure"><img src="assets/portfolio-cover/nuedc-c/receiver-structure.png" alt="四天线 UWB 接收模块结构" /><figcaption>接收结构 · 四天线基线与主控数据链路</figcaption></figure>
+          <figure class="nuedc-figure wide photo"><img src="assets/portfolio-cover/nuedc-c/test-integrated.jpg" alt="数字钥匙实验系统完整实物" /><figcaption>完整实物 · 120° 定位基站、门锁控制与上位机</figcaption></figure>
+          <figure class="nuedc-figure wide"><img src="assets/portfolio-cover/nuedc-c/software-unlock.png" alt="数字钥匙开锁区运行界面" /><figcaption>运行界面 · ID、距离、方位角、区域与门锁状态</figcaption></figure>
+          <figure class="nuedc-figure"><img src="assets/portfolio-cover/nuedc-c/program-flow.png" alt="数字钥匙系统程序流程" /><figcaption>控制流程 · 验证、滤波、区域判定与动作</figcaption></figure>
+          <figure class="nuedc-figure photo"><img src="assets/portfolio-cover/nuedc-c/digital-key.jpg" alt="UWB 数字钥匙信标" /><figcaption>数字钥匙 · 一键启动与 4 位身份信标</figcaption></figure>
+          <figure class="nuedc-figure photo"><img src="assets/portfolio-cover/nuedc-c/smart-lock.jpg" alt="智能门锁执行端" /><figcaption>执行端 · 声光迎宾、自动开锁与离区闭锁</figcaption></figure>
+          <figure class="nuedc-figure wide"><img src="assets/portfolio-cover/nuedc-c/test-results.png" alt="定位精度与身份区域功能测试结果" /><figcaption>测试数据 · 定位精度、身份验证与三区域功能</figcaption></figure>
+        </div>
+        <div class="nuedc-metrics" aria-label="数字钥匙系统关键测试指标">
+          <span><strong>0.04 m</strong>最大距离误差</span><span><strong>2.3°</strong>最大方位角误差</span><span><strong>4 bit</strong>可设置身份 ID</span><span><strong>6 / 6</strong>功能判断正确</span>
+        </div>
+      </section>
+    </article>
+
+    <article class="project-card embedded-card" id="embeddedProjectCard">
+      <div class="project-topline">
+        <span class="project-kicker">2025年4月—8月 · 第八届（2025）全国大学生嵌入式芯片与系统设计竞赛芯片应用赛道</span>
+        <div class="project-logos" aria-label="华中科技大学、全国大学生嵌入式芯片与系统设计竞赛和瑞萨电子">
+          <span class="logo-tip" data-label="华中科技大学" tabindex="0"><img class="hust-mark" src="assets/hust_logo.png" alt="华中科技大学" /></span>
+          <span class="logo-tip" data-label="全国大学生嵌入式芯片与系统设计竞赛" tabindex="0"><img class="embedded-contest-mark" src="assets/portfolio-cover/embedded-2025/competition-logo.png" alt="全国大学生嵌入式芯片与系统设计竞赛" /></span>
+          <span class="logo-tip" data-label="瑞萨电子（Renesas Electronics）" tabindex="0"><img class="renesas-mark" src="assets/portfolio-cover/embedded-2025/renesas-logo.png" alt="瑞萨电子" /></span>
+        </div>
+      </div>
+
+      <button class="embedded-cover-trigger" id="embeddedCoverTrigger" type="button" aria-expanded="false" aria-controls="embeddedFeatureOverlay" aria-label="展开智能烟雾检测系统的 AI 算法、双板卡对照与工程实现">
+        <span class="embedded-cover-slide single" aria-hidden="true"><img src="assets/portfolio-cover/embedded-2025/finals-dual-board.jpg" alt="" /></span>
+        <span class="embedded-cover-slide pair" aria-hidden="true">
+          <img src="assets/portfolio-cover/embedded-2025/compact-prototype.jpg" alt="" />
+          <img src="assets/portfolio-cover/embedded-2025/compact-internal.jpg" alt="" />
+        </span>
+        <span class="embedded-cover-slide data" aria-hidden="true">
+          <img src="assets/portfolio-cover/embedded-2025/data-display.jpg" alt="" />
+          <img src="assets/portfolio-cover/embedded-2025/prediction-curve.png" alt="" />
+          <img src="assets/portfolio-cover/embedded-2025/model-memory.png" alt="" />
+        </span>
+      </button>
+
+      <div class="project-copy embedded-copy has-signature">
+        <div class="signature-visuals signature-photo" aria-label="智能烟雾检测系统铁盒实物">
+          <figure class="visual-tip" data-label="初版系统特写" tabindex="0"><img src="assets/portfolio-cover/embedded-2025/report-tin-box.jpg" alt="报告中的智能烟雾检测系统铁盒特写" /></figure>
+        </div>
+        <h2><a class="title-link" href="https://www.socchina.net/details?id=8a9b099de40642f48e40bdeb04649df1" target="_blank" rel="noopener">基于 RA MCU 嵌入式处理平台的智能烟雾检测系统与自适应 AI 阈值优化算法</a></h2>
+        <div class="project-meta"><p>全国总决赛二等奖 · 中部赛区一等奖 · 全国前3.97%</p><p>项目队长</p></div>
+        <p class="summary">在瑞萨 RA6M5 上部署轻量化烟雾时序预测网络，以双板卡分别运行 AI 预测与传统固定阈值方案进行现场对照，可提前 3–5 秒预警并将误报率控制在 0.5% 以下。系统采用低成本光学粉尘传感器与 MCU 本地推理，无需云端或高算力平台，兼顾预测性能、部署成本与离线可靠性。</p>
+        <div class="links"><a href="https://www.socchina.net/details?id=8a9b099de40642f48e40bdeb04649df1" target="_blank" rel="noopener">赛事页面</a></div>
+      </div>
+
+      <section class="feature-overlay embedded-feature-overlay" id="embeddedFeatureOverlay" aria-label="智能烟雾检测系统算法、双板卡对照与工程实现">
+        <div class="overlay-head">
+          <h3>智能烟雾检测系统 · AI 预测与低成本部署<span>RA6M5 · On-device AI · Dual-board A/B comparison</span></h3>
+          <button class="close" id="embeddedCloseOverlay" type="button" aria-label="关闭智能烟雾检测系统汇总">×</button>
+        </div>
+        <div class="embedded-grid">
+          <figure class="embedded-figure wide photo finals-showcase"><img src="assets/portfolio-cover/embedded-2025/finals-dual-board.jpg" alt="全国总决赛双板卡对照展示方案" /><figcaption>国赛方案 · AI 预测板与固定阈值板现场 A/B 对照</figcaption></figure>
+          <figure class="embedded-figure portrait"><img src="assets/portfolio-cover/embedded-2025/data-display.jpg" alt="烟雾浓度采集与预测曲线运行界面" /><figcaption>实时数据 · 浓度采集、5 秒预测与误差显示</figcaption></figure>
+          <figure class="embedded-figure photo"><img src="assets/portfolio-cover/embedded-2025/compact-prototype.jpg" alt="智能烟雾检测系统简易展示版" /><figcaption>简易展示版 · 显示、报警与传感器集成</figcaption></figure>
+          <figure class="embedded-figure photo"><img src="assets/portfolio-cover/embedded-2025/compact-internal.jpg" alt="智能烟雾检测系统内部 RA6M5 板卡" /><figcaption>板端硬件 · RA6M5、粉尘传感器与声光外设</figcaption></figure>
+          <figure class="embedded-figure"><img src="assets/portfolio-cover/embedded-2025/system-block.png" alt="智能烟雾检测系统整体框图" /><figcaption>系统闭环 · 采集、板端预测、显示与分级报警</figcaption></figure>
+          <figure class="embedded-figure"><img src="assets/portfolio-cover/embedded-2025/prediction-curve.png" alt="烟雾浓度真实值、预测值与未来趋势曲线" /><figcaption>时序预测 · 真实值、单步预测与未来趋势</figcaption></figure>
+          <figure class="embedded-figure"><img src="assets/portfolio-cover/embedded-2025/model-memory.png" alt="轻量化神经网络 ROM RAM 与计算量" /><figcaption>轻量部署 · 113,576 B ROM、65,536 B 峰值 RAM</figcaption></figure>
+          <figure class="embedded-figure"><img src="assets/portfolio-cover/embedded-2025/software-flow.png" alt="烟雾检测预测与分级报警软件流程" /><figcaption>软件流程 · 标定、预测、状态判断与声光报警</figcaption></figure>
+        </div>
+        <div class="embedded-metrics" aria-label="智能烟雾检测系统关键指标">
+          <span><strong>3–5 s</strong>相较固定阈值提前预警</span><span><strong>≤0.5%</strong>系统误报率</span><span><strong>70 ms</strong>RA6M5 单次推理</span><span><strong>800+</strong>自采烟雾数据组</span>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <div class="overlay-backdrop" aria-hidden="true"></div>
+
+  <script>
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+    const backdrop = document.querySelector('.overlay-backdrop');
+    const projects = [
+      {
+        card: document.getElementById('projectCard'),
+        trigger: document.getElementById('coverTrigger'),
+        overlay: document.getElementById('featureOverlay'),
+        close: document.getElementById('closeOverlay')
+      },
+      {
+        card: document.getElementById('nuedcProjectCard'),
+        trigger: document.getElementById('nuedcCoverTrigger'),
+        overlay: document.getElementById('nuedcFeatureOverlay'),
+        close: document.getElementById('nuedcCloseOverlay')
+      },
+      {
+        card: document.getElementById('vaseProjectCard'),
+        trigger: document.getElementById('vaseCoverTrigger'),
+        overlay: document.getElementById('vaseFeatureOverlay'),
+        close: document.getElementById('vaseCloseOverlay')
+      },
+      {
+        card: document.getElementById('eecsProjectCard'),
+        trigger: document.getElementById('eecsCoverTrigger'),
+        overlay: document.getElementById('eecsFeatureOverlay'),
+        close: document.getElementById('eecsCloseOverlay')
+      },
+      {
+        card: document.getElementById('embeddedProjectCard'),
+        trigger: document.getElementById('embeddedCoverTrigger'),
+        overlay: document.getElementById('embeddedFeatureOverlay'),
+        close: document.getElementById('embeddedCloseOverlay')
+      }
+    ];
+    const anyOpen = () => projects.some(project => project.card.classList.contains('is-open'));
+    const syncBackdrop = () => document.body.classList.toggle('overlay-active', anyOpen());
+    const setOpen = (project, open) => {
+      if (open) projects.filter(item => item !== project).forEach(item => setOpen(item, false));
+      project.card.classList.toggle('is-open', open);
+      project.trigger.setAttribute('aria-expanded', String(open));
+      project.overlay.setAttribute('aria-hidden', String(!open));
+      project.overlay.querySelectorAll('video').forEach(video => {
+        if (open && !reduceMotion) video.play().catch(() => {});
+        else video.pause();
+      });
+      syncBackdrop();
+    };
+    const closeOpenProject = () => {
+      const openProject = projects.find(project => project.card.classList.contains('is-open'));
+      if (!openProject) return;
+      setOpen(openProject, false);
+      openProject.trigger.focus({preventScroll:true});
+    };
+    projects.forEach(project => {
+      project.overlay.setAttribute('aria-hidden', 'true');
+      project.overlay.querySelectorAll('video').forEach(video => video.pause());
+      project.trigger.addEventListener('click', () => {
+        setOpen(project, !project.card.classList.contains('is-open'));
+      });
+      project.close.addEventListener('click', event => {
+        event.stopPropagation();
+        closeOpenProject();
+      });
+    });
+    backdrop.addEventListener('click', closeOpenProject);
+    document.addEventListener('keydown', event => {
+      if (!anyOpen() || (event.key !== 'Escape' && event.key !== ' ')) return;
+      event.preventDefault();
+      closeOpenProject();
+    });
+    if (reduceMotion) document.querySelectorAll('video').forEach(video => video.pause());
+  </script>
+</body>
+</html>
