@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <script>
     (() => {
+      document.documentElement.classList.add('portfolio-loading');
       const viewport = document.querySelector('meta[name="viewport"]');
       const screenWidth = Math.min(window.innerWidth, window.screen.width, window.screen.height);
       const portraitPhone = screenWidth <= 600 && window.innerHeight > window.innerWidth;
@@ -19,9 +20,10 @@
   <title>谢秋实 · 作品集项目</title>
   <style>
     :root{--blue:#1772d0;--navy:#162a3a;--muted:#5f7180;--line:#e2e7eb;--paper:#fff;--bg:#fff}
-    *{box-sizing:border-box}html{color-scheme:light;overflow-x:hidden}body{margin:0;overflow-x:hidden;background:var(--bg);color:#1d2d3a;font-family:Lato,Arial,"PingFang SC","Microsoft YaHei",sans-serif;font-size:14px}
+    *{box-sizing:border-box}html{color-scheme:light;overflow-x:hidden}html.portfolio-loading{overflow:hidden}body{margin:0;overflow-x:hidden;background:var(--bg);color:#1d2d3a;font-family:Lato,Arial,"PingFang SC","Microsoft YaHei",sans-serif;font-size:14px}
     a{color:var(--blue);text-decoration:none}a:hover{color:#f09228;text-decoration:none}
-    .page{width:min(860px,calc(100% - 96px));margin:0 auto;padding:42px 0 72px}
+    .page{width:min(860px,calc(100% - 96px));margin:0 auto;padding:42px 0 72px;opacity:1;transform:none;transition:opacity .32s ease,transform .32s ease}html.portfolio-loading .page{opacity:0;transform:translateY(5px)}
+    .portfolio-loader{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;background:#fff;opacity:1;visibility:visible;transition:opacity .28s ease,visibility .28s ease}.portfolio-ready .portfolio-loader{opacity:0;visibility:hidden;pointer-events:none}.loader-inner{width:min(220px,60vw);text-align:center}.loader-title{color:#213747;font-size:14px;font-weight:700;letter-spacing:.02em}.loader-subtitle{margin-top:3px;color:#8797a3;font-size:10px;letter-spacing:.08em;text-transform:uppercase}.loader-track{height:2px;margin-top:15px;overflow:hidden;background:#e5eaee}.loader-progress{display:block;width:0;height:100%;background:var(--blue);transition:width .18s ease}
     .page-head{margin-bottom:24px}.page-head small{display:block;color:#7d91a2;font-size:11px;font-weight:760;letter-spacing:.08em}.page-head h1{margin:6px 0 7px;font-size:32px;letter-spacing:-.035em}.page-head p{margin:0;color:var(--muted);font-size:14px}
     .project-card{position:relative;display:grid;grid-template-columns:240px minmax(0,1fr);column-gap:28px;row-gap:14px;align-items:center;padding:24px 16px;background:var(--paper);border:0;border-bottom:1px solid var(--line);border-radius:0;box-shadow:none}
     .project-topline{grid-column:1/-1;display:flex;align-items:flex-start;justify-content:space-between;gap:10px 18px;flex-wrap:wrap}
@@ -49,10 +51,18 @@
     @media(max-width:1050px){.feature-overlay{right:2vw;width:min(860px,82vw)}}
     @media(max-width:760px){.page{width:min(100% - 24px,1180px);padding-top:30px}.project-card{grid-template-columns:1fr;column-gap:0;row-gap:18px;padding:18px}.project-topline{grid-row:1}.project-logos,.vase-logos{width:100%;justify-content:flex-start;margin-left:0}.cover-column{grid-row:2;max-width:360px}.project-copy{grid-row:3;margin-top:0}.project-copy.has-signature{padding-right:0}.signature-visuals{position:static;margin:0 0 14px}.project-kicker,.vase-kicker{flex-basis:100%;max-width:100%}.vase-cover-trigger,.nuedc-cover-trigger,.eecs-cover-trigger,.embedded-cover-trigger{grid-row:2;max-width:360px}.vase-copy,.nuedc-copy,.eecs-copy,.embedded-copy{grid-row:3;margin-top:0;padding-top:0}.project-actions{align-items:flex-start}.feature-overlay{right:auto;left:50%;width:92vw;padding:11px;border-radius:8px;transform:translate(-50%,-50%) scale(.86);transform-origin:center}.project-card.is-open .feature-overlay{transform:translate(-50%,-50%) scale(1)}.feature-grid,.research-grid,.eecs-grid{grid-template-columns:repeat(2,1fr)}.nuedc-grid,.embedded-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.feature{aspect-ratio:4/3}.research-figure img,.nuedc-figure img,.eecs-figure img,.embedded-figure img{height:145px}.overlay-head h3{font-size:20px}}
     @media(max-width:460px){.feature-grid,.research-grid,.nuedc-grid,.eecs-grid,.embedded-grid{grid-template-columns:1fr}.nuedc-figure.wide,.embedded-figure.wide{grid-column:auto}.nuedc-metrics,.eecs-metrics,.embedded-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.feature{aspect-ratio:16/9}.research-figure img,.nuedc-figure img,.eecs-figure img,.embedded-figure img{height:auto;max-height:220px}.logo-tip::after{left:0;transform:translate(0,-2px)}.logo-tip:hover::after,.logo-tip:focus::after{transform:translate(0,0)}}
-    @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}.cover-trigger,.vase-cover-trigger,.nuedc-cover-trigger,.eecs-cover-trigger,.embedded-cover-trigger,.feature-overlay{transition:none}.vase-slide,.nuedc-cover-slide,.eecs-slide,.embedded-cover-slide{animation:none;opacity:0}.vase-slide:first-child,.nuedc-cover-slide:first-child,.eecs-slide:first-child,.embedded-cover-slide:first-child{opacity:1}}
+    @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}.page,.portfolio-loader,.loader-progress,.cover-trigger,.vase-cover-trigger,.nuedc-cover-trigger,.eecs-cover-trigger,.embedded-cover-trigger,.feature-overlay{transition:none}.vase-slide,.nuedc-cover-slide,.eecs-slide,.embedded-cover-slide{animation:none;opacity:0}.vase-slide:first-child,.nuedc-cover-slide:first-child,.eecs-slide:first-child,.embedded-cover-slide:first-child{opacity:1}}
   </style>
 </head>
 <body>
+  <div class="portfolio-loader" id="portfolioLoader" role="status" aria-live="polite" aria-label="正在加载作品集">
+    <div class="loader-inner">
+      <div class="loader-title">正在加载作品集</div>
+      <div class="loader-subtitle">Loading portfolio</div>
+      <div class="loader-track" id="loaderTrack" role="progressbar" aria-label="首屏图片加载进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span class="loader-progress" id="loaderProgress"></span></div>
+    </div>
+  </div>
+  <noscript><style>.portfolio-loader{display:none!important}.page{opacity:1!important;transform:none!important}</style></noscript>
   <main class="page">
     <header class="page-head">
       <small>谢秋实 · 项目作品集</small>
@@ -325,6 +335,64 @@
   </main>
 
   <div class="overlay-backdrop" aria-hidden="true"></div>
+
+  <script>
+    (() => {
+      const root = document.documentElement;
+      const loader = document.getElementById('portfolioLoader');
+      const track = document.getElementById('loaderTrack');
+      const progress = document.getElementById('loaderProgress');
+      const minimumDisplay = new Promise(resolve => window.setTimeout(resolve, 240));
+      const maximumWait = new Promise(resolve => window.setTimeout(resolve, 4500));
+      let completed = 0;
+
+      const updateProgress = (value) => {
+        const percentage = Math.max(0, Math.min(100, Math.round(value)));
+        progress.style.width = `${percentage}%`;
+        track.setAttribute('aria-valuenow', String(percentage));
+      };
+
+      const waitForImage = (image, index, total) => new Promise(resolve => {
+        let settled = false;
+        const finish = () => {
+          if (settled) return;
+          settled = true;
+          completed += 1;
+          updateProgress((completed / total) * 100);
+          resolve();
+        };
+        const decodeThenFinish = () => {
+          if (image.decode && image.naturalWidth) image.decode().catch(() => {}).then(finish);
+          else finish();
+        };
+
+        image.loading = 'eager';
+        if (index < 4) image.fetchPriority = 'high';
+        if (image.complete) decodeThenFinish();
+        else {
+          image.addEventListener('load', decodeThenFinish, {once:true});
+          image.addEventListener('error', finish, {once:true});
+        }
+      });
+
+      const revealPage = async () => {
+        const firstProject = document.querySelector('.project-card');
+        const criticalImages = firstProject ? [...firstProject.querySelectorAll('img[src]')] : [];
+        if (!criticalImages.length) updateProgress(100);
+        const imagesReady = Promise.allSettled(criticalImages.map((image, index) => waitForImage(image, index, criticalImages.length)));
+        await Promise.all([Promise.race([imagesReady, maximumWait]), minimumDisplay]);
+        updateProgress(100);
+        window.requestAnimationFrame(() => {
+          root.classList.remove('portfolio-loading');
+          root.classList.add('portfolio-ready');
+          loader.setAttribute('aria-hidden', 'true');
+        });
+      };
+
+      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', revealPage, {once:true});
+      else revealPage();
+    })();
+  </script>
 
   <script>
     const reduceMotion = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
