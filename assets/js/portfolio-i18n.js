@@ -26,7 +26,7 @@
     '2026年4月—7月 · 2026年英特尔杯大学生电子设计竞赛嵌入式AI专题赛': 'Apr–Jul 2026 · 2026 Intel Cup Embedded AI Track',
     '2026年7月—8月 · 2026年全国大学生电子设计竞赛（湖北赛区）': 'Jul–Aug 2026 · 2026 National Undergraduate Electronics Design Contest (Hubei)',
     '2025年4月—8月 · 第八届（2025）全国大学生嵌入式芯片与系统设计竞赛芯片应用赛道': 'Apr–Aug 2025 · 8th National College Student Embedded Chip and System Design Contest — Chip Application Track',
-    '预计投稿至 NMI': 'Planned submission to NMI',
+    '投稿至 NMI': 'Submitted to NMI',
     '共同第一作者 · 本科生科研助理（远程）': 'Co-first Author · Undergraduate Research Assistant (Remote)',
     '面向古希腊陶器的数字智能博物馆，融合多模态感知、三维推理、外部知识检索与推理时可靠性控制，为文化遗产问答提供更可信、可验证的解释。': 'A digital intelligent museum for ancient Greek pottery that combines multimodal perception, 3D reasoning, external knowledge retrieval, and inference-time reliability control to deliver more trustworthy and verifiable cultural-heritage explanations.',
     '项目网站': 'Project Website',
