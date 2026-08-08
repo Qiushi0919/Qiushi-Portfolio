@@ -1,5 +1,5 @@
 (() => {
-  const STORAGE_KEY = 'qiushi-portfolio-language';
+  const STORAGE_KEY = 'qiushi-portfolio-language-v2';
   const translations = {
     '正在加载关键图片': 'Loading key visuals',
     '正在加载作品集': 'Loading portfolio',
@@ -250,7 +250,7 @@
     button.addEventListener('click', () => applyLanguage(button.dataset.language));
   });
 
-  let initialLanguage = 'zh';
+  let initialLanguage = 'en';
   try {
     const savedLanguage = window.localStorage.getItem(STORAGE_KEY);
     if (savedLanguage === 'en' || savedLanguage === 'zh') initialLanguage = savedLanguage;
