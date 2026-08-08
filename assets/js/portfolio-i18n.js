@@ -1,0 +1,259 @@
+(() => {
+  const STORAGE_KEY = 'qiushi-portfolio-language';
+  const translations = {
+    '正在加载关键图片': 'Loading key visuals',
+    '正在加载作品集': 'Loading portfolio',
+    '关键图片加载进度': 'Key visual loading progress',
+    '谢秋实的竞赛与科研项目作品集': "Qiushi Xie's research and competition portfolio",
+    '谢秋实 个人主页': "Qiushi Xie's Homepage",
+    '谢秋实': 'Qiushi Xie',
+    '华中科技大学通信工程专业本科生，目前大三。': 'Third-year undergraduate student in Communication Engineering at Huazhong University of Science and Technology.',
+    '这里整理了我的科研论文与竞赛项目，涵盖数字文化遗产、无人机地面站、无线定位和嵌入式 AI。': 'This portfolio presents my research papers and competition projects in digital cultural heritage, UAV ground stations, wireless localization, and embedded AI.',
+    '联系方式': 'Contact',
+    '微信': 'WeChat',
+    '微信公众号': 'WeChat Official Account',
+    '个人微信': 'Personal WeChat',
+    '扫描二维码添加个人微信': 'Scan the QR code to add me on WeChat',
+    '扫描二维码关注微信公众号': 'Scan the QR code to follow my WeChat Official Account',
+    '扫描二维码添加 QQ': 'Scan the QR code to add me on QQ',
+    '扫描二维码联系': 'Scan the QR code to connect',
+    '联系二维码': 'Contact QR code',
+    '关闭二维码': 'Close QR code',
+    '作品': 'Selected Work',
+    '科研论文与竞赛项目；单击项目封面可展开功能汇总。': 'Research papers and competition projects. Click a cover to view the full project summary.',
+    '2025年10月—至今 · 本科生科研助理（远程）': 'Oct 2025–Present · Undergraduate Research Assistant (Remote)',
+    '2025年9月—2026年6月 · 嵌赛成果转化': 'Sep 2025–Jun 2026 · Research Translation from an Embedded Systems Competition',
+    '2026年4月—7月 · 2026年英特尔杯大学生电子设计竞赛嵌入式AI专题赛': 'Apr–Jul 2026 · 2026 Intel Cup Embedded AI Track',
+    '2026年7月—8月 · 2026年全国大学生电子设计竞赛（湖北赛区）': 'Jul–Aug 2026 · 2026 National Undergraduate Electronics Design Contest (Hubei)',
+    '2025年4月—8月 · 第八届（2025）全国大学生嵌入式芯片与系统设计竞赛芯片应用赛道': 'Apr–Aug 2025 · 8th National College Student Embedded Chip and System Design Contest — Chip Application Track',
+    '预计投稿至 NMI': 'Planned submission to NMI',
+    '共同第一作者': 'Co-first Author',
+    '面向古希腊陶器的数字智能博物馆，融合多模态感知、三维推理、外部知识检索与推理时可靠性控制，为文化遗产问答提供更可信、可验证的解释。': 'A digital intelligent museum for ancient Greek pottery that combines multimodal perception, 3D reasoning, external knowledge retrieval, and inference-time reliability control to deliver more trustworthy and verifiable cultural-heritage explanations.',
+    '项目网站': 'Project Website',
+    '项目仓库': 'Code',
+    'VaseMuseum · 方法与验证': 'VaseMuseum · Methods and Evaluation',
+    '系统架构 · 感知、检索与可靠性控制': 'System Architecture · Perception, retrieval, and reliability control',
+    '交互流程 · 从藏品导入到数字展陈': 'Interaction Pipeline · From artifact ingestion to digital exhibition',
+    '系统界面 · 3D 展品与可验证问答': 'System Interface · 3D exhibits and verifiable question answering',
+    '可靠性框架 · Source / Response Control': 'Reliability Framework · Source / Response Control',
+    '主要结果 · 准确率、幻觉率与链接有效性': 'Main Results · Accuracy, hallucination rate, and link validity',
+    '深入评估 · 消融、扩展性与多维对比': 'Further Evaluation · Ablation, scalability, and multidimensional comparisons',
+    '关闭论文图示汇总': 'Close paper figure summary',
+    'EECS 2026 录用 · SPIE 会议论文集': 'Accepted by EECS 2026 · SPIE Conference Proceedings',
+    '独立第一作者': 'Sole First Author',
+    '面向锂离子电池剩余寿命预测，以 ALA 自适应优化 VMD 分解参数，并结合双向时序卷积与注意力机制建模容量退化，在 NASA 与 CALCE 数据集上完成跨数据源验证。': 'Lithium-ion battery remaining-useful-life estimation with ALA-optimized VMD decomposition and a bidirectional temporal convolutional attention model, validated across the NASA and CALCE datasets.',
+    '论文页面（待检索）': 'Paper Page (indexing pending)',
+    '锂离子电池剩余寿命预测': 'Lithium-ion Battery Remaining Useful Life Estimation',
+    '总体方法 · ALA 参数寻优、VMD 分解与 BiTCN-AM 预测': 'Method · ALA optimization, VMD decomposition, and BiTCN-AM prediction',
+    '自适应分解 · 标准 VMD 与 ALA-VMD 对比': 'Adaptive Decomposition · Standard VMD vs. ALA-VMD',
+    'NASA B0005 · 容量轨迹与剩余寿命预测': 'NASA B0005 · Capacity trajectory and RUL prediction',
+    'CALCE CS2_38 · 跨数据集验证': 'CALCE CS2_38 · Cross-dataset validation',
+    'NASA RUL 绝对误差': 'NASA RUL absolute error',
+    '关闭论文图示汇总': 'Close paper figure summary',
+    '智驭低空枢纽（无人机地面站系统）': 'Intelligent Low-Altitude Hub (UAV Ground Station System)',
+    '全国二等奖 第18/230名 前7.83%': 'National Second Prize · 18th of 230 · Top 7.83%',
+    '项目队长': 'Project Lead',
+    '基于 Intel DK-2500 的多模态无人机地面站：用手势与视线生成任务，完成仿真规划、自主巡逻、目标识别、安全确认和全过程记录。': 'A multimodal UAV ground station built on Intel DK-2500. It turns gesture and gaze input into missions and supports simulation planning, autonomous patrol, target recognition, safety confirmation, and full-process logging.',
+    '项目主页': 'Project Website',
+    '智驭低空枢纽 · 核心功能': 'Intelligent Low-Altitude Hub · Core Features',
+    '起飞 · 巡航 · 降落': 'Takeoff · Patrol · Landing',
+    '姿态自检': 'Attitude Self-check',
+    '仿真飞行': 'Simulation Flight',
+    '自由选点巡逻': 'Free-waypoint Patrol',
+    '手势 · 视线输入': 'Gesture · Gaze Input',
+    '火源 · 人脸 · 文字识别': 'Fire · Face · Text Recognition',
+    '多模态交互': 'Multimodal Interaction',
+    '三维仿真': '3D Simulation',
+    '自主路线规划': 'Autonomous Route Planning',
+    '低空巡检': 'Low-altitude Patrol',
+    '边缘视觉识别': 'Edge Vision Recognition',
+    '安全飞行管理': 'Flight Safety Management',
+    '关闭功能汇总': 'Close feature summary',
+    '基于无线通信的数字钥匙实验系统': 'Wireless Digital Key Experimental System',
+    '湖北赛区一等奖 · 华中科技大学该题目唯一省一队伍': 'Hubei First Prize · HUST\'s only first-prize team for this problem',
+    '基于 UWB ToF 测距、四天线 PDoA 测角和卡尔曼滤波，完成 4 位身份验证、三区域实时判定、迎宾声光提示与自动开闭锁。': 'A digital key system using UWB ToF ranging, four-antenna PDoA angle estimation, and Kalman filtering for 4-bit identity verification, real-time three-zone classification, audiovisual greeting, and automatic locking control.',
+    '2026 年为全国大学生电子设计竞赛省赛年，当届不设置全国赛；湖北赛区一等奖为该年度赛事的最高奖项。': 'The 2026 contest was held at the provincial level with no national round; First Prize in the Hubei Division was the highest award available that year.',
+    '正式网站': 'Project Website',
+    '数字钥匙实验系统 · 原理与验证': 'Digital Key System · Principles and Validation',
+    '系统闭环 · UWB 发送、定位接收、主控与门锁执行': 'System Loop · UWB transmission, positioning receiver, controller, and lock actuation',
+    '测角原理 · 到达相位差解算方位角': 'Angle Estimation · Direction from phase difference of arrival',
+    '接收结构 · 四天线基线与主控数据链路': 'Receiver Design · Four-antenna baselines and controller data link',
+    '完整实物 · 120° 定位基站、门锁控制与上位机': 'Integrated Prototype · 120° positioning base station, lock control, and host software',
+    '运行界面 · ID、距离、方位角、区域与门锁状态': 'Runtime Interface · ID, range, azimuth, zone, and lock state',
+    '控制流程 · 验证、滤波、区域判定与动作': 'Control Flow · Verification, filtering, zone classification, and actuation',
+    '数字钥匙 · 一键启动与 4 位身份信标': 'Digital Key · One-button startup and 4-bit identity beacon',
+    '执行端 · 声光迎宾、自动开锁与离区闭锁': 'Actuator · Audiovisual greeting, automatic unlock, and exit locking',
+    '测试数据 · 定位精度、身份验证与三区域功能': 'Test Results · Localization accuracy, identity verification, and three-zone operation',
+    '最大距离误差': 'Maximum range error',
+    '最大方位角误差': 'Maximum azimuth error',
+    '可设置身份 ID': 'Configurable identity ID',
+    '功能判断正确': 'Correct function decisions',
+    '关闭数字钥匙系统汇总': 'Close digital key system summary',
+    '基于 RA MCU 嵌入式处理平台的智能烟雾检测系统与自适应 AI 阈值优化算法': 'Intelligent Smoke Detection System and Adaptive AI Threshold Optimization on an RA MCU Embedded Platform',
+    '全国总决赛二等奖 · 中部赛区一等奖 · 全国前3.97%': 'National Finals Second Prize · Central China First Prize · Top 3.97%',
+    '在瑞萨 RA6M5 上部署轻量化烟雾时序预测网络，以双板卡分别运行 AI 预测与传统固定阈值方案进行现场对照，可提前 3–5 秒预警并将误报率控制在 0.5% 以下。系统采用低成本光学粉尘传感器与 MCU 本地推理，无需云端或高算力平台，兼顾预测性能、部署成本与离线可靠性。': 'A lightweight smoke time-series prediction network deployed on the Renesas RA6M5, demonstrated through a dual-board comparison between AI prediction and a fixed-threshold baseline. It provides warnings 3–5 seconds earlier with a false-alarm rate below 0.5%, using a low-cost optical dust sensor and fully local MCU inference for affordable, offline operation.',
+    '赛事页面': 'Competition Page',
+    '智能烟雾检测系统 · AI 预测与低成本部署': 'Intelligent Smoke Detection · AI Prediction and Low-cost Deployment',
+    '国赛方案 · AI 预测板与固定阈值板现场 A/B 对照': 'National Finals Prototype · On-site A/B comparison of AI prediction and fixed-threshold boards',
+    '实时数据 · 浓度采集、5 秒预测与误差显示': 'Live Data · Concentration acquisition, five-second prediction, and error display',
+    '简易展示版 · 显示、报警与传感器集成': 'Compact Prototype · Integrated display, alarm, and sensing',
+    '板端硬件 · RA6M5、粉尘传感器与声光外设': 'Embedded Hardware · RA6M5, dust sensor, and audiovisual peripherals',
+    '系统闭环 · 采集、板端预测、显示与分级报警': 'System Loop · Acquisition, on-device prediction, display, and graded alarms',
+    '时序预测 · 真实值、单步预测与未来趋势': 'Time-series Forecasting · Ground truth, one-step prediction, and future trend',
+    '轻量部署 · 113,576 B ROM、65,536 B 峰值 RAM': 'Lightweight Deployment · 113,576 B ROM and 65,536 B peak RAM',
+    '软件流程 · 标定、预测、状态判断与声光报警': 'Software Flow · Calibration, prediction, state classification, and audiovisual alarms',
+    '相较固定阈值提前预警': 'Earlier warning than fixed threshold',
+    '系统误报率': 'System false-alarm rate',
+    'RA6M5 单次推理': 'RA6M5 inference latency',
+    '自采烟雾数据组': 'Self-collected smoke samples',
+    '关闭智能烟雾检测系统汇总': 'Close smoke detection system summary',
+    '华中科技大学': 'Huazhong University of Science and Technology',
+    '北京交通大学': 'Beijing Jiaotong University',
+    '北京大学': 'Peking University',
+    '中国科学技术大学': 'University of Science and Technology of China',
+    '英特尔杯大学生电子设计竞赛': 'Intel Cup Undergraduate Electronic Design Contest',
+    '全国大学生电子设计竞赛': 'National Undergraduate Electronics Design Contest',
+    '全国大学生嵌入式芯片与系统设计竞赛': 'National College Student Embedded Chip and System Design Contest',
+    '瑞萨电子（Renesas Electronics）': 'Renesas Electronics',
+    'SPIE（会议论文出版）': 'SPIE (conference proceedings publisher)',
+    'VaseMuseum 标志图': 'VaseMuseum signature visual',
+    'Intel DK-2500 板卡': 'Intel DK-2500 Board',
+    '无人机': 'UAV',
+    '整体系统实物图': 'Integrated System Prototype',
+    '软件界面': 'Software Interface',
+    '初版系统特写': 'Early System Prototype',
+    'Intel DK-2500 板卡与巡检无人机': 'Intel DK-2500 board and inspection UAV',
+    '数字钥匙整体系统与软件运行界面': 'Digital key system prototype and software interface',
+    '智能烟雾检测系统铁盒实物': 'Metal-enclosure smoke detection prototype',
+    '查看 Intel DK-2500 开发套件介绍': 'View the Intel DK-2500 development kit',
+    '展开 VaseMuseum 论文关键流程与实验结果': 'Open VaseMuseum paper methods and results',
+    '展开 EECS 2026 电池剩余寿命预测论文方法与实验结果': 'Open EECS 2026 battery RUL paper methods and results',
+    '展开智驭低空枢纽完整功能汇总': 'Open the full Intelligent Low-Altitude Hub feature summary',
+    '展开数字钥匙实验系统的原理、实现与测试汇总': 'Open digital key principles, implementation, and test summary',
+    '展开智能烟雾检测系统的 AI 算法、双板卡对照与工程实现': 'Open smoke detection AI, dual-board comparison, and engineering summary'
+    ,'谢秋实个人照片': 'Portrait of Qiushi Xie'
+    ,'VaseMuseum 系统架构': 'VaseMuseum system architecture'
+    ,'虚拟博物馆交互流程': 'Virtual museum interaction pipeline'
+    ,'虚拟博物馆界面': 'Virtual museum interface'
+    ,'VaseAgent 可靠性框架': 'VaseAgent reliability framework'
+    ,'VaseAgent 主要实验结果': 'VaseAgent main experimental results'
+    ,'VaseAgent 消融与扩展性实验': 'VaseAgent ablation and scalability experiments'
+    ,'VaseMuseum 古希腊陶器数字展柜': 'VaseMuseum digital display case for ancient Greek pottery'
+    ,'主要实验结果': 'Main experimental results'
+    ,'消融、扩展性与多维评估': 'Ablation, scalability, and multidimensional evaluation'
+    ,'ALA-VMD-BiTCN-AM 电池剩余寿命预测框架': 'ALA-VMD-BiTCN-AM battery RUL prediction framework'
+    ,'标准 VMD 与 ALA-VMD 电池容量序列分解对比': 'Standard VMD and ALA-VMD battery capacity decomposition comparison'
+    ,'NASA B0005 电池容量与剩余寿命预测结果': 'NASA B0005 battery capacity and RUL prediction results'
+    ,'CALCE CS2_38 电池容量与剩余寿命预测结果': 'CALCE CS2_38 battery capacity and RUL prediction results'
+    ,'Intel DK-2500 边缘智能板卡': 'Intel DK-2500 edge AI board'
+    ,'低空巡检无人机': 'Low-altitude inspection UAV'
+    ,'数字钥匙端与智能门锁端系统框图': 'Digital key and smart lock system block diagram'
+    ,'双天线 PDoA 方位角测量原理': 'Dual-antenna PDoA azimuth estimation principle'
+    ,'四天线 UWB 接收模块结构': 'Four-antenna UWB receiver structure'
+    ,'数字钥匙实验系统完整实物': 'Complete digital key system prototype'
+    ,'数字钥匙开锁区运行界面': 'Digital key unlock-zone runtime interface'
+    ,'数字钥匙系统程序流程': 'Digital key software flow'
+    ,'UWB 数字钥匙信标': 'UWB digital key beacon'
+    ,'智能门锁执行端': 'Smart lock actuator'
+    ,'定位精度与身份区域功能测试结果': 'Localization, identity, and zone test results'
+    ,'数字钥匙实验系统整体实物': 'Integrated digital key system prototype'
+    ,'数字钥匙软件运行界面': 'Digital key software interface'
+    ,'全国总决赛双板卡对照展示方案': 'Dual-board comparison prototype at the national finals'
+    ,'烟雾浓度采集与预测曲线运行界面': 'Smoke acquisition and prediction runtime interface'
+    ,'智能烟雾检测系统简易展示版': 'Compact smoke detection prototype'
+    ,'智能烟雾检测系统内部 RA6M5 板卡': 'RA6M5 board inside the smoke detection system'
+    ,'智能烟雾检测系统整体框图': 'Smoke detection system block diagram'
+    ,'烟雾浓度真实值、预测值与未来趋势曲线': 'Smoke ground truth, prediction, and future trend curves'
+    ,'轻量化神经网络 ROM RAM 与计算量': 'Lightweight neural network ROM, RAM, and compute requirements'
+    ,'烟雾检测预测与分级报警软件流程': 'Smoke prediction and graded alarm software flow'
+    ,'报告中的智能烟雾检测系统铁盒特写': 'Metal-enclosure smoke detection prototype from the design report'
+    ,'Vase Museum 合作院校与研究组织': 'VaseMuseum partner universities and research organizations'
+    ,'VaseMuseum 数字博物馆展柜': 'VaseMuseum digital museum display case'
+    ,'VaseMuseum 论文关键流程与实验结果': 'VaseMuseum paper methods and experimental results'
+    ,'EECS 2026 电池剩余寿命预测论文方法与实验结果': 'EECS 2026 battery RUL paper methods and experimental results'
+    ,'智驭低空枢纽功能汇总': 'Intelligent Low-Altitude Hub feature summary'
+    ,'数字钥匙实验系统原理、实现与测试汇总': 'Digital key principles, implementation, and test summary'
+    ,'数字钥匙系统关键测试指标': 'Digital key system metrics'
+    ,'智能烟雾检测系统算法、双板卡对照与工程实现': 'Smoke detection algorithm, dual-board comparison, and engineering implementation'
+    ,'智能烟雾检测系统关键指标': 'Smoke detection system metrics'
+    ,'论文实验关键指标': 'Paper evaluation metrics'
+    ,'华中科技大学与 SPIE': 'Huazhong University of Science and Technology and SPIE'
+    ,'华中科技大学与英特尔杯大学生电子设计竞赛': 'Huazhong University of Science and Technology and the Intel Cup'
+    ,'华中科技大学与全国大学生电子设计竞赛': 'Huazhong University of Science and Technology and the National Undergraduate Electronics Design Contest'
+    ,'华中科技大学、全国大学生嵌入式芯片与系统设计竞赛和瑞萨电子': 'Huazhong University of Science and Technology, the Embedded Chip and System Design Contest, and Renesas Electronics'
+  };
+
+  const translatableAttributes = [
+    'aria-label', 'alt', 'title', 'data-label', 'data-contact-title', 'data-contact-description'
+  ];
+  const originalText = new WeakMap();
+  const originalAttributes = new WeakMap();
+
+  const translateValue = (value, language) => {
+    if (language !== 'en') return value;
+    const match = value.match(/^(\s*)(.*?)(\s*)$/s);
+    if (!match) return value;
+    return `${match[1]}${translations[match[2]] || match[2]}${match[3]}`;
+  };
+
+  const applyLanguage = language => {
+    const activeLanguage = language === 'en' ? 'en' : 'zh';
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+      acceptNode: node => {
+        const parent = node.parentElement;
+        if (!parent || parent.closest('[data-no-i18n]') || ['SCRIPT', 'STYLE', 'NOSCRIPT'].includes(parent.tagName)) {
+          return NodeFilter.FILTER_REJECT;
+        }
+        return node.nodeValue.trim() ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+      }
+    });
+
+    const textNodes = [];
+    while (walker.nextNode()) textNodes.push(walker.currentNode);
+    textNodes.forEach(node => {
+      if (!originalText.has(node)) originalText.set(node, node.nodeValue);
+      node.nodeValue = translateValue(originalText.get(node), activeLanguage);
+    });
+
+    document.querySelectorAll('*:not([data-no-i18n])').forEach(element => {
+      if (element.closest('[data-no-i18n]')) return;
+      let values = originalAttributes.get(element);
+      if (!values) {
+        values = {};
+        originalAttributes.set(element, values);
+      }
+      translatableAttributes.forEach(attribute => {
+        if (!element.hasAttribute(attribute)) return;
+        if (!(attribute in values)) values[attribute] = element.getAttribute(attribute);
+        element.setAttribute(attribute, translateValue(values[attribute], activeLanguage));
+      });
+    });
+
+    document.documentElement.lang = activeLanguage === 'en' ? 'en' : 'zh-CN';
+    document.documentElement.dataset.language = activeLanguage;
+    document.title = activeLanguage === 'en' ? translations['谢秋实 个人主页'] : '谢秋实 个人主页';
+    const description = document.querySelector('meta[name="description"]');
+    if (description) description.content = activeLanguage === 'en'
+      ? translations['谢秋实的竞赛与科研项目作品集']
+      : '谢秋实的竞赛与科研项目作品集';
+
+    document.querySelectorAll('[data-language]').forEach(button => {
+      const isActive = button.dataset.language === activeLanguage;
+      button.setAttribute('aria-pressed', String(isActive));
+      button.classList.toggle('is-active', isActive);
+    });
+
+    try { window.localStorage.setItem(STORAGE_KEY, activeLanguage); } catch (_) {}
+  };
+
+  document.querySelectorAll('[data-language]').forEach(button => {
+    button.addEventListener('click', () => applyLanguage(button.dataset.language));
+  });
+
+  let initialLanguage = 'zh';
+  try {
+    const savedLanguage = window.localStorage.getItem(STORAGE_KEY);
+    if (savedLanguage === 'en' || savedLanguage === 'zh') initialLanguage = savedLanguage;
+  } catch (_) {}
+  applyLanguage(initialLanguage);
+})();

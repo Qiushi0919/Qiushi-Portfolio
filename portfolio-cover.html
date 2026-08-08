@@ -23,7 +23,8 @@
     :root{--blue:#1772d0;--navy:#162a3a;--muted:#5f7180;--line:#e2e7eb;--paper:#fff;--bg:#fff}
     *{box-sizing:border-box}html{color-scheme:light;overflow-x:hidden}html.portfolio-loading{overflow:hidden}body{margin:0;overflow-x:hidden;background:var(--bg);color:#1d2d3a;font-family:Lato,Arial,"PingFang SC","Microsoft YaHei",sans-serif;font-size:14px}
     a{color:var(--blue);text-decoration:none}a:hover{color:#f09228;text-decoration:none}
-    .page{width:min(860px,calc(100% - 96px));margin:0 auto;padding:42px 0 72px;opacity:1;transform:none;transition:opacity .32s ease,transform .32s ease}html.portfolio-loading .page{opacity:0;transform:translateY(5px)}
+    .page{width:min(860px,calc(100% - 96px));margin:0 auto;padding:28px 0 72px;opacity:1;transform:none;transition:opacity .32s ease,transform .32s ease}html.portfolio-loading .page{opacity:0;transform:translateY(5px)}
+    .site-toolbar{display:flex;justify-content:flex-end;align-items:center;padding:0 16px 8px}.language-switch{display:inline-flex;align-items:center;gap:6px;color:#9aa7b0;font-size:12px}.language-switch button{appearance:none;padding:2px 0;border:0;border-bottom:1px solid transparent;background:none;color:#81909b;font:inherit;line-height:1.3;cursor:pointer}.language-switch button:hover,.language-switch button:focus-visible{color:var(--blue)}.language-switch button.is-active{border-bottom-color:#536b7c;color:#314e64;font-weight:700}.language-switch span{color:#ccd4d9}
     .portfolio-loader{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;background:#fff;opacity:1;visibility:visible;transition:opacity .28s ease,visibility .28s ease}.portfolio-ready .portfolio-loader{opacity:0;visibility:hidden;pointer-events:none}.loader-inner{width:min(220px,60vw);text-align:center}.loader-title{color:#213747;font-size:14px;font-weight:700;letter-spacing:.02em}.loader-subtitle{margin-top:3px;color:#8797a3;font-size:10px;letter-spacing:.08em;text-transform:uppercase}.loader-track{height:2px;margin-top:15px;overflow:hidden;background:#e5eaee}.loader-progress{display:block;width:0;height:100%;background:var(--blue);transition:width .18s ease}
     .profile-section{display:grid;grid-template-columns:minmax(0,63fr) minmax(180px,37fr);gap:28px;align-items:center;padding:2px 16px 34px;border-bottom:1px solid var(--line)}.profile-copy{padding:12px 0}.profile-copy h1{margin:0 0 20px;text-align:center;color:#172b3a;font-size:32px;font-weight:400;letter-spacing:-.025em}.profile-copy p{margin:0 0 12px;color:#344d60;font-size:14px;line-height:1.62}.profile-links{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:5px;margin-top:17px;font-size:14px}.profile-links span{color:#9aa7b0}.contact-link{appearance:none;padding:0;border:0;background:none;color:var(--blue);font:inherit;cursor:pointer}.contact-link:hover,.contact-link:focus-visible{color:#f09228}.profile-photo-placeholder{display:grid;width:min(100%,220px);aspect-ratio:1;place-items:center;justify-self:center;border:1px dashed #cbd4da;background:#f7f8f9;color:#7c8d99;text-align:center}.profile-photo-placeholder strong{display:block;font-size:14px;font-weight:700}.profile-photo-placeholder small{display:block;margin-top:3px;font-size:10px;letter-spacing:.08em;text-transform:uppercase}.works-head{padding:27px 16px 7px}.works-head h2{margin:0 0 6px;color:#1d2d3a;font-size:22px;font-weight:400}.works-head p{margin:0;color:var(--muted);font-size:14px}.contact-dialog{width:min(430px,calc(100% - 36px));max-height:88vh;padding:0;border:1px solid #d5dde2;border-radius:4px;background:#fff;box-shadow:0 18px 50px rgba(16,31,43,.24)}.contact-dialog::backdrop{background:rgba(13,28,40,.4)}.contact-dialog-card{padding:18px}.contact-dialog-head{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;margin-bottom:13px}.contact-dialog-head h2{margin:0;color:#213747;font-size:20px;font-weight:700}.contact-dialog-head p{margin:4px 0 0;color:#70818d;font-size:12px}.contact-dialog-close{width:32px;height:32px;padding:0;border:1px solid #d5dde2;border-radius:50%;background:#fff;color:#344d60;font-size:20px;line-height:28px;cursor:pointer}.contact-qr{margin:0;text-align:center}.contact-qr img{display:block;width:100%;max-height:64vh;object-fit:contain;background:#fff}.contact-qr figcaption{margin-top:10px;color:#425b6e;font-size:13px;font-weight:700}
     .profile-photo{display:block;width:min(100%,220px);aspect-ratio:3/4;justify-self:center;border:1px solid #d9e0e5;background:#f7f8f9;object-fit:cover}
@@ -67,6 +68,13 @@
   </div>
   <noscript><style>.portfolio-loader{display:none!important}.page{opacity:1!important;transform:none!important}</style></noscript>
   <main class="page">
+    <div class="site-toolbar" data-no-i18n>
+      <div class="language-switch" role="group" aria-label="Language / 语言">
+        <button type="button" data-language="zh" lang="zh-CN" aria-pressed="true">中文</button>
+        <span aria-hidden="true">/</span>
+        <button type="button" data-language="en" lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
     <section class="profile-section" aria-labelledby="profileName">
       <div class="profile-copy">
         <h1 id="profileName">谢秋实</h1>
@@ -90,7 +98,7 @@
 
     <article class="project-card vase-card" id="vaseProjectCard">
       <div class="project-topline vase-topline">
-        <span class="vase-kicker">2025年10月—至今 · 研究项目</span>
+        <span class="vase-kicker">2025年10月—至今 · 本科生科研助理（远程）</span>
         <div class="vase-logos" aria-label="Vase Museum 合作院校与研究组织">
           <span class="logo-tip" data-label="北京交通大学" tabindex="0"><img loading="lazy" decoding="async" class="seal" src="assets/portfolio-cover/bjtu-logo.png" alt="北京交通大学" /></span>
           <span class="logo-tip" data-label="北京大学" tabindex="0"><img loading="lazy" decoding="async" class="seal" src="assets/portfolio-cover/pku-logo.svg" alt="北京大学" /></span>
@@ -365,6 +373,8 @@
   </dialog>
 
   <div class="overlay-backdrop" aria-hidden="true"></div>
+
+  <script src="assets/js/portfolio-i18n.js"></script>
 
   <script>
     (() => {
