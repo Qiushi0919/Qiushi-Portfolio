@@ -21,7 +21,7 @@
     '关闭二维码': 'Close QR code',
     '作品': 'Selected Work',
     '科研论文与竞赛项目；单击项目封面可展开功能汇总。': 'Research papers and competition projects. Click a cover to view the full project summary.',
-    '2025年10月—至今 · VaseMuseum 研究项目': 'Oct 2025–Present · VaseMuseum Research Project',
+    '2025年10月—至今 · 本科生远程科研项目': 'Oct 2025–Present · Remote Undergraduate Research Project',
     '2025年9月—2026年6月 · 嵌赛成果转化': 'Sep 2025–Jun 2026 · Research Translation from an Embedded Systems Competition',
     '2026年4月—7月 · 2026年英特尔杯大学生电子设计竞赛嵌入式AI专题赛': 'Apr–Jul 2026 · 2026 Intel Cup Embedded AI Track',
     '2026年7月—8月 · 2026年全国大学生电子设计竞赛（湖北赛区）': 'Jul–Aug 2026 · 2026 National Undergraduate Electronics Design Contest (Hubei)',
