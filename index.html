@@ -24,7 +24,7 @@
     a{color:var(--blue);text-decoration:none}a:hover{color:#f09228;text-decoration:none}
     .page{width:min(860px,calc(100% - 96px));margin:0 auto;padding:42px 0 72px;opacity:1;transform:none;transition:opacity .32s ease,transform .32s ease}html.portfolio-loading .page{opacity:0;transform:translateY(5px)}
     .portfolio-loader{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;background:#fff;opacity:1;visibility:visible;transition:opacity .28s ease,visibility .28s ease}.portfolio-ready .portfolio-loader{opacity:0;visibility:hidden;pointer-events:none}.loader-inner{width:min(220px,60vw);text-align:center}.loader-title{color:#213747;font-size:14px;font-weight:700;letter-spacing:.02em}.loader-subtitle{margin-top:3px;color:#8797a3;font-size:10px;letter-spacing:.08em;text-transform:uppercase}.loader-track{height:2px;margin-top:15px;overflow:hidden;background:#e5eaee}.loader-progress{display:block;width:0;height:100%;background:var(--blue);transition:width .18s ease}
-    .page-head{margin-bottom:24px}.page-head small{display:block;color:#7d91a2;font-size:11px;font-weight:760;letter-spacing:.08em}.page-head h1{margin:6px 0 7px;font-size:32px;letter-spacing:-.035em}.page-head p{margin:0;color:var(--muted);font-size:14px}
+    .profile-section{display:grid;grid-template-columns:minmax(0,63fr) minmax(180px,37fr);gap:28px;align-items:center;padding:2px 16px 34px;border-bottom:1px solid var(--line)}.profile-copy{padding:12px 0}.profile-copy h1{margin:0 0 20px;text-align:center;color:#172b3a;font-size:32px;font-weight:400;letter-spacing:-.025em}.profile-copy p{margin:0 0 12px;color:#344d60;font-size:14px;line-height:1.62}.profile-links{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:5px;margin-top:17px;font-size:14px}.profile-links span{color:#9aa7b0}.profile-photo-placeholder{display:grid;width:min(100%,220px);aspect-ratio:1;place-items:center;justify-self:center;border:1px dashed #cbd4da;background:#f7f8f9;color:#7c8d99;text-align:center}.profile-photo-placeholder strong{display:block;font-size:14px;font-weight:700}.profile-photo-placeholder small{display:block;margin-top:3px;font-size:10px;letter-spacing:.08em;text-transform:uppercase}.works-head{padding:27px 16px 7px}.works-head h2{margin:0 0 6px;color:#1d2d3a;font-size:22px;font-weight:400}.works-head p{margin:0;color:var(--muted);font-size:14px}
     .project-card{position:relative;display:grid;grid-template-columns:240px minmax(0,1fr);column-gap:28px;row-gap:14px;align-items:center;padding:24px 16px;background:var(--paper);border:0;border-bottom:1px solid var(--line);border-radius:0;box-shadow:none}
     .project-topline{grid-column:1/-1;display:flex;align-items:flex-start;justify-content:space-between;gap:10px 18px;flex-wrap:wrap}
     .cover-column{display:grid;gap:12px;align-self:center}.cover-trigger{position:relative;display:block;width:100%;aspect-ratio:1;padding:8px;overflow:hidden;border:1px solid var(--line);border-radius:3px;background:#fff;cursor:zoom-in;box-shadow:none}
@@ -50,7 +50,7 @@
     .overlay-foot{display:flex;flex-wrap:wrap;gap:6px;padding:12px 2px 0}.overlay-foot span{padding:5px 7px;border:1px solid #d5e0e8;border-radius:2px;background:#fff;color:#315a79;font-size:11px;font-weight:700}.vase-feature-overlay{width:min(980px,76vw);background:rgba(250,252,252,.98)}.research-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.research-figure{display:grid;grid-template-rows:minmax(0,1fr) auto;min-height:0;margin:0;overflow:hidden;border:1px solid #d9e2e5;border-radius:3px;background:#fff;box-shadow:none}.research-figure img{display:block;width:100%;height:170px;padding:7px;object-fit:contain;background:#fff}.research-figure figcaption{padding:8px 9px 9px;border-top:1px solid #e7eeee;color:#315a60;font-size:12px;font-weight:700;line-height:1.35}
     :focus-visible{outline:3px solid rgba(8,120,213,.48);outline-offset:3px}
     @media(max-width:1050px){.feature-overlay{right:2vw;width:min(860px,82vw)}}
-    @media(max-width:760px){.page{width:min(100% - 24px,1180px);padding-top:30px}.project-card{grid-template-columns:1fr;column-gap:0;row-gap:18px;padding:18px}.project-topline{grid-row:1}.project-logos,.vase-logos{width:100%;justify-content:flex-start;margin-left:0}.cover-column{grid-row:2;max-width:360px}.project-copy{grid-row:3;margin-top:0}.project-copy.has-signature{padding-right:0}.signature-visuals{position:static;margin:0 0 14px}.project-kicker,.vase-kicker{flex-basis:100%;max-width:100%}.vase-cover-trigger,.nuedc-cover-trigger,.eecs-cover-trigger,.embedded-cover-trigger{grid-row:2;max-width:360px}.vase-copy,.nuedc-copy,.eecs-copy,.embedded-copy{grid-row:3;margin-top:0;padding-top:0}.project-actions{align-items:flex-start}.feature-overlay{right:auto;left:50%;width:92vw;padding:11px;border-radius:8px;transform:translate(-50%,-50%) scale(.86);transform-origin:center}.project-card.is-open .feature-overlay{transform:translate(-50%,-50%) scale(1)}.feature-grid,.research-grid,.eecs-grid{grid-template-columns:repeat(2,1fr)}.nuedc-grid,.embedded-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.feature{aspect-ratio:4/3}.research-figure img,.nuedc-figure img,.eecs-figure img,.embedded-figure img{height:145px}.overlay-head h3{font-size:20px}}
+    @media(max-width:760px){.page{width:min(100% - 24px,1180px);padding-top:30px}.profile-section{grid-template-columns:1fr;padding-inline:18px}.profile-photo-placeholder{width:200px}.project-card{grid-template-columns:1fr;column-gap:0;row-gap:18px;padding:18px}.project-topline{grid-row:1}.project-logos,.vase-logos{width:100%;justify-content:flex-start;margin-left:0}.cover-column{grid-row:2;max-width:360px}.project-copy{grid-row:3;margin-top:0}.project-copy.has-signature{padding-right:0}.signature-visuals{position:static;margin:0 0 14px}.project-kicker,.vase-kicker{flex-basis:100%;max-width:100%}.vase-cover-trigger,.nuedc-cover-trigger,.eecs-cover-trigger,.embedded-cover-trigger{grid-row:2;max-width:360px}.vase-copy,.nuedc-copy,.eecs-copy,.embedded-copy{grid-row:3;margin-top:0;padding-top:0}.project-actions{align-items:flex-start}.feature-overlay{right:auto;left:50%;width:92vw;padding:11px;border-radius:8px;transform:translate(-50%,-50%) scale(.86);transform-origin:center}.project-card.is-open .feature-overlay{transform:translate(-50%,-50%) scale(1)}.feature-grid,.research-grid,.eecs-grid{grid-template-columns:repeat(2,1fr)}.nuedc-grid,.embedded-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.feature{aspect-ratio:4/3}.research-figure img,.nuedc-figure img,.eecs-figure img,.embedded-figure img{height:145px}.overlay-head h3{font-size:20px}}
     @media(max-width:460px){.feature-grid,.research-grid,.nuedc-grid,.eecs-grid,.embedded-grid{grid-template-columns:1fr}.nuedc-figure.wide,.embedded-figure.wide{grid-column:auto}.nuedc-metrics,.eecs-metrics,.embedded-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.feature{aspect-ratio:16/9}.research-figure img,.nuedc-figure img,.eecs-figure img,.embedded-figure img{height:auto;max-height:220px}.logo-tip::after{left:0;transform:translate(0,-2px)}.logo-tip:hover::after,.logo-tip:focus::after{transform:translate(0,0)}}
     @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}.page,.portfolio-loader,.loader-progress,.cover-trigger,.vase-cover-trigger,.nuedc-cover-trigger,.eecs-cover-trigger,.embedded-cover-trigger,.feature-overlay{transition:none}.vase-slide,.nuedc-cover-slide,.eecs-slide,.embedded-cover-slide{animation:none;opacity:0}.vase-slide:first-child,.nuedc-cover-slide:first-child,.eecs-slide:first-child,.embedded-cover-slide:first-child{opacity:1}}
   </style>
@@ -65,10 +65,26 @@
   </div>
   <noscript><style>.portfolio-loader{display:none!important}.page{opacity:1!important;transform:none!important}</style></noscript>
   <main class="page">
-    <header class="page-head">
-      <small>谢秋实 · 项目作品集</small>
-      <h1>作品集项目</h1>
-      <p>点击项目链接查看完整网站与开源仓库；单击项目封面可展开功能汇总。</p>
+    <section class="profile-section" aria-labelledby="profileName">
+      <div class="profile-copy">
+        <h1 id="profileName">谢秋实</h1>
+        <p>华中科技大学本科生，关注嵌入式系统、边缘智能、多模态交互与智能感知。</p>
+        <p>这里整理了我的科研论文与竞赛项目，涵盖数字文化遗产、无人机地面站、无线定位和嵌入式 AI。</p>
+        <nav class="profile-links" aria-label="联系方式">
+          <a href="weixin://" title="打开微信">微信</a><span aria-hidden="true">/</span>
+          <a href="https://wpa.qq.com/msgrd?v=3&amp;uin=1061839153&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener">QQ</a><span aria-hidden="true">/</span>
+          <a href="mailto:1061839153@qq.com">Email</a><span aria-hidden="true">/</span>
+          <a href="https://github.com/Qiushi0919" target="_blank" rel="noopener">GitHub</a>
+        </nav>
+      </div>
+      <div class="profile-photo-placeholder" role="img" aria-label="个人照片占位符">
+        <div><strong>个人照片</strong><small>Photo</small></div>
+      </div>
+    </section>
+
+    <header class="works-head">
+      <h2>作品</h2>
+      <p>科研论文与竞赛项目；单击项目封面可展开功能汇总。</p>
     </header>
 
     <article class="project-card vase-card" id="vaseProjectCard">
@@ -101,8 +117,7 @@
         <div class="signature-visuals signature-vase" aria-label="VaseMuseum 数字博物馆展柜">
           <figure class="visual-tip" data-label="VaseMuseum 标志图" tabindex="0"><img loading="lazy" decoding="async" src="assets/portfolio-cover/vase-paper-preview/vase-display.webp" alt="VaseMuseum 古希腊陶器数字展柜" /></figure>
         </div>
-        <h2><a class="title-link" href="https://aigeeksgroup.github.io/VaseMuseum/" target="_blank" rel="noopener">VaseMuseum</a></h2>
-        <p class="vase-subtitle">Digital Intelligent Museum for Ancient Greek Pottery</p>
+        <h2><a class="title-link" href="https://aigeeksgroup.github.io/VaseMuseum/" target="_blank" rel="noopener">VaseMuseum: Digital Intelligent Museum for Ancient Greek Pottery</a></h2>
         <div class="vase-meta"><p>预计投稿至 NMI</p><p>共同第一作者</p></div>
         <p class="vase-summary">面向古希腊陶器的数字智能博物馆，融合多模态感知、三维推理、外部知识检索与推理时可靠性控制，为文化遗产问答提供更可信、可验证的解释。</p>
         <div class="links"><a href="https://aigeeksgroup.github.io/VaseMuseum/" target="_blank" rel="noopener">项目网站</a><a href="https://github.com/AIGeeksGroup/VaseMuseum" target="_blank" rel="noopener">项目仓库</a></div>
