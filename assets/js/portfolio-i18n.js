@@ -20,7 +20,8 @@
     '联系二维码': 'Contact QR code',
     '关闭二维码': 'Close QR code',
     '作品': 'Selected Work',
-    '科研论文与竞赛项目；单击项目封面可展开功能汇总。': 'Research papers and competition projects. Click a cover to view the full project summary.',
+    '科研论文与竞赛项目；单击左侧缩略图查看项目详情，单击作品标题或下方链接访问对应页面。': 'Research papers and competition projects. Click a thumbnail on the left to view project details, or click a project title or link below to visit the corresponding page.',
+    '科研论文与竞赛项目；单击作品标题或下方链接可访问对应网站。': 'Research papers and competition projects. Click a project title or link below to visit the corresponding website.',
     '2025年10月—至今 · 本科生远程科研项目': 'Oct 2025–Present · Remote Undergraduate Research Project',
     '2025年9月—2026年6月 · 嵌赛成果转化': 'Sep 2025–Jun 2026 · Research Translation from an Embedded Systems Competition',
     '2026年4月—7月 · 2026年英特尔杯大学生电子设计竞赛嵌入式AI专题赛': 'Apr–Jul 2026 · 2026 Intel Cup Embedded AI Track',
@@ -279,5 +280,7 @@
     const savedLanguage = window.localStorage.getItem(STORAGE_KEY);
     if (savedLanguage === 'en' || savedLanguage === 'zh') initialLanguage = savedLanguage;
   } catch (_) {}
+  const requestedLanguage = new URLSearchParams(window.location.search).get('lang');
+  if (requestedLanguage === 'en' || requestedLanguage === 'zh') initialLanguage = requestedLanguage;
   applyLanguage(initialLanguage);
 })();
