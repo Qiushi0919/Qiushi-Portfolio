@@ -25,12 +25,9 @@
     '2025年9月—2026年6月 · 嵌赛成果转化': 'Sep 2025–Jun 2026 · Research Translation from an Embedded Systems Competition',
     '2026年4月—7月 · 2026年英特尔杯大学生电子设计竞赛嵌入式AI专题赛': 'Apr–Jul 2026 · 2026 Intel Cup Embedded AI Track',
     '2026年7月—8月 · 2026年全国大学生电子设计竞赛（湖北赛区）': 'Jul–Aug 2026 · 2026 National Undergraduate Electronics Design Contest (Hubei)',
-    '2024年11月—2025年6月 · 中国国际大学生创新大赛（2026）': 'Nov 2024–Jun 2025 · China International College Students’ Innovation Competition (2026)',
-    '2025年4月—2026年4月 · 2项省级大学生创新创业训练计划项目': 'Apr 2025–Apr 2026 · Two Provincial Undergraduate Innovation and Entrepreneurship Training Program Projects',
     '2025年4月—8月 · 第八届（2025）全国大学生嵌入式芯片与系统设计竞赛芯片应用赛道': 'Apr–Aug 2025 · 8th National College Student Embedded Chip and System Design Contest — Chip Application Track',
     '投稿至 NMI': 'Submitted to NMI',
     '共同第一作者 · 本科生科研助理（远程）': 'Co-first Author · Undergraduate Research Assistant (Remote)',
-    '指导教师：唐浩': 'Advisor: Hao Tang',
     '面向古希腊陶器的数字智能博物馆，融合多模态感知、三维推理、外部知识检索与推理时可靠性控制，为文化遗产问答提供更可信、可验证的解释。': 'A digital intelligent museum for ancient Greek pottery that combines multimodal perception, 3D reasoning, external knowledge retrieval, and inference-time reliability control to deliver more trustworthy and verifiable cultural-heritage explanations.',
     '项目网站': 'Project Website',
     '项目仓库': 'Code',
@@ -92,15 +89,6 @@
     '可设置身份 ID': 'Configurable identity ID',
     '功能判断正确': 'Correct function decisions',
     '关闭数字钥匙系统汇总': 'Close digital key system summary',
-    '凌云睿通：基于波束跟踪的低空通信信号增强系统': 'Lingyun Ruitong: Low-Altitude Communication Signal Enhancement via Beam Tracking',
-    '主要团队成员': 'Core Team Member',
-    '指导教师：尹海帆、谭力': 'Advisors: Haifan Yin and Li Tan',
-    '面向低空无人机通信覆盖与稳定性问题，采用动态可重构超表面实现波束生成、快速切换与定向追踪，并依托实验室设备、测试场地和创新空间开展产学研协同验证。': 'A low-altitude UAV communication system using a dynamically reconfigurable metasurface for beam generation, rapid switching, and directional tracking, supported by collaborative validation across laboratory equipment, test sites, and innovation facilities.',
-    '大赛官网': 'Competition Website',
-    '低空通信信号增强 · 技术方案': 'Low-Altitude Communication Enhancement · Technical Approach',
-    '第 8 页 · 动态元表面实现快速波束切换与追踪': 'Page 8 · Rapid beam switching and tracking with a dynamic metasurface',
-    '第 10 页 · 实验室设备、测试场地与创新空间': 'Page 10 · Laboratory equipment, test sites, and innovation facilities',
-    '关闭低空通信信号增强项目汇总': 'Close low-altitude communication project summary',
     '基于 RA MCU 嵌入式处理平台的智能烟雾检测系统与自适应 AI 阈值优化算法': 'Intelligent Smoke Detection System and Adaptive AI Threshold Optimization on an RA MCU Embedded Platform',
     '全国总决赛二等奖 · 中部赛区一等奖 · 全国前3.97%': 'National Finals Second Prize · Central China First Prize · Top 3.97%',
     '在瑞萨 RA6M5 上部署轻量化烟雾时序预测网络，以双板卡分别运行 AI 预测与传统固定阈值方案进行现场对照，可提前 3–5 秒预警并将误报率控制在 0.5% 以下。系统采用低成本光学粉尘传感器与 MCU 本地推理，无需云端或高算力平台，兼顾预测性能、部署成本与离线可靠性。': 'A lightweight smoke time-series prediction network deployed on the Renesas RA6M5, demonstrated through a dual-board comparison between AI prediction and a fixed-threshold baseline. It provides warnings 3–5 seconds earlier with a false-alarm rate below 0.5%, using a low-cost optical dust sensor and fully local MCU inference for affordable, offline operation.',
@@ -123,9 +111,6 @@
     '北京交通大学': 'Beijing Jiaotong University',
     '北京大学': 'Peking University',
     '中国科学技术大学': 'University of Science and Technology of China',
-    '大学生创新创业训练计划': 'Undergraduate Innovation and Entrepreneurship Training Program',
-    '中国国际大学生创新大赛': 'China International College Students’ Innovation Competition',
-    '大创计划': 'Innovation Program',
     '英特尔杯大学生电子设计竞赛': 'Intel Cup Undergraduate Electronic Design Contest',
     '全国大学生电子设计竞赛': 'National Undergraduate Electronics Design Contest',
     '全国大学生嵌入式芯片与系统设计竞赛': 'National College Student Embedded Chip and System Design Contest',
@@ -146,7 +131,6 @@
     '展开智驭低空枢纽完整功能汇总': 'Open the full Intelligent Low-Altitude Hub feature summary',
     '展开数字钥匙实验系统的原理、实现与测试汇总': 'Open digital key principles, implementation, and test summary',
     '展开智能烟雾检测系统的 AI 算法、双板卡对照与工程实现': 'Open smoke detection AI, dual-board comparison, and engineering summary'
-    ,'展开低空通信信号增强项目技术方案与支撑条件': 'Open the low-altitude communication technical approach and supporting facilities'
     ,'谢秋实个人照片': 'Portrait of Qiushi Xie'
     ,'VaseMuseum 系统架构': 'VaseMuseum system architecture'
     ,'虚拟博物馆交互流程': 'Virtual museum interaction pipeline'
@@ -197,10 +181,6 @@
     ,'华中科技大学与英特尔杯大学生电子设计竞赛': 'Huazhong University of Science and Technology and the Intel Cup'
     ,'华中科技大学与全国大学生电子设计竞赛': 'Huazhong University of Science and Technology and the National Undergraduate Electronics Design Contest'
     ,'华中科技大学、全国大学生嵌入式芯片与系统设计竞赛和瑞萨电子': 'Huazhong University of Science and Technology, the Embedded Chip and System Design Contest, and Renesas Electronics'
-    ,'华中科技大学、大学生创新创业训练计划、中国国际大学生创新大赛与 MCSP Lab': 'Huazhong University of Science and Technology, the Undergraduate Innovation and Entrepreneurship Training Program, the China International College Students’ Innovation Competition, and MCSP Lab'
-    ,'低空通信信号增强项目技术方案与支撑条件': 'Low-altitude communication technical approach and supporting facilities'
-    ,'动态元表面低空通信波束生成与定向追踪方案': 'Dynamic-metasurface beam generation and directional tracking for low-altitude communication'
-    ,'低空通信项目产学研协同创新支撑条件': 'Collaborative research and innovation facilities for the low-altitude communication project'
   };
 
   const translatableAttributes = [
