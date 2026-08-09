@@ -59,6 +59,10 @@
     @media(max-width:760px){.page{width:min(100% - 24px,1180px);padding-top:30px}.profile-section{grid-template-columns:1fr;padding-inline:18px}.profile-photo-placeholder{width:200px}.project-card{grid-template-columns:1fr;column-gap:0;row-gap:18px;padding:18px}.project-topline{grid-row:1}.project-logos,.vase-logos{width:100%;justify-content:flex-start;margin-left:0}.cover-column{grid-row:2;max-width:360px}.project-copy{grid-row:3;margin-top:0}.project-copy.has-signature{padding-right:0}.signature-visuals{position:static;margin:0 0 14px}.project-kicker,.vase-kicker{flex-basis:100%;max-width:100%}.vase-cover-trigger,.nuedc-cover-trigger,.eecs-cover-trigger,.embedded-cover-trigger{grid-row:2;max-width:360px}.vase-copy,.nuedc-copy,.eecs-copy,.embedded-copy{grid-row:3;margin-top:0;padding-top:0}.project-actions{align-items:flex-start}.feature-overlay{right:auto;left:50%;width:92vw;padding:11px;border-radius:8px;transform:translate(-50%,-50%) scale(.86);transform-origin:center}.project-card.is-open .feature-overlay{transform:translate(-50%,-50%) scale(1)}.feature-grid,.research-grid,.eecs-grid{grid-template-columns:repeat(2,1fr)}.nuedc-grid,.embedded-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.feature{aspect-ratio:4/3}.research-figure img,.nuedc-figure img,.eecs-figure img,.embedded-figure img{height:145px}.overlay-head h3{font-size:20px}}
     @media(max-width:460px){.feature-grid,.research-grid,.nuedc-grid,.eecs-grid,.embedded-grid{grid-template-columns:1fr}.nuedc-figure.wide,.embedded-figure.wide{grid-column:auto}.nuedc-metrics,.eecs-metrics,.embedded-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.feature{aspect-ratio:16/9}.research-figure img,.nuedc-figure img,.eecs-figure img,.embedded-figure img{height:auto;max-height:220px}.logo-tip::after{left:0;transform:translate(0,-2px)}.logo-tip:hover::after,.logo-tip:focus::after{transform:translate(0,0)}}
     @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}.page,.portfolio-loader,.loader-progress,.cover-trigger,.vase-cover-trigger,.nuedc-cover-trigger,.eecs-cover-trigger,.embedded-cover-trigger,.feature-overlay{transition:none}.vase-slide,.nuedc-cover-slide,.eecs-slide,.embedded-cover-slide{animation:none;opacity:0}.vase-slide:first-child,.nuedc-cover-slide:first-child,.eecs-slide:first-child,.embedded-cover-slide:first-child{opacity:1}}
+    .kicker-lines{display:grid;gap:2px}.kicker-lines span{display:block}
+    .lowcom-card{margin-top:0}.lowcom-card .project-topline{align-items:center}.lowcom-card .project-logos{gap:7px}.lowcom-card .project-logos .hust-mark{width:104px;height:30px}.lowcom-card .project-logos .innovation-mark{width:34px;height:30px}.lowcom-card .project-logos .mcsp-mark{width:96px;height:28px}.dachuang-wordmark{display:inline-flex;align-items:center;justify-content:center;min-height:25px;padding:3px 7px;border:1px solid #ccd8df;color:#2a5c99;background:#fff;font-family:Lato,"PingFang SC","Microsoft YaHei",sans-serif;font-size:10px;font-weight:700;line-height:1.1;white-space:nowrap}.lowcom-cover-trigger{position:relative;display:block;width:100%;aspect-ratio:1;padding:6px;overflow:hidden;border:1px solid var(--line);border-radius:2px;background:#fff;cursor:zoom-in;box-shadow:none}.lowcom-cover-trigger img{display:block;width:100%;height:100%;object-fit:contain;background:#fff}.lowcom-copy h2{color:#2a5c99}.lowcom-feature-overlay{width:min(980px,78vw);background:rgba(252,253,254,.99)}.lowcom-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.lowcom-figure{display:grid;grid-template-rows:minmax(0,1fr) auto;min-height:0;margin:0;overflow:hidden;border:1px solid #dce4e9;background:#fff}.lowcom-figure img{display:block;width:100%;height:auto;object-fit:contain;background:#fff}.lowcom-figure figcaption{padding:8px 9px 9px;border-top:1px solid #e6ebee;color:#31546e;font-size:11px;font-weight:700;line-height:1.35}
+    @media(max-width:760px){.lowcom-cover-trigger{grid-row:2;max-width:360px}.lowcom-copy{grid-row:3}.lowcom-card .project-logos{width:100%;justify-content:flex-start}.lowcom-feature-overlay{width:92vw}}
+    @media(max-width:460px){.lowcom-grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
@@ -130,7 +134,7 @@
           <figure class="visual-tip" data-label="VaseMuseum 标志图" tabindex="0"><img loading="lazy" decoding="async" src="assets/portfolio-cover/vase-paper-preview/vase-display.webp" alt="VaseMuseum 古希腊陶器数字展柜" /></figure>
         </div>
         <h2><a class="title-link" href="https://qiushi0919.cn/vasemuseum/" target="_blank" rel="noopener">VaseMuseum: Digital Intelligent Museum for Ancient Greek Pottery</a></h2>
-        <div class="vase-meta"><p>投稿至 NMI</p><p>共同第一作者 · 本科生科研助理（远程）</p></div>
+        <div class="vase-meta"><p>投稿至 NMI</p><p>共同第一作者 · 本科生科研助理（远程）</p><p>指导教师：唐浩</p></div>
         <p class="vase-summary">面向古希腊陶器的数字智能博物馆，融合多模态感知、三维推理、外部知识检索与推理时可靠性控制，为文化遗产问答提供更可信、可验证的解释。</p>
         <div class="links"><a href="https://qiushi0919.cn/vasemuseum/" target="_blank" rel="noopener">项目网站</a><a href="https://github.com/AIGeeksGroup/VaseMuseum" target="_blank" rel="noopener">项目仓库</a></div>
       </div>
@@ -307,6 +311,43 @@
       </section>
     </article>
 
+    <article class="project-card lowcom-card" id="lowcomProjectCard">
+      <div class="project-topline">
+        <span class="project-kicker kicker-lines">
+          <span>2024年11月—2025年6月 · 中国国际大学生创新大赛（2026）</span>
+          <span>2025年4月—2026年4月 · 2项省级大学生创新创业训练计划项目</span>
+        </span>
+        <div class="project-logos" aria-label="华中科技大学、大学生创新创业训练计划、中国国际大学生创新大赛与 MCSP Lab">
+          <span class="logo-tip" data-label="华中科技大学" tabindex="0"><img loading="lazy" decoding="async" class="hust-mark" src="assets/hust_logo.png" alt="华中科技大学" /></span>
+          <span class="logo-tip" data-label="大学生创新创业训练计划" tabindex="0"><span class="dachuang-wordmark">大创计划</span></span>
+          <span class="logo-tip" data-label="中国国际大学生创新大赛" tabindex="0"><img loading="lazy" decoding="async" class="innovation-mark" src="assets/portfolio-cover/low-altitude-communication/innovation-competition-logo.webp" alt="中国国际大学生创新大赛" /></span>
+          <span class="logo-tip" data-label="MCSP Lab" tabindex="0"><img loading="lazy" decoding="async" class="mcsp-mark" src="assets/portfolio-cover/low-altitude-communication/mcsp-lab-logo.svg" alt="MCSP Lab" /></span>
+        </div>
+      </div>
+
+      <button class="lowcom-cover-trigger" id="lowcomCoverTrigger" type="button" aria-expanded="false" aria-controls="lowcomFeatureOverlay" aria-label="展开低空通信信号增强项目技术方案与支撑条件">
+        <img loading="lazy" decoding="async" src="assets/portfolio-cover/low-altitude-communication/page-08.webp" alt="动态元表面低空通信波束生成与定向追踪方案" />
+      </button>
+
+      <div class="project-copy lowcom-copy">
+        <h2><a class="title-link" href="https://cy.ncss.cn/" target="_blank" rel="noopener">凌云睿通：基于波束跟踪的低空通信信号增强系统</a></h2>
+        <div class="project-meta"><p>主要团队成员</p><p>指导教师：尹海帆、谭力</p></div>
+        <p class="summary">面向低空无人机通信覆盖与稳定性问题，采用动态可重构超表面实现波束生成、快速切换与定向追踪，并依托实验室设备、测试场地和创新空间开展产学研协同验证。</p>
+        <div class="links"><a href="https://cy.ncss.cn/" target="_blank" rel="noopener">大赛官网</a><a href="https://haifanyin.cn/" target="_blank" rel="noopener">MCSP Lab</a></div>
+      </div>
+
+      <section class="feature-overlay lowcom-feature-overlay" id="lowcomFeatureOverlay" aria-label="低空通信信号增强项目技术方案与支撑条件">
+        <div class="overlay-head">
+          <h3>低空通信信号增强 · 技术方案<span>Dynamic Metasurface · Beam Tracking · Collaborative Validation</span></h3>
+          <button class="close" id="lowcomCloseOverlay" type="button" aria-label="关闭低空通信信号增强项目汇总">×</button>
+        </div>
+        <div class="lowcom-grid">
+          <figure class="lowcom-figure"><img loading="lazy" decoding="async" data-src="assets/portfolio-cover/low-altitude-communication/page-08.webp" alt="动态元表面低空通信波束生成与定向追踪方案" /><figcaption>第 8 页 · 动态元表面实现快速波束切换与追踪</figcaption></figure>
+          <figure class="lowcom-figure"><img loading="lazy" decoding="async" data-src="assets/portfolio-cover/low-altitude-communication/page-10.webp" alt="低空通信项目产学研协同创新支撑条件" /><figcaption>第 10 页 · 实验室设备、测试场地与创新空间</figcaption></figure>
+        </div>
+      </section>
+    </article>
+
     <article class="project-card embedded-card" id="embeddedProjectCard">
       <div class="project-topline">
         <span class="project-kicker">2025年4月—8月 · 第八届（2025）全国大学生嵌入式芯片与系统设计竞赛芯片应用赛道</span>
@@ -431,6 +472,7 @@
           '.vase-slide:first-child img',
           '.nuedc-cover-slide:first-child img',
           '.eecs-slide:first-child img',
+          '.lowcom-cover-trigger > img',
           '.embedded-cover-slide:first-child img'
         ].join(',');
         const images = [...document.querySelectorAll(criticalSelector)];
@@ -521,6 +563,12 @@
         trigger: document.getElementById('embeddedCoverTrigger'),
         overlay: document.getElementById('embeddedFeatureOverlay'),
         close: document.getElementById('embeddedCloseOverlay')
+      },
+      {
+        card: document.getElementById('lowcomProjectCard'),
+        trigger: document.getElementById('lowcomCoverTrigger'),
+        overlay: document.getElementById('lowcomFeatureOverlay'),
+        close: document.getElementById('lowcomCloseOverlay')
       }
     ];
     const anyOpen = () => projects.some(project => project.card.classList.contains('is-open'));
