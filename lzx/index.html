@@ -20,7 +20,13 @@
     a:hover,a:focus-visible{color:#f09228}
     img{max-width:100%}
     .page{width:min(860px,calc(100% - 96px));margin:0 auto;padding:28px 0 62px;background:rgba(255,255,255,.84);box-shadow:0 0 48px rgba(178,92,132,.09)}
-    .site-toolbar{display:flex;justify-content:flex-end;align-items:center;padding:0 16px 8px}
+    .site-toolbar{display:flex;min-height:64px;justify-content:space-between;align-items:center;gap:14px;padding:0 16px 8px}
+    .loopy-parade{display:flex;min-width:0;max-width:680px;flex:1;align-items:center;justify-content:space-around;padding:0 24px}
+    .loopy-parade img{display:block;width:50px;height:50px;object-fit:cover;mix-blend-mode:multiply;filter:drop-shadow(0 2px 3px rgba(168,79,119,.12))}
+    .loopy-parade img:nth-child(1){transform:rotate(-5deg)}
+    .loopy-parade img:nth-child(2){transform:translateY(3px) rotate(3deg)}
+    .loopy-parade img:nth-child(3){transform:translateY(-2px) rotate(-2deg)}
+    .loopy-parade img:nth-child(4){transform:rotate(5deg)}
     .language-switch{display:inline-flex;align-items:center;gap:6px;color:#a1adb5;font-size:12px}
     .language-switch button{padding:2px 0;border:0;border-bottom:1px solid transparent;background:none;color:#81909b;cursor:pointer}
     .language-switch button:hover,.language-switch button:focus-visible{color:var(--blue)}
@@ -107,6 +113,9 @@
     @media(max-width:760px){
       .loopy-background{opacity:.18}
       .page{width:min(100% - 28px,640px);padding-top:18px}
+      .site-toolbar{min-height:52px}
+      .loopy-parade{padding:0 10px}
+      .loopy-parade img{width:38px;height:38px}
       .profile{grid-template-columns:1fr;gap:18px;padding:2px 8px 28px}
       .profile-copy{order:2}.profile-photo{order:1;width:152px}
       .profile h1{font-size:28px;margin-bottom:14px}
@@ -121,7 +130,9 @@
     }
     @media(max-width:560px){
       .page{width:calc(100% - 16px)}
-      .site-toolbar{padding:0 8px 5px}
+      .site-toolbar{min-height:42px;padding:0 8px 5px}
+      .loopy-parade{gap:4px;padding:0 5px}
+      .loopy-parade img{width:29px;height:29px}
       .profile{gap:10px;padding:0 6px 21px}
       .profile-photo{width:118px}
       .profile-copy{padding:0}
@@ -153,6 +164,12 @@
   <canvas class="loopy-background" id="loopyBackground" aria-hidden="true"></canvas>
   <main class="page">
     <div class="site-toolbar">
+      <div class="loopy-parade" aria-hidden="true">
+        <img src="assets/loopy-background.png" alt="" />
+        <img src="assets/loopy-2.png" alt="" />
+        <img src="assets/loopy-3.png" alt="" />
+        <img src="assets/loopy-4.png" alt="" />
+      </div>
       <div class="language-switch" role="group" aria-label="Language / 语言">
         <button type="button" data-language="en" lang="en" aria-pressed="false">EN</button>
         <span aria-hidden="true">/</span>
