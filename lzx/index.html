@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="zh-CN" data-language="zh">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="李梓昕的学术经历、科研论文与实践项目个人主页" />
+  <link rel="shortcut icon" href="../assets/contact/globe-favicon.ico" type="image/x-icon" />
+  <title>李梓昕 个人主页</title>
+  <style>
+    @font-face{font-family:Lato;font-style:normal;font-weight:400;font-display:swap;src:url("../assets/fonts/lato-regular.woff2") format("woff2")}
+    @font-face{font-family:Lato;font-style:normal;font-weight:700;font-display:swap;src:url("../assets/fonts/lato-bold.woff2") format("woff2")}
+    @font-face{font-family:Lato;font-style:italic;font-weight:400;font-display:swap;src:url("../assets/fonts/lato-italic.woff2") format("woff2")}
+    :root{--blue:#1772d0;--deep:#17344d;--muted:#637887;--line:#e1e7eb;--paper:#fff;--soft:#f6f8fa}
+    *{box-sizing:border-box}
+    html{color-scheme:light;scroll-behavior:smooth;overflow-x:hidden}
+    body{margin:0;overflow-x:hidden;background:#fff;color:#243847;font-family:Lato,Verdana,Helvetica,"PingFang SC","Microsoft YaHei",sans-serif;font-size:14px}
+    button,input{font:inherit}
+    a{color:var(--blue);text-decoration:none}
+    a:hover,a:focus-visible{color:#f09228}
+    img{max-width:100%}
+    .page{width:min(860px,calc(100% - 96px));margin:0 auto;padding:28px 0 62px}
+    .site-toolbar{display:flex;justify-content:flex-end;align-items:center;padding:0 16px 8px}
+    .language-switch{display:inline-flex;align-items:center;gap:6px;color:#a1adb5;font-size:12px}
+    .language-switch button{padding:2px 0;border:0;border-bottom:1px solid transparent;background:none;color:#81909b;cursor:pointer}
+    .language-switch button:hover,.language-switch button:focus-visible{color:var(--blue)}
+    .language-switch button.is-active{border-bottom-color:#536b7c;color:#314e64;font-weight:700}
+    .language-switch span{color:#ccd4d9}
+    html[data-language="zh"] .lang.en,html[data-language="en"] .lang.zh{display:none!important}
+
+    .profile{display:grid;grid-template-columns:minmax(0,63fr) minmax(180px,37fr);gap:30px;align-items:center;padding:5px 16px 34px;border-bottom:1px solid var(--line)}
+    .profile-copy{padding:10px 0}
+    .profile h1{margin:0 0 18px;text-align:center;color:#172b3a;font-size:32px;font-weight:400;letter-spacing:-.025em}
+    .profile p{margin:0 0 11px;color:#344d60;font-size:14px;line-height:1.62}
+    .profile-photo{display:block;width:min(100%,210px);aspect-ratio:413/579;justify-self:center;border:1px solid #dbe2e7;background:#f7f8f9;object-fit:cover}
+    .profile-stats{display:flex;justify-content:center;flex-wrap:wrap;gap:7px 14px;margin:16px 0 0;color:#587080;font-size:12px}
+    .profile-stats strong{color:#234b69;font-size:13px}
+    .profile-links{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:5px;margin-top:15px;font-size:14px}
+    .profile-links span,.website-line span{color:#9aa7b0}
+    .contact-link{padding:0;border:0;background:none;color:var(--blue);cursor:pointer}
+    .contact-link:hover,.contact-link:focus-visible{color:#f09228}
+    .website-line{margin-top:7px;text-align:center;color:#50697a;font-size:13px;line-height:1.5}
+    .website-line a{font-weight:700}
+
+    .section-head{padding:27px 16px 8px}
+    .section-head h2{margin:0 0 5px;color:#1d2d3a;font-size:22px;font-weight:400}
+    .section-head p{margin:0;color:var(--muted);font-size:13px;line-height:1.5}
+
+    .academic-summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;margin:4px 16px 8px;border:1px solid var(--line);background:var(--line)}
+    .academic-summary div{padding:12px 10px;background:#fff;text-align:center}
+    .academic-summary strong{display:block;margin-bottom:2px;color:#135ba4;font-size:18px}
+    .academic-summary span{color:#637787;font-size:11px;line-height:1.35}
+
+    .entry{display:grid;grid-template-columns:205px minmax(0,1fr);column-gap:24px;row-gap:6px;align-items:center;padding:16px;border-top:1px solid var(--line);background:var(--paper)}
+    .entry-kicker{grid-column:1/-1;color:#60798d;font-size:12px;font-weight:700;letter-spacing:.015em;line-height:1.35}
+    .thumb-button{display:block;width:100%;height:166px;padding:7px;overflow:hidden;border:1px solid var(--line);border-radius:2px;background:#fff;cursor:zoom-in}
+    .thumb-button:hover,.thumb-button:focus-visible{border-color:#b9c9d4;box-shadow:0 0 0 2px rgba(23,114,208,.07)}
+    .thumb-button img{display:block;width:100%;height:100%;object-fit:contain;background:#fff;pointer-events:none}
+    .thumb-stack{display:grid;width:100%;height:100%;grid-template-rows:repeat(2,minmax(0,1fr));gap:5px}
+    .thumb-stack img{min-height:0}
+    .entry-copy{align-self:center}
+    .entry-copy h2{margin:0;color:var(--blue);font-size:16px;font-weight:700;line-height:1.24}
+    .entry-copy h2 a{color:inherit}
+    .entry-copy h2 a:hover,.entry-copy h2 a:focus-visible{color:#f09228}
+    .entry-meta{margin:6px 0 8px;color:#314e64}
+    .entry-meta p{margin:0;font-size:12px;font-weight:700;line-height:1.38}
+    .entry-meta p:first-child{font-size:13px}
+    .entry-copy .summary{margin:0 0 9px;color:#364f63;font-size:13px;line-height:1.48}
+    .entry-links{display:flex;flex-wrap:wrap;gap:14px;font-size:13px;font-weight:700}
+    .m6a h2{color:#155a9d}.botulinum h2{color:#a34c48}.macrocycle h2{color:#287a6c}.experience h2{color:#5c4b8a}
+
+    .honors{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;padding:13px 16px 20px;border-top:1px solid var(--line)}
+    .honor h3{margin:0 0 5px;color:#264c68;font-size:14px}
+    .honor p{margin:0;color:#536b7c;font-size:12px;line-height:1.48}
+    .practice-thumb{display:grid;width:100%;height:100%;grid-template-columns:40% 60%;grid-template-rows:repeat(2,minmax(0,1fr));gap:4px}
+    .practice-thumb img{width:100%;height:100%;min-width:0;min-height:0;object-fit:cover}
+    .practice-thumb img:first-child{grid-row:1/-1}
+
+    .future{padding:15px 16px 25px;border-top:1px solid var(--line)}
+    .future h3{margin:0 0 7px;color:#284d68;font-size:15px}
+    .future p{max-width:760px;margin:0;color:#536b7c;font-size:13px;line-height:1.62}
+    footer{display:flex;justify-content:space-between;gap:20px;margin:9px 16px 0;padding-top:18px;border-top:1px solid var(--line);color:#8796a0;font-size:11px}
+
+    dialog{padding:0;border:1px solid #d4dce2;border-radius:4px;background:#fff;box-shadow:0 20px 55px rgba(16,31,43,.25)}
+    dialog::backdrop{background:rgba(13,28,40,.42)}
+    .contact-dialog{width:min(390px,calc(100% - 34px))}
+    .dialog-card{padding:20px}
+    .dialog-head{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;margin-bottom:15px}
+    .dialog-head h2{margin:0;color:#213747;font-size:20px}
+    .dialog-head p{margin:4px 0 0;color:#70818d;font-size:12px}
+    .dialog-close{width:32px;height:32px;padding:0;border:1px solid #d5dde2;border-radius:50%;background:#fff;color:#344d60;font-size:20px;line-height:28px;cursor:pointer}
+    .wechat-id{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:14px 15px;border:1px solid var(--line);background:#f8fafb}
+    .wechat-id code{color:#163f5e;font-family:Lato,monospace;font-size:18px;font-weight:700}
+    .copy-button{padding:6px 10px;border:1px solid #cad6de;background:#fff;color:var(--blue);cursor:pointer}
+    .copy-status{min-height:18px;margin:8px 0 0;color:#6f818e;font-size:11px}
+    .detail-dialog{width:min(920px,calc(100% - 42px));max-height:88vh;overflow:auto}
+    .detail-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+    .detail-grid figure{display:grid;grid-template-rows:minmax(0,1fr) auto;min-width:0;margin:0;border:1px solid var(--line);background:#fff}
+    .detail-grid img{display:block;width:100%;height:260px;padding:7px;object-fit:contain;background:#fff}
+    .detail-grid .photo img{padding:0;object-fit:cover}
+    .detail-grid figcaption{padding:7px 9px;border-top:1px solid #e8ecef;color:#4d6678;font-size:11px;font-weight:700;line-height:1.35}
+
+    @media(max-width:760px){
+      .page{width:min(100% - 28px,640px);padding-top:18px}
+      .profile{grid-template-columns:1fr;gap:18px;padding:2px 8px 28px}
+      .profile-copy{order:2}.profile-photo{order:1;width:152px}
+      .profile h1{font-size:28px;margin-bottom:14px}
+      .section-head{padding-left:8px;padding-right:8px}
+      .academic-summary{grid-template-columns:repeat(2,minmax(0,1fr));margin-left:8px;margin-right:8px}
+      .entry{grid-template-columns:150px minmax(0,1fr);column-gap:18px;padding-left:8px;padding-right:8px}
+      .thumb-button{height:142px}
+      .entry-copy h2{font-size:15px}
+      .honors{grid-template-columns:1fr;gap:13px;padding-left:8px;padding-right:8px}
+      .future{padding-left:8px;padding-right:8px}
+      footer{margin-left:8px;margin-right:8px}
+    }
+    @media(max-width:560px){
+      .entry{grid-template-columns:1fr;gap:9px}
+      .entry-kicker{grid-column:1}
+      .thumb-button{width:min(100%,340px);height:180px}
+      .detail-grid{grid-template-columns:1fr}.detail-grid img{height:auto;max-height:330px}
+      footer{flex-direction:column;gap:5px}
+    }
+    @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="site-toolbar">
+      <div class="language-switch" role="group" aria-label="Language / 语言">
+        <button type="button" data-language="en" lang="en" aria-pressed="false">EN</button>
+        <span aria-hidden="true">/</span>
+        <button class="is-active" type="button" data-language="zh" lang="zh-CN" aria-pressed="true">中文</button>
+      </div>
+    </div>
+
+    <section class="profile" aria-labelledby="profileName">
+      <div class="profile-copy">
+        <h1 id="profileName"><span class="lang zh">李梓昕</span><span class="lang en">Zixin Li</span></h1>
+        <p class="lang zh">暨南大学生物制药专业本科生，专业排名 1/27，入选暨南大学 2023 级本科优异学生培养计划。</p>
+        <p class="lang en">Undergraduate in Biopharmaceuticals at Jinan University, ranked 1st of 27 and selected for the university's 2023 Honors Undergraduate Development Program.</p>
+        <p class="lang zh">研究兴趣聚焦创面修复与组织再生、药物递送及计算辅助大环药物设计，希望将机制研究与药物转化问题连接起来。</p>
+        <p class="lang en">My interests span wound repair and tissue regeneration, drug delivery, and computational macrocycle design, with an emphasis on connecting mechanistic research to translational therapeutics.</p>
+        <div class="profile-stats" aria-label="学术成绩">
+          <span><strong>4.16</strong> GPA</span><span><strong>616</strong> CET-6</span><span><strong>7.5</strong> IELTS</span><span><strong>9.0</strong> Listening</span>
+        </div>
+        <nav class="profile-links" aria-label="联系方式">
+          <button class="contact-link" id="wechatButton" type="button"><span class="lang zh">微信</span><span class="lang en">WeChat</span></button>
+        </nav>
+        <div class="website-line">Website: <a href="https://qiushi0919.cn/lzx/" target="_blank" rel="noopener">LZX</a> <span>/</span> <a href="https://qiushi0919.cn/" target="_blank" rel="noopener">XQS</a></div>
+      </div>
+      <img class="profile-photo" src="assets/profile.webp" alt="李梓昕个人照片" loading="eager" decoding="async" fetchpriority="high" />
+    </section>
+
+    <header class="section-head">
+      <h2><span class="lang zh">学术背景</span><span class="lang en">Academic Profile</span></h2>
+      <p class="lang zh">药学课程、语言能力与连续两年国家奖学金构成扎实的本科训练基础。</p>
+      <p class="lang en">A strong undergraduate foundation in pharmaceutical sciences, academic English, and sustained academic distinction.</p>
+    </header>
+    <section class="academic-summary" aria-label="学术背景摘要">
+      <div><strong>1 / 27</strong><span class="lang zh">专业排名</span><span class="lang en">Major Rank</span></div>
+      <div><strong>97</strong><span class="lang zh">药剂学</span><span class="lang en">Pharmaceutics</span></div>
+      <div><strong>× 2</strong><span class="lang zh">本科生国家奖学金</span><span class="lang en">National Scholarships</span></div>
+      <div><strong>Top 1%</strong><span class="lang zh">本科优异学生培养计划</span><span class="lang en">Honors Program</span></div>
+    </section>
+
+    <header class="section-head" id="research">
+      <h2><span class="lang zh">科研论文与项目</span><span class="lang en">Research &amp; Projects</span></h2>
+      <p class="lang zh">单击左侧缩略图查看图示，单击论文标题访问正式页面。</p>
+      <p class="lang en">Click a thumbnail to inspect the figures, or a paper title to open its publication page.</p>
+    </header>
+
+    <article class="entry m6a">
+      <div class="entry-kicker"><span class="lang zh">2025 · 综述论文</span><span class="lang en">2025 · Review Article</span></div>
+      <button class="thumb-button" type="button" data-detail="m6aDetail" aria-label="查看 m6A 与创面愈合论文图示">
+        <img src="assets/wound-healing.webp" alt="创面愈合四阶段机制图" loading="eager" decoding="async" />
+      </button>
+      <div class="entry-copy">
+        <h2><a href="https://www.ijbs.com/v21p4927.htm" target="_blank" rel="noopener">Epigenetic orchestration of RNA m<sup>6</sup>A methylation in wound healing and post-wound events</a></h2>
+        <div class="entry-meta">
+          <p>International Journal of Biological Sciences · CAS Q1 · IF 10.0</p>
+          <p><span class="lang zh">共同第一作者（第三署名）</span><span class="lang en">Co-first Author (third listed)</span></p>
+        </div>
+        <p class="summary lang zh">系统梳理 m6A writer、reader 与 eraser 在正常创面、糖尿病创面、烧伤及愈合后事件中的调控作用；参与文献检索、机制图绘制并主导创面愈合机制部分的撰写。</p>
+        <p class="summary lang en">A review of m6A writers, readers, and erasers across normal wounds, diabetic wounds, burns, and post-wound events. I contributed literature synthesis and mechanism figures and led the section on wound-healing mechanisms.</p>
+        <div class="entry-links"><a href="https://www.ijbs.com/v21p4927.htm" target="_blank" rel="noopener"><span class="lang zh">论文页面</span><span class="lang en">Paper</span></a><a href="https://pubmed.ncbi.nlm.nih.gov/40860194/" target="_blank" rel="noopener">PubMed</a></div>
+      </div>
+    </article>
+
+    <article class="entry botulinum">
+      <div class="entry-kicker"><span class="lang zh">2025 · 临床研究论文</span><span class="lang en">2025 · Clinical Research Article</span></div>
+      <button class="thumb-button" type="button" data-detail="botulinumDetail" aria-label="查看肉毒素临床研究论文图示">
+        <img src="assets/botulinum-paper.webp" alt="Aesthetic Plastic Surgery 论文首页" loading="lazy" decoding="async" />
+      </button>
+      <div class="entry-copy">
+        <h2><a href="https://doi.org/10.1007/s00266-025-05111-4" target="_blank" rel="noopener">Botulinum Toxin Injections to Improve Unsatisfactory Eyelid Appearance After Blepharoplasty Due to Periorbital Muscle Hyperactivity</a></h2>
+        <div class="entry-meta">
+          <p>Aesthetic Plastic Surgery · CAS Q3 · IF 2.8</p>
+          <p><span class="lang zh">共同第一作者（第二署名）</span><span class="lang en">Co-first Author (second listed)</span></p>
+        </div>
+        <p class="summary lang zh">聚焦重睑术后眼周肌肉过度活动导致的外观不满意，讨论肉毒素 A 的临床应用价值；负责作用机制部分的文献整理与撰写，并参与 40 余份临床案例整理。</p>
+        <p class="summary lang en">A clinical study of botulinum toxin A for unsatisfactory eyelid appearance associated with periorbital muscle hyperactivity after blepharoplasty. I wrote the mechanism section and helped organize over 40 clinical cases.</p>
+        <div class="entry-links"><a href="https://doi.org/10.1007/s00266-025-05111-4" target="_blank" rel="noopener"><span class="lang zh">论文页面</span><span class="lang en">Paper</span></a></div>
+      </div>
+    </article>
+
+    <article class="entry macrocycle">
+      <div class="entry-kicker"><span class="lang zh">广东省级大学生创新创业训练计划项目</span><span class="lang en">Guangdong Provincial Undergraduate Innovation and Entrepreneurship Training Program</span></div>
+      <button class="thumb-button" type="button" data-detail="macrocycleDetail" aria-label="查看分子魔方项目图示">
+        <span class="thumb-stack"><img src="assets/macrocycle-db.webp" alt="Macrocycle-DB 数据库框架" loading="lazy" decoding="async" /><img src="assets/macrohop.webp" alt="Macro-Hop 强化学习分子设计流程" loading="lazy" decoding="async" /></span>
+      </button>
+      <div class="entry-copy">
+        <h2><span class="lang zh">分子魔方——基于强化学习的大环分子智能设计引擎与协同研发平台</span><span class="lang en">Molecular Cube: A Reinforcement-learning Engine and Collaborative Platform for Intelligent Macrocycle Design</span></h2>
+        <div class="entry-meta">
+          <p><span class="lang zh">项目负责人 · 软件著作权 1 项 · 团队竞赛奖项 4 项</span><span class="lang en">Project Lead · 1 Software Copyright · 4 Team Competition Awards</span></p>
+        </div>
+        <p class="summary lang zh">依托 Macro-Hop 强化学习框架与大环骨架跃迁策略生成高活性候选分子，并构建 Macrocycle-DB。负责项目统筹、跨学科沟通、数据库建设以及算法产出分子的二次评估与人工筛查。</p>
+        <p class="summary lang en">The project combines the Macro-Hop reinforcement-learning framework with scaffold hopping to generate active macrocycle candidates and build Macrocycle-DB. I led coordination, database development, and secondary evaluation of generated molecules.</p>
+      </div>
+    </article>
+
+    <header class="section-head">
+      <h2><span class="lang zh">荣誉与实践</span><span class="lang en">Honors &amp; Experience</span></h2>
+      <p class="lang zh">持续参与学术交流、科普服务与跨地区学生交流。</p>
+      <p class="lang en">Academic exchange, science outreach, and cross-regional student engagement complement my research training.</p>
+    </header>
+    <section class="honors" aria-label="主要荣誉">
+      <div class="honor"><h3><span class="lang zh">国家级荣誉</span><span class="lang en">National Honors</span></h3><p class="lang zh">连续两学年获本科生国家奖学金（2023–2024、2024–2025）。</p><p class="lang en">National Scholarship for Undergraduates in two consecutive academic years (2023–2024 and 2024–2025).</p></div>
+      <div class="honor"><h3><span class="lang zh">校级与学科荣誉</span><span class="lang en">University &amp; Competition Honors</span></h3><p class="lang zh">暨南大学优秀学生代表；“AI+”应用创新大赛一等奖负责人；中国国际大学生创新大赛校赛银奖负责人。</p><p class="lang en">Outstanding Student Representative; project lead for first prize in JNU's AI+ Innovation Competition and a silver award in the university innovation competition.</p></div>
+      <div class="honor"><h3><span class="lang zh">学术能力</span><span class="lang en">Research Skills</span></h3><p class="lang zh">文献检索与机制综述、BioRender 与 Adobe Illustrator 科研绘图、跨学科项目统筹及候选分子评价。</p><p class="lang en">Literature synthesis, mechanism reviews, scientific illustration with BioRender and Adobe Illustrator, interdisciplinary coordination, and candidate-molecule evaluation.</p></div>
+    </section>
+
+    <article class="entry experience">
+      <div class="entry-kicker"><span class="lang zh">2024–2026 · 学术交流与社会实践</span><span class="lang en">2024–2026 · Academic Exchange &amp; Public Engagement</span></div>
+      <button class="thumb-button" type="button" data-detail="experienceDetail" aria-label="查看学术交流与实践照片">
+        <span class="practice-thumb"><img src="assets/pharmacy-conference.webp" alt="全国药学创新人才培养研讨会壁报交流" loading="lazy" decoding="async" /><img src="assets/rural-outreach.webp" alt="百千万工程三下乡科普实践" loading="lazy" decoding="async" /><img src="assets/hong-kong-visit.webp" alt="暨南大学优秀学生访港团" loading="lazy" decoding="async" /></span>
+      </button>
+      <div class="entry-copy">
+        <h2><span class="lang zh">从壁报交流到科普实践</span><span class="lang en">From Poster Presentation to Science Outreach</span></h2>
+        <div class="entry-meta"><p><span class="lang zh">学院本科生代表 · 国家级大创核心成员 · 校级优秀学生骨干</span><span class="lang en">School Representative · Core Member of a National Innovation Project · Student Leader</span></p></div>
+        <p class="summary lang zh">作为学院仅 3 名本科生代表之一参加全国药学创新人才培养研讨会；赴梅州市实验中学开展项目科普宣传；作为校级优秀学生骨干参加暨南大学优秀学生访港交流。</p>
+        <p class="summary lang en">Selected as one of three undergraduate school representatives for a national pharmacy symposium, delivered project outreach at Meizhou Experimental Middle School, and joined Jinan University's outstanding-student exchange visit to Hong Kong.</p>
+      </div>
+    </article>
+
+    <section class="future">
+      <h3><span class="lang zh">未来方向</span><span class="lang en">Future Direction</span></h3>
+      <p class="lang zh">以药剂学为核心，进一步关注药物递送系统、肺部疾病干预及体内外评价方法；在研究训练中持续凝练科学问题，建立稳定的实验体系，并推动候选药物从计算设计走向成药性与递送转化。</p>
+      <p class="lang en">I plan to pursue pharmaceutics with a focus on drug-delivery systems, pulmonary disease intervention, and in-vitro/in-vivo evaluation, while bridging computational candidate design with developability and translational delivery.</p>
+    </section>
+
+    <footer>
+      <span>© 2026 Zixin Li</span>
+      <span>Website: <a href="https://qiushi0919.cn/lzx/" target="_blank" rel="noopener">LZX</a> / <a href="https://qiushi0919.cn/" target="_blank" rel="noopener">XQS</a></span>
+    </footer>
+  </main>
+
+  <dialog class="contact-dialog" id="wechatDialog">
+    <div class="dialog-card">
+      <div class="dialog-head"><div><h2><span class="lang zh">微信</span><span class="lang en">WeChat</span></h2><p><span class="lang zh">复制微信号后在微信中搜索添加</span><span class="lang en">Copy the ID and search for it in WeChat</span></p></div><button class="dialog-close" type="button" data-close aria-label="关闭">×</button></div>
+      <div class="wechat-id"><code>NomNom_cookie</code><button class="copy-button" id="copyWechat" type="button"><span class="lang zh">复制</span><span class="lang en">Copy</span></button></div>
+      <p class="copy-status" id="copyStatus" aria-live="polite"></p>
+    </div>
+  </dialog>
+
+  <dialog class="detail-dialog" id="detailDialog">
+    <div class="dialog-card">
+      <div class="dialog-head"><div id="detailHeading"></div><button class="dialog-close" type="button" data-close aria-label="关闭">×</button></div>
+      <div class="detail-grid" id="detailContent"></div>
+    </div>
+  </dialog>
+
+  <template id="m6aDetail">
+    <div data-heading><h2><span class="lang zh">m6A 与创面愈合</span><span class="lang en">m6A &amp; Wound Healing</span></h2><p><span class="lang zh">论文首页与创面愈合四阶段机制图</span><span class="lang en">Article preview and the four phases of wound healing</span></p></div>
+    <figure><img src="assets/m6a-paper.webp" alt="m6A 创面愈合综述论文首页" /><figcaption><span class="lang zh">International Journal of Biological Sciences · 论文首页</span><span class="lang en">International Journal of Biological Sciences · Article preview</span></figcaption></figure>
+    <figure><img src="assets/wound-healing.webp" alt="创面愈合四阶段机制图" /><figcaption><span class="lang zh">止血、炎症、增殖与重塑阶段</span><span class="lang en">Hemostasis, inflammation, proliferation, and remodeling</span></figcaption></figure>
+  </template>
+  <template id="botulinumDetail">
+    <div data-heading><h2><span class="lang zh">肉毒素 A 的临床应用</span><span class="lang en">Clinical Application of Botulinum Toxin A</span></h2><p>Aesthetic Plastic Surgery</p></div>
+    <figure style="grid-column:1/-1"><img src="assets/botulinum-paper.webp" alt="肉毒素临床研究论文首页" /><figcaption><span class="lang zh">共同第一作者（第二署名）</span><span class="lang en">Co-first Author (second listed)</span></figcaption></figure>
+  </template>
+  <template id="macrocycleDetail">
+    <div data-heading><h2><span class="lang zh">分子魔方 · 方法与平台</span><span class="lang en">Molecular Cube · Method &amp; Platform</span></h2><p>Macro-Hop · Macrocycle-DB</p></div>
+    <figure><img src="assets/macrocycle-db.webp" alt="Macrocycle-DB 数据库结构" /><figcaption><span class="lang zh">多来源大环分子数据库</span><span class="lang en">Multi-source macrocycle database</span></figcaption></figure>
+    <figure><img src="assets/macrohop.webp" alt="Macro-Hop 强化学习分子设计流程" /><figcaption><span class="lang zh">生成、采样、评价与迭代优化</span><span class="lang en">Generation, sampling, evaluation, and refinement</span></figcaption></figure>
+  </template>
+  <template id="experienceDetail">
+    <div data-heading><h2><span class="lang zh">学术交流与社会实践</span><span class="lang en">Academic Exchange &amp; Public Engagement</span></h2><p>2024–2026</p></div>
+    <figure class="photo"><img src="assets/pharmacy-conference.webp" alt="全国药学创新人才培养研讨会" /><figcaption><span class="lang zh">全国药学创新人才培养研讨会 · 壁报交流</span><span class="lang en">National Pharmacy Innovation Symposium · Poster presentation</span></figcaption></figure>
+    <figure class="photo"><img src="assets/rural-outreach.webp" alt="百千万工程三下乡" /><figcaption><span class="lang zh">百千万工程三下乡 · 科普实践</span><span class="lang en">Rural outreach · Science communication</span></figcaption></figure>
+    <figure class="photo" style="grid-column:1/-1"><img src="assets/hong-kong-visit.webp" alt="暨南大学优秀学生访港团" /><figcaption><span class="lang zh">暨南大学优秀学生访港团</span><span class="lang en">Jinan University outstanding-student visit to Hong Kong</span></figcaption></figure>
+  </template>
+
+  <script>
+    (() => {
+      const root = document.documentElement;
+      const languageButtons = [...document.querySelectorAll('[data-language]')];
+      const applyLanguage = language => {
+        const active = language === 'en' ? 'en' : 'zh';
+        root.dataset.language = active;
+        root.lang = active === 'en' ? 'en' : 'zh-CN';
+        document.title = active === 'en' ? "Zixin Li's Homepage" : '李梓昕 个人主页';
+        languageButtons.forEach(button => {
+          const selected = button.dataset.language === active;
+          button.classList.toggle('is-active', selected);
+          button.setAttribute('aria-pressed', String(selected));
+        });
+        try { localStorage.setItem('lzx-homepage-language', active); } catch (_) {}
+      };
+      let saved = 'zh';
+      try { saved = localStorage.getItem('lzx-homepage-language') || 'zh'; } catch (_) {}
+      applyLanguage(saved);
+      languageButtons.forEach(button => button.addEventListener('click', () => applyLanguage(button.dataset.language)));
+
+      const wechatDialog = document.getElementById('wechatDialog');
+      document.getElementById('wechatButton').addEventListener('click', () => wechatDialog.showModal());
+      document.getElementById('copyWechat').addEventListener('click', async () => {
+        const status = document.getElementById('copyStatus');
+        try {
+          await navigator.clipboard.writeText('NomNom_cookie');
+          status.textContent = root.dataset.language === 'en' ? 'Copied.' : '已复制微信号。';
+        } catch (_) {
+          status.textContent = root.dataset.language === 'en' ? 'WeChat ID: NomNom_cookie' : '微信号：NomNom_cookie';
+        }
+      });
+
+      const detailDialog = document.getElementById('detailDialog');
+      const detailHeading = document.getElementById('detailHeading');
+      const detailContent = document.getElementById('detailContent');
+      document.querySelectorAll('[data-detail]').forEach(button => button.addEventListener('click', () => {
+        const template = document.getElementById(button.dataset.detail);
+        const fragment = template.content.cloneNode(true);
+        const heading = fragment.querySelector('[data-heading]');
+        detailHeading.replaceChildren(...heading.childNodes);
+        heading.remove();
+        detailContent.replaceChildren(...fragment.childNodes);
+        detailDialog.showModal();
+      }));
+
+      document.querySelectorAll('dialog').forEach(dialog => {
+        dialog.querySelectorAll('[data-close]').forEach(button => button.addEventListener('click', () => dialog.close()));
+        dialog.addEventListener('click', event => {
+          const rect = dialog.getBoundingClientRect();
+          const outside = event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom;
+          if (outside) dialog.close();
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
