@@ -14,12 +14,12 @@
     *{box-sizing:border-box}
     html{color-scheme:light;scroll-behavior:smooth;overflow-x:hidden}
     body{position:relative;isolation:isolate;margin:0;overflow-x:hidden;background:#fff7fb;color:#243847;font-family:Lato,Verdana,Helvetica,"PingFang SC","Microsoft YaHei",sans-serif;font-size:14px}
-    body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.83),rgba(255,255,255,.83)),url("assets/loopy-background.png");background-position:0 0,center top;background-size:auto,210px 207px;background-repeat:repeat,repeat;filter:saturate(.82)}
+    .loopy-background{position:fixed;inset:0;z-index:-1;width:100%;height:100%;pointer-events:none;background:#fff7fb;opacity:.22;filter:saturate(.82)}
     button,input{font:inherit}
     a{color:var(--blue);text-decoration:none}
     a:hover,a:focus-visible{color:#f09228}
     img{max-width:100%}
-    .page{width:min(860px,calc(100% - 96px));margin:0 auto;padding:28px 0 62px;background:rgba(255,255,255,.91);box-shadow:0 0 48px rgba(178,92,132,.09)}
+    .page{width:min(860px,calc(100% - 96px));margin:0 auto;padding:28px 0 62px;background:rgba(255,255,255,.84);box-shadow:0 0 48px rgba(178,92,132,.09)}
     .site-toolbar{display:flex;justify-content:flex-end;align-items:center;padding:0 16px 8px}
     .language-switch{display:inline-flex;align-items:center;gap:6px;color:#a1adb5;font-size:12px}
     .language-switch button{padding:2px 0;border:0;border-bottom:1px solid transparent;background:none;color:#81909b;cursor:pointer}
@@ -105,7 +105,7 @@
     .detail-grid figcaption{padding:7px 9px;border-top:1px solid #e8ecef;color:#4d6678;font-size:11px;font-weight:700;line-height:1.35}
 
     @media(max-width:760px){
-      body::before{background-size:auto,170px 167px}
+      .loopy-background{opacity:.18}
       .page{width:min(100% - 28px,640px);padding-top:18px}
       .profile{grid-template-columns:1fr;gap:18px;padding:2px 8px 28px}
       .profile-copy{order:2}.profile-photo{order:1;width:152px}
@@ -120,17 +120,37 @@
       footer{margin-left:8px;margin-right:8px}
     }
     @media(max-width:560px){
-      .entry{grid-template-columns:1fr;gap:9px}
-      .entry-kicker{grid-column:1}
-      .thumb-button{width:min(100%,340px);height:180px}
+      .page{width:calc(100% - 16px)}
+      .site-toolbar{padding:0 8px 5px}
+      .profile{gap:10px;padding:0 6px 21px}
+      .profile-photo{width:118px}
+      .profile-copy{padding:0}
+      .profile h1{margin:7px 0 12px;font-size:24px}
+      .profile p{margin-bottom:8px;font-size:12px;line-height:1.5}
+      .profile-stats{gap:5px 10px;margin-top:10px;font-size:10px}
+      .profile-stats strong{font-size:12px}
+      .profile-links{margin-top:10px;font-size:12px}
+      .website-actions{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin-top:10px}
+      .website-link{min-height:64px;padding:8px 9px}
+      .website-link strong{font-size:12px}
+      .website-link .website-url{font-size:10px}
+      .section-head{padding-top:21px}
+      .entry{grid-template-columns:112px minmax(0,1fr);column-gap:12px;row-gap:6px;align-items:start;padding:12px 6px}
+      .entry-kicker{grid-column:1/-1;font-size:10px}
+      .thumb-button{width:100%;height:110px;padding:5px}
+      .entry-copy h2{font-size:13px;line-height:1.2}
+      .entry-meta{margin:4px 0 6px}
+      .entry-meta p,.entry-meta p:first-child{font-size:10.5px;line-height:1.32}
+      .entry-copy .summary{margin-bottom:6px;font-size:11px;line-height:1.4}
+      .entry-links{gap:9px;font-size:11px}
       .detail-grid{grid-template-columns:1fr}.detail-grid img{height:auto;max-height:330px}
       footer{flex-direction:column;gap:5px}
-      .website-actions{grid-template-columns:1fr}
     }
     @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
   </style>
 </head>
 <body>
+  <canvas class="loopy-background" id="loopyBackground" aria-hidden="true"></canvas>
   <main class="page">
     <div class="site-toolbar">
       <div class="language-switch" role="group" aria-label="Language / 语言">
@@ -148,7 +168,7 @@
         <p class="lang zh">研究兴趣聚焦创面修复与组织再生、药物递送及计算辅助大环药物设计，希望将机制研究与药物转化问题连接起来。</p>
         <p class="lang en">My interests span wound repair and tissue regeneration, drug delivery, and computational macrocycle design, with an emphasis on connecting mechanistic research to translational therapeutics.</p>
         <div class="profile-stats" aria-label="学术成绩">
-          <span><strong>4.16</strong> GPA</span><span><strong>616</strong> CET-6</span><span><strong>7.5</strong> IELTS</span><span><strong>9.0</strong> Listening</span>
+          <span><strong>4.17</strong> GPA</span><span><strong>616</strong> CET-6</span><span><strong>7.5</strong> IELTS</span><span><strong>9.0</strong> Listening</span>
         </div>
         <nav class="profile-links" aria-label="联系方式">
           <button class="contact-link" id="wechatButton" type="button"><span class="lang zh">微信</span><span class="lang en">WeChat</span></button>
@@ -311,6 +331,42 @@
   <script>
     (() => {
       const root = document.documentElement;
+      const loopyCanvas = document.getElementById('loopyBackground');
+      const loopyContext = loopyCanvas.getContext('2d');
+      const loopyImages = ['assets/loopy-background.png', 'assets/loopy-2.png', 'assets/loopy-3.png', 'assets/loopy-4.png'].map(src => {
+        const image = new Image();
+        image.src = src;
+        return image;
+      });
+      const drawLoopyBackground = () => {
+        const ratio = Math.min(window.devicePixelRatio || 1, 2);
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+        const tile = width <= 560 ? 112 : 150;
+        loopyCanvas.width = Math.round(width * ratio);
+        loopyCanvas.height = Math.round(height * ratio);
+        loopyContext.setTransform(ratio, 0, 0, ratio, 0, 0);
+        loopyContext.clearRect(0, 0, width, height);
+        for (let row = 0; row * tile < height; row += 1) {
+          for (let column = 0; column * tile < width; column += 1) {
+            const image = loopyImages[(row % 2) * 2 + (column % 2)];
+            const sourceSize = Math.min(image.naturalWidth, image.naturalHeight);
+            const sourceX = (image.naturalWidth - sourceSize) / 2;
+            const sourceY = (image.naturalHeight - sourceSize) / 2;
+            loopyContext.drawImage(image, sourceX, sourceY, sourceSize, sourceSize, column * tile, row * tile, tile, tile);
+          }
+        }
+      };
+      const waitForLoopyImage = image => image.complete && image.naturalWidth ? Promise.resolve() : new Promise(resolve => {
+        image.addEventListener('load', resolve, {once:true});
+        image.addEventListener('error', resolve, {once:true});
+      });
+      Promise.all(loopyImages.map(waitForLoopyImage)).then(drawLoopyBackground);
+      let loopyResizeFrame;
+      window.addEventListener('resize', () => {
+        window.cancelAnimationFrame(loopyResizeFrame);
+        loopyResizeFrame = window.requestAnimationFrame(drawLoopyBackground);
+      }, {passive:true});
       const languageButtons = [...document.querySelectorAll('[data-language]')];
       const applyLanguage = language => {
         const active = language === 'en' ? 'en' : 'zh';
