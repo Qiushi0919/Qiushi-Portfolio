@@ -13,12 +13,13 @@
     :root{--blue:#1772d0;--deep:#17344d;--muted:#637887;--line:#e1e7eb;--paper:#fff;--soft:#f6f8fa}
     *{box-sizing:border-box}
     html{color-scheme:light;scroll-behavior:smooth;overflow-x:hidden}
-    body{margin:0;overflow-x:hidden;background:#fff;color:#243847;font-family:Lato,Verdana,Helvetica,"PingFang SC","Microsoft YaHei",sans-serif;font-size:14px}
+    body{position:relative;isolation:isolate;margin:0;overflow-x:hidden;background:#fff7fb;color:#243847;font-family:Lato,Verdana,Helvetica,"PingFang SC","Microsoft YaHei",sans-serif;font-size:14px}
+    body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.83),rgba(255,255,255,.83)),url("assets/loopy-background.png");background-position:0 0,center top;background-size:auto,210px 207px;background-repeat:repeat,repeat;filter:saturate(.82)}
     button,input{font:inherit}
     a{color:var(--blue);text-decoration:none}
     a:hover,a:focus-visible{color:#f09228}
     img{max-width:100%}
-    .page{width:min(860px,calc(100% - 96px));margin:0 auto;padding:28px 0 62px}
+    .page{width:min(860px,calc(100% - 96px));margin:0 auto;padding:28px 0 62px;background:rgba(255,255,255,.91);box-shadow:0 0 48px rgba(178,92,132,.09)}
     .site-toolbar{display:flex;justify-content:flex-end;align-items:center;padding:0 16px 8px}
     .language-switch{display:inline-flex;align-items:center;gap:6px;color:#a1adb5;font-size:12px}
     .language-switch button{padding:2px 0;border:0;border-bottom:1px solid transparent;background:none;color:#81909b;cursor:pointer}
@@ -104,6 +105,7 @@
     .detail-grid figcaption{padding:7px 9px;border-top:1px solid #e8ecef;color:#4d6678;font-size:11px;font-weight:700;line-height:1.35}
 
     @media(max-width:760px){
+      body::before{background-size:auto,170px 167px}
       .page{width:min(100% - 28px,640px);padding-top:18px}
       .profile{grid-template-columns:1fr;gap:18px;padding:2px 8px 28px}
       .profile-copy{order:2}.profile-photo{order:1;width:152px}
