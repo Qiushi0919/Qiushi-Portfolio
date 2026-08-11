@@ -35,11 +35,15 @@
     .profile-stats{display:flex;justify-content:center;flex-wrap:wrap;gap:7px 14px;margin:16px 0 0;color:#587080;font-size:12px}
     .profile-stats strong{color:#234b69;font-size:13px}
     .profile-links{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:5px;margin-top:15px;font-size:14px}
-    .profile-links span,.website-line span{color:#9aa7b0}
+    .profile-links span{color:#9aa7b0}
     .contact-link{padding:0;border:0;background:none;color:var(--blue);cursor:pointer}
     .contact-link:hover,.contact-link:focus-visible{color:#f09228}
-    .website-line{margin-top:7px;text-align:center;color:#50697a;font-size:13px;line-height:1.5}
-    .website-line a{font-weight:700}
+    .website-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:15px}
+    .website-link{display:flex;min-height:72px;flex-direction:column;align-items:flex-start;justify-content:center;padding:10px 13px;border:1px solid #d7e1e8;background:#f8fafb;color:#36566d;text-align:left;transition:border-color .16s ease,background-color .16s ease,color .16s ease}
+    .website-link:hover,.website-link:focus-visible{border-color:#8db8dd;background:#f2f8fd;color:var(--blue)}
+    .website-link strong{color:var(--blue);font-size:14px}
+    .website-link .website-url{margin-top:2px;color:#294b63;font-size:12px;font-weight:700;overflow-wrap:anywhere}
+    .website-link .website-hint{margin-top:3px;color:#84939e;font-size:10px;font-weight:400}
 
     .section-head{padding:27px 16px 8px}
     .section-head h2{margin:0 0 5px;color:#1d2d3a;font-size:22px;font-weight:400}
@@ -119,6 +123,7 @@
       .thumb-button{width:min(100%,340px);height:180px}
       .detail-grid{grid-template-columns:1fr}.detail-grid img{height:auto;max-height:330px}
       footer{flex-direction:column;gap:5px}
+      .website-actions{grid-template-columns:1fr}
     }
     @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
   </style>
@@ -146,7 +151,18 @@
         <nav class="profile-links" aria-label="联系方式">
           <button class="contact-link" id="wechatButton" type="button"><span class="lang zh">微信</span><span class="lang en">WeChat</span></button>
         </nav>
-        <div class="website-line">Website: <a href="https://qiushi0919.cn/lzx/" target="_blank" rel="noopener">LZX</a> <span>/</span> <a href="https://qiushi0919.cn/" target="_blank" rel="noopener">XQS</a></div>
+        <nav class="website-actions" aria-label="Website links">
+          <a class="website-link" href="https://qiushi0919.cn/lzx/" target="_blank" rel="noopener">
+            <strong>LZX Website</strong>
+            <span class="website-url">qiushi0919.cn/lzx/</span>
+            <span class="website-hint"><span class="lang zh">点击即可跳转</span><span class="lang en">Click to visit</span> ↗</span>
+          </a>
+          <a class="website-link" href="https://qiushi0919.cn/" target="_blank" rel="noopener">
+            <strong>XQS Website</strong>
+            <span class="website-url">qiushi0919.cn/</span>
+            <span class="website-hint"><span class="lang zh">点击即可跳转</span><span class="lang en">Click to visit</span> ↗</span>
+          </a>
+        </nav>
       </div>
       <img class="profile-photo" src="assets/profile.webp" alt="李梓昕个人照片" loading="eager" decoding="async" fetchpriority="high" />
     </section>
