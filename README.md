@@ -1,6 +1,6 @@
 # 谢秋实作品集
 
-谢秋实的个人主页与项目作品集，包含论文、电子设计竞赛、嵌入式系统项目与 macOS 开源小项目。
+谢秋实的个人主页与项目作品集，包含论文、电子设计竞赛、嵌入式系统项目与 macOS 开源小项目（Codex Tidy、Boring Notch Focus 和 AltTab）。
 
 打开 `index.html` 查看个人主页；`portfolio-cover.html` 为兼容已有链接保留的同内容入口。
 
