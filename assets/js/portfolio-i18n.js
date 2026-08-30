@@ -100,7 +100,7 @@
     '基于 Python 和 PyQt5 的桌面思维导图编辑器，支持多层级节点、连接线管理、撤销重做、批注、链接、待办事项、Markdown 导入及 PNG / PDF 导出，并提供多主题与中英文界面。': 'A desktop mind map editor built with Python and PyQt5, featuring multilevel nodes, connector management, undo and redo, annotations, links, to-do items, Markdown import, PNG/PDF export, multiple themes, and bilingual Chinese-English interfaces.',
     '课程报告': 'Course Report',
     '展开 MindMap 思维导图编辑器功能详情': 'Open MindMap editor feature details',
-    'MindMap 思维导图编辑器运行界面': 'MindMap editor interface',
+    'MindMap 思维导图编辑器产品封面': 'MindMap editor product cover',
     'MindMap 应用图标': 'MindMap app icon',
     'MindMap 思维导图编辑器功能详情': 'MindMap editor feature details',
     'MindMap · 功能详情': 'MindMap · Feature Details',
