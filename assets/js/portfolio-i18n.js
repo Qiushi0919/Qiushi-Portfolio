@@ -10,6 +10,7 @@
     '总访问量': 'Total views',
     '华中科技大学通信工程专业本科生，目前大三。': 'Third-year undergraduate student in Communication Engineering at Huazhong University of Science and Technology.',
     '这里整理了我的科研论文与竞赛项目，涵盖数字文化遗产、无人机地面站、无线定位和嵌入式 AI。': 'This portfolio presents my research papers and competition projects in digital cultural heritage, UAV ground stations, wireless localization, and embedded AI.',
+    '个人简历（PDF）': 'Curriculum Vitae (PDF)',
     '联系方式': 'Contact',
     '微信': 'WeChat',
     '微信公众号': 'WeChat Official Account',
