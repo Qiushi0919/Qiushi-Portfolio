@@ -15,9 +15,10 @@ from lxml import etree, html
 ROOT = Path(__file__).resolve().parent
 SOURCE = ROOT / 'source'
 BUILD = ROOT / 'build'
-VERSION = 'search-20261005'
+VERSION = 'root-homepage-20261005'
 CN = 'https://qiushi0919.cn/'
-GH = 'https://qiushi0919.github.io/Qiushi-Portfolio/'
+GH = 'https://qiushi0919.github.io/'
+LEGACY_GH = 'https://qiushi0919.github.io/Qiushi-Portfolio/'
 CATEGORIES = {'papers': ('论文', 'Papers', 'paper'),
               'competitions': ('竞赛项目', 'Competitions', 'competition'),
               'projects': ('个人作品', 'Side Projects', 'side')}
@@ -141,8 +142,8 @@ def build():
     manifest = {'version': VERSION, 'origins': {}}
     for origin, base, default_lang in [('cn', CN, 'zh'), ('github', GH, 'en')]:
         destination = BUILD / origin
-        asset_prefix = '/assets/' if origin == 'cn' else '/Qiushi-Portfolio/assets/'
-        path_prefix = '/' if origin == 'cn' else '/Qiushi-Portfolio/'
+        asset_prefix = '/assets/'
+        path_prefix = '/'
         write(destination / 'assets/css/portfolio.css', css)
         write(destination / 'assets/js/portfolio-runtime.js', runtime)
         for language in ('zh', 'en'):
@@ -288,7 +289,8 @@ def build():
         if verification.exists():
             for p in verification.iterdir():
                 if p.is_file(): write(destination / p.name, p.read_text())
-        write(destination / 'robots.txt', f'User-agent: *\nDisallow: {path_prefix}analytics/\nDisallow: {path_prefix}cost-per-day/api/\nDisallow: {path_prefix}tools/\nSitemap: {base}sitemap.xml\n')
+        legacy_tools = 'Disallow: /Qiushi-Portfolio/tools/\n' if origin == 'github' else ''
+        write(destination / 'robots.txt', f'User-agent: *\nDisallow: {path_prefix}analytics/\nDisallow: {path_prefix}cost-per-day/api/\nDisallow: {path_prefix}tools/\n{legacy_tools}Sitemap: {base}sitemap.xml\n')
         sitemap = etree.Element('urlset', nsmap={None:'http://www.sitemaps.org/schemas/sitemap/0.9', 'xhtml':'http://www.w3.org/1999/xhtml'})
         for route in ROUTES:
             url = etree.SubElement(sitemap, 'url')
@@ -300,6 +302,28 @@ def build():
         write(destination / 'portfolio-cover.html', alias)
         write(destination / '404.html', f'<!doctype html><html lang="{default_lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>404 · Qiushi Xie</title><style>body{{font:16px system-ui;max-width:600px;margin:12vh auto;padding:24px;line-height:1.8}}a{{color:#1772d0}}</style></head><body><h1>404</h1><p>页面不存在 / Page not found.</p><a href="{path_prefix}">返回主页 / Homepage</a></body></html>\n')
         manifest['origins'][origin] = {str(p.relative_to(destination)): hashlib.sha256(p.read_bytes()).hexdigest() for p in destination.rglob('*') if p.is_file()}
+    # Preserve each existing project URL while moving the portfolio to the root.
+    legacy = BUILD / 'github-legacy'
+    for language in ('en', 'zh'):
+        prefix = '' if language == 'en' else 'zh/'
+        for route in ROUTES:
+            target = route_url(GH + prefix, route)
+            canonical = route_url(GH if language == 'en' else CN, route)
+            page = f'<!doctype html><html lang="{language}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="refresh" content="0;url={target}"><link rel="canonical" href="{canonical}"><title>Qiushi Xie / 谢秋实 · Homepage</title></head><body><a href="{target}">Qiushi Xie / 谢秋实 · Homepage</a></body></html>\n'
+            write(legacy / prefix / route / 'index.html', page)
+    for path in ('cv', 'nav'):
+        target = GH + path + '/'
+        write(legacy / path / 'index.html', f'<!doctype html><html><head><meta charset="utf-8"><meta http-equiv="refresh" content="0;url={target}"><link rel="canonical" href="{target}"><title>Qiushi Xie</title></head><body><a href="{target}">Continue</a></body></html>\n')
+    write(legacy / 'portfolio-cover.html', (BUILD / 'github/portfolio-cover.html').read_text())
+    write(legacy / '404.html', (BUILD / 'github/404.html').read_text())
+    # The old sitemap allows crawlers to discover the old pages' redirects.
+    old_sitemap = etree.Element('urlset', nsmap={None:'http://www.sitemaps.org/schemas/sitemap/0.9'})
+    for route in ROUTES:
+        url = etree.SubElement(old_sitemap, 'url')
+        etree.SubElement(url, 'loc').text = route_url(LEGACY_GH, route)
+    write(legacy / 'sitemap.xml', '<?xml version="1.0" encoding="UTF-8"?>\n' + etree.tostring(old_sitemap, encoding='unicode', pretty_print=True))
+    write(legacy / 'robots.txt', 'User-agent: *\nDisallow: /Qiushi-Portfolio/tools/\nSitemap: ' + LEGACY_GH + 'sitemap.xml\n')
+    manifest['legacy_github'] = {str(p.relative_to(legacy)): hashlib.sha256(p.read_bytes()).hexdigest() for p in legacy.rglob('*') if p.is_file()}
     write(BUILD / 'manifest.json', json.dumps(manifest, ensure_ascii=False, indent=2) + '\n')
     print(json.dumps({'status':'built','pages_per_origin':len(ROUTES)*2,'version':VERSION}))
 

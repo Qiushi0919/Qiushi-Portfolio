@@ -1,87 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://qiushi0919.github.io/Qiushi-Portfolio/</loc>
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://qiushi0919.cn/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://qiushi0919.github.io/Qiushi-Portfolio/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://qiushi0919.github.io/Qiushi-Portfolio/"/>
   </url>
   <url>
     <loc>https://qiushi0919.github.io/Qiushi-Portfolio/papers/</loc>
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://qiushi0919.cn/papers/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://qiushi0919.github.io/Qiushi-Portfolio/papers/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://qiushi0919.github.io/Qiushi-Portfolio/papers/"/>
   </url>
   <url>
     <loc>https://qiushi0919.github.io/Qiushi-Portfolio/competitions/</loc>
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://qiushi0919.cn/competitions/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://qiushi0919.github.io/Qiushi-Portfolio/competitions/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://qiushi0919.github.io/Qiushi-Portfolio/competitions/"/>
   </url>
   <url>
     <loc>https://qiushi0919.github.io/Qiushi-Portfolio/projects/</loc>
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://qiushi0919.cn/projects/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://qiushi0919.github.io/Qiushi-Portfolio/projects/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://qiushi0919.github.io/Qiushi-Portfolio/projects/"/>
   </url>
   <url>
     <loc>https://qiushi0919.github.io/Qiushi-Portfolio/papers/vasemuseum/</loc>
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://qiushi0919.cn/papers/vasemuseum/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://qiushi0919.github.io/Qiushi-Portfolio/papers/vasemuseum/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://qiushi0919.github.io/Qiushi-Portfolio/papers/vasemuseum/"/>
   </url>
   <url>
     <loc>https://qiushi0919.github.io/Qiushi-Portfolio/papers/battery-rul/</loc>
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://qiushi0919.cn/papers/battery-rul/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://qiushi0919.github.io/Qiushi-Portfolio/papers/battery-rul/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://qiushi0919.github.io/Qiushi-Portfolio/papers/battery-rul/"/>
   </url>
   <url>
     <loc>https://qiushi0919.github.io/Qiushi-Portfolio/competitions/intelcup-2026/</loc>
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://qiushi0919.cn/competitions/intelcup-2026/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://qiushi0919.github.io/Qiushi-Portfolio/competitions/intelcup-2026/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://qiushi0919.github.io/Qiushi-Portfolio/competitions/intelcup-2026/"/>
   </url>
   <url>
     <loc>https://qiushi0919.github.io/Qiushi-Portfolio/competitions/nuedc-c/</loc>
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://qiushi0919.cn/competitions/nuedc-c/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://qiushi0919.github.io/Qiushi-Portfolio/competitions/nuedc-c/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://qiushi0919.github.io/Qiushi-Portfolio/competitions/nuedc-c/"/>
   </url>
   <url>
     <loc>https://qiushi0919.github.io/Qiushi-Portfolio/competitions/lowcom/</loc>
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://qiushi0919.cn/competitions/lowcom/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://qiushi0919.github.io/Qiushi-Portfolio/competitions/lowcom/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://qiushi0919.github.io/Qiushi-Portfolio/competitions/lowcom/"/>
   </url>
   <url>
     <loc>https://qiushi0919.github.io/Qiushi-Portfolio/competitions/embedded-2025/</loc>
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://qiushi0919.cn/competitions/embedded-2025/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://qiushi0919.github.io/Qiushi-Portfolio/competitions/embedded-2025/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://qiushi0919.github.io/Qiushi-Portfolio/competitions/embedded-2025/"/>
   </url>
   <url>
     <loc>https://qiushi0919.github.io/Qiushi-Portfolio/projects/codex-tidy/</loc>
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://qiushi0919.cn/projects/codex-tidy/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://qiushi0919.github.io/Qiushi-Portfolio/projects/codex-tidy/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://qiushi0919.github.io/Qiushi-Portfolio/projects/codex-tidy/"/>
   </url>
   <url>
     <loc>https://qiushi0919.github.io/Qiushi-Portfolio/projects/boring-notch-focus/</loc>
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://qiushi0919.cn/projects/boring-notch-focus/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://qiushi0919.github.io/Qiushi-Portfolio/projects/boring-notch-focus/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://qiushi0919.github.io/Qiushi-Portfolio/projects/boring-notch-focus/"/>
   </url>
   <url>
     <loc>https://qiushi0919.github.io/Qiushi-Portfolio/projects/alttab/</loc>
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://qiushi0919.cn/projects/alttab/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://qiushi0919.github.io/Qiushi-Portfolio/projects/alttab/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://qiushi0919.github.io/Qiushi-Portfolio/projects/alttab/"/>
   </url>
   <url>
     <loc>https://qiushi0919.github.io/Qiushi-Portfolio/projects/mindmap/</loc>
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://qiushi0919.cn/projects/mindmap/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://qiushi0919.github.io/Qiushi-Portfolio/projects/mindmap/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://qiushi0919.github.io/Qiushi-Portfolio/projects/mindmap/"/>
   </url>
 </urlset>
