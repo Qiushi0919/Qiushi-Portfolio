@@ -41,6 +41,7 @@ EXTERNAL_PROJECTS = {
 }
 ROUTES = ['', *CATEGORIES, *DETAILS.values()]
 TRANSLATIONS = json.loads((SOURCE / 'translations.json').read_text())
+VERIFICATION = json.loads((SOURCE / 'search-verification.json').read_text()) if (SOURCE / 'search-verification.json').exists() else {}
 
 
 def translated(value):
@@ -193,6 +194,8 @@ def build():
                     tree.xpath('//*[@id="profileName"]')[0].tag = 'h2'
                 head.find('title').text = title
                 head.xpath('./meta[@name="description"]')[0].set('content', description)
+                if route == '' and VERIFICATION.get('google'):
+                    head.append(element('meta', name='google-site-verification', content=VERIFICATION['google']))
                 head.append(element('link', rel='stylesheet', href=asset_prefix + 'css/portfolio.css?v=' + VERSION))
                 canonical = route_url(canonical_base, route)
                 head.append(element('link', rel='canonical', href=canonical))
