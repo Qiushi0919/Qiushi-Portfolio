@@ -275,6 +275,10 @@ def build():
                 footer.append(element('p', '国内入口 / China: qiushi0919.cn · International: GitHub Pages' if language == 'zh' else 'China: qiushi0919.cn · International: GitHub Pages'))
                 for href, label in [(route_url(CN, route), '国内 · cn'), (route_url(GH, route), 'International · GitHub'), (route_url(local_base, 'papers'), '论文 / Papers'), (route_url(local_base, 'competitions'), '竞赛 / Competitions')]:
                     footer.append(element('a', label, href=href))
+                if origin == 'cn' and VERIFICATION.get('icp_website'):
+                    filing = element('p')
+                    filing.append(element('a', VERIFICATION['icp_website'], href='https://beian.miit.gov.cn/', target='_blank', rel='noopener noreferrer'))
+                    footer.append(filing)
                 main.append(footer)
                 body.append(element('script', src=asset_prefix + 'js/portfolio-runtime.js?v=' + VERSION))
                 target = destination / lang_prefix / route / 'index.html'

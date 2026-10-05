@@ -45,6 +45,9 @@ default languages and asset prefixes differ.
 
 The ownership verification files under `tools/search/verification/` must remain
 published after verification. They are public files issued by Google/Baidu.
+`tools/search/source/search-verification.json` holds the public Google meta token
+and the CN website ICP number confirmed in Aliyun: 鄂ICP备2026007908号-1.
+The CN footer links that number to the official MIIT query site.
 
 ## Hosting
 
