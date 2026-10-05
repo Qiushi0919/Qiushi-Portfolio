@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /Qiushi-Portfolio/analytics/
+Disallow: /Qiushi-Portfolio/cost-per-day/api/
+Disallow: /Qiushi-Portfolio/tools/
+Sitemap: https://qiushi0919.github.io/Qiushi-Portfolio/sitemap.xml

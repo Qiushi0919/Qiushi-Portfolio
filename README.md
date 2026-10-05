@@ -1,15 +1,67 @@
-# 谢秋实作品集
+# 谢秋实 / Qiushi Xie — Research & Projects
 
-谢秋实的个人主页与项目作品集，包含论文、电子设计竞赛、嵌入式系统项目与独立小项目（Codex Tidy、Boring Notch Focus、AltTab 和 MindMap）。
+- 国内中文主页：https://qiushi0919.cn/
+- International English homepage: https://qiushi0919.github.io/Qiushi-Portfolio/
+- Source repository: https://github.com/Qiushi0919/Qiushi-Portfolio
 
-打开 `index.html` 查看个人主页；`portfolio-cover.html` 为兼容已有链接保留的同内容入口。
+Two public entrances serve the same portfolio. The CN origin defaults to Chinese;
+GitHub Pages defaults to English. Both offer a language switch and an origin
+switch. There is no IP-based redirect.
 
-页面首次加载会等待关键缩略图；淡入后在后台预载论文、比赛和小项目三个分类的全部缩略图与展开详情媒体。
+## Search-friendly static pages
 
-## 个人简历
+Each language has a homepage, three category pages, and ten project pages. All
+text and navigation links exist in HTML without JavaScript. JavaScript adds
+contact dialogs, project previews, and image carousels; it does not hide the
+portfolio while waiting for images.
 
-`cv/index.html` 提供原版 PDF 预览、直接打开及下载。主站地址为 `https://qiushi0919.cn/cv`；主页和兼容入口的简历链接位于微信、QQ 联系方式行上方，支持中英文切换。
+Preferred Chinese URLs live on `qiushi0919.cn`; preferred English URLs live on
+GitHub Pages. Same-language alternate copies point to those preferred URLs with
+canonical links. Reciprocal `zh-CN`, `en`, and `x-default` hreflang links describe
+the language alternatives. Each origin's sitemap lists its 14 preferred pages.
+Page titles, descriptions, Open Graph tags, and Person/WebPage structured data
+are generated from the existing portfolio content. Publication claims are not
+inferred or added by the generator.
 
-更新简历时替换 `cv/qiushi-xie-cv.pdf`，保持文件名不变，并用 `pypdfium2` 渲染第一页更新 `cv/qiushi-xie-cv.webp`（2.5 倍缩放、WebP quality=92），以兼容移动端浏览器。当前使用用户提供的 2026 年 9 月 PDF，不对原文件重新排版。
+The mobile layout uses the actual device width. Below 760px the profile and
+project cards stack vertically. Content renders immediately, off-screen images
+load lazily, and preview videos do not preload.
 
-网站是静态文件，无需安装依赖或构建。提交 `main` 后由 GitHub Pages 发布；国内站使用服务器 `/opt/qiushi-portfolio-src` 拉取同一提交，将此次变更的入口、语言脚本和 `cv/` 同步到 `/opt/portfolio`。发布前在服务器 Web 根目录之外备份将覆盖的文件。现有 Nginx 静态目录规则自动处理 `/cv` 到 `/cv/`，无需改动其他路由。
+## Build and update
+
+The editable source is `tools/search/source/portfolio.html`, with English text in
+`tools/search/source/translations.json`. Requires Python 3 and `lxml`.
+
+```sh
+python3 tools/search/build_site.py
+python3 tools/search/check_site.py
+```
+
+The generator writes `tools/search/build/cn/` and `tools/search/build/github/`.
+Publish the contents of `build/github/` to the repository root, preserving the
+existing `assets/`, `cv/`, and `nav/` files. Publish the contents of `build/cn/`
+to the CN web root. **Do not copy GitHub's root HTML directly to CN:** their
+default languages and asset prefixes differ.
+
+The ownership verification files under `tools/search/verification/` must remain
+published after verification. They are public files issued by Google/Baidu.
+
+## Hosting
+
+GitHub Pages serves `main` from the repository root (`.nojekyll` retained).
+CN uses Nginx with static directory pages, actual 404 responses, and 301 redirects
+from the former root homepage aliases. Existing navigation, cost tracker, and
+other service routes retain their own configuration.
+
+The CN `robots.txt` advertises its sitemap. GitHub project-level `robots.txt`
+cannot control the host-wide `/robots.txt`; submit the GitHub sitemap directly
+in Search Console. Sitemaps and submission help discovery but do not guarantee
+indexing or search ranking.
+
+## CV assets
+
+`cv/index.html` previews the original PDF and offers open/download links. Update
+`cv/qiushi-xie-cv.pdf` without renaming it. Render its first page to
+`cv/qiushi-xie-cv.webp` with `pypdfium2` (2.5x scale, WebP quality 92) for mobile
+compatibility. The current document is the user's original September 2026 PDF;
+do not typeset a replacement when updating the website.
